@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+<!-- Meta, title, CSS, favicons, etc. -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="利用規約, 免責事項, を使用するリスク">
+<title>条件 - 電子カルボ - 分散交換手段</title></title>
+
+<link rel="alternate" href="/" hreflang="x-default" />
+<link rel="alternate" href="/ua/" hreflang="uk_UA" />
+<link rel="alternate" href="/ru/" hreflang="ru_RU" />
+<link rel="alternate" href="/pl/" hreflang="pl_PL" />
+<link rel="alternate" href="/es/" hreflang="es_ES" />
+<link rel="alternate" href="/cn/" hreflang="zh_CN" />
+<link rel="alternate" href="/jp/" hreflang="ja_JP" />
+<link rel="alternate" href="/kr/" hreflang="ko_KR" />
+
+<!-- Bootstrap core CSS -->
+<link href="/css/bootstrap.css" rel="stylesheet">
+
+<!-- Startup CSS -->
+<link href="/css/startup.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <script src="js/respond.min.js"></script>
+<![endif]-->
+
+<!-- Favicons -->
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="icon" type="image/icon" href="/images/favicon.ico" >
+<script src="/js/pace.js"></script>
+<!-- Custom Google Font : Open Sans -->
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:100,100i,300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic' rel='stylesheet' type='text/css'>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-78493281-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<meta property="og:url" content="https://www.karbo.io" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="電子カルボ" />
+<meta property="og:description" content="分散交換手段" />
+<meta property="og:image" content="https://karbo.io/images/wallet.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1092" />
+<meta property="og:image:height" content="684" />
+</head>
+<body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1631255797202963',
+      xfbml      : true,
+      version    : 'v2.7'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/ja_JP/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<div class="preloader"></div>
+
+<!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">ナビゲーション</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/jp/"><span id="coinIcon">&#1180;</span> <strong>カルボ</strong></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+			  <a href="/jp/download">ダウンロード</a>
+			</li>
+			<li>
+              <a href="/jp/use">アプリケーション</a>
+            </li>
+			<li>
+              <a href="/jp/info">情報</a>
+            </li>
+			<li>
+              <a href="http://explorer.karbowanec.com/">エクスプローラー</a>
+            </li>
+			<li class="dropdown">
+			  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-language" aria-hidden="true"></i> <span class="caret"></span></a>
+			  <ul class="dropdown-menu" role="menu">
+				<li><a href="/"><span class="flag-icon flag-icon-us"></span> English</a></li>
+				<li><a href="/ua/"><span class="flag-icon flag-icon-ua"></span> Українська</a></li>
+				<li><a href="/ru/"><span class="flag-icon flag-icon-ru"></span> Русский</a></li>
+				<li><a href="/pl/"><span class="flag-icon flag-icon-pl"></span> Polski</a></li>
+				<li><a href="/es/"><span class="flag-icon flag-icon-es"></span> Español</a></li>
+				<li><a href="/cn/"><span class="flag-icon flag-icon-cn"></span> 简体中文</a></li>
+				<li><a href="/jp/"><span class="flag-icon flag-icon-jp"></span> 日本語</a></li>
+				<li><a href="/kr/"><span class="flag-icon flag-icon-kr"></span> 한국어</a></li>
+			  </ul>
+			</li>
+			<li class="dropdown">
+			<a href="#" class="price dropdown-toggle" data-toggle="dropdown"><span id="btc_price"></span> <span id="arrowplace"></span></a>
+			<ul class="dropdown-menu" role="menu">
+				<li><a href="#calc" id="usd_price"></a></li>
+				<li><a href="#calc" id="eur_price"></a></li>
+				<li><a href="#calc" id="rur_price"></a></li>
+				<li><a href="#calc" id="uah_price"></a></li>
+			</ul>
+			</li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+   </div>
+<!--// Navbar Ends-->
+
+	<div class="wrapper"></div>
+	
+<!--SUBPAGE HEAD-->
+
+<div class="subpage-head grad breath inverse">
+  <div class="container">
+    <div class="section-title">
+		<h2>利用規約</h2>
+		<h4>免責事項</h4>
+	</div>
+  </div>
+</div>
+
+<!-- // END SUBPAGE HEAD -->
+
+<div class="breath">
+  <div class="container"> 
+		
+
+	<section class="row">
+
+
+		<div class="col-lg-12">
+
+<h3>1. karbo.ioに掲載された情報</h2>
+
+ウェブサイトhttps://karbo.io/（以下「ウェブサイト」といいます）は、情報と一般資料を提供します。
+法的、ビジネス・コンサルティングなどのその他の種類のコンサルティングの目的で、ウェブサイトに頼ることはできなくて、そしてそれをすること権利がありません。
+ウェブサイトの内容に頼っている場合、自身の責任で行ってください。
+行動するか、行動しないかを決める場合には、援助を受けたい、または受けなければならない適切な管轄で免許弁護士に連絡する必要があります。
+いかなる場合でも、ウェブサイトの所有者およびプロジェクトの参加者は、あなたの受け入れる、実行する行動、決定および行為に関してウェブサイトに頼ってということに対して責任を負いません。
+
+<h3>2. 翻訳</h2>
+
+ウェブサイトには、サイトで利用可能なコンテンツの英語版の翻訳が含まれている場合があります。
+そのような翻訳は、便宜のためにのみ与えられています。
+英語版と翻訳版との間に矛盾が生じた場合は、英語版が優先します。
+矛盾がある場合は、電子メールで伝えてください。
+
+<h3>3．Karboを使用するリスク</h2>
+
+このウェブサイトは、以下の5つのカテゴリーの事件のために起因する損失、損害、請求に関して責任を負いません：
+<ol>
+
+<li>  忘れられたパスワード、間違ったkarboアドレスへの支払い、ウォレットの過失による削除などのKarboのソフトウェアおよびサービスに関連するユーザーのエラー。</li>
+
+<li> 破損したファイル・ウォレット、間違って作成されたトランザクション、安全でない暗号化ライブラリ、ウェブサイトおよびKarboに関連するソフトウェアまたはサービスに悪く影響する悪質なコードなどのKarboのソフトウェアおよびサービスに関連するウェブサイトのパフォーマンスの問題。</li>
+
+<li> 障害または損傷のあるストレージ・デバイスによるデータ損失などの Karboに関連するソフトウェアおよびサービスまたはユーザーのデバイスの技術的問題。</li>
+
+<li> 利用者のウォレットおよび/またはアカウントへの不正アクセスなどのKarboに関連するサービスまたはソフトウェアの任意のユーザが直面するセキュリティ上の問題。</li>
+
+<li> サービスプロバイダの破産、情報セキュリティまたはサービスプロバイダに対する攻撃、第三者による詐欺など第三者に影響を及ぼす事件および/または第三者の作為または不作為。</li>
+</ol>
+
+<h3>4. 投資のリスク</h2>
+
+カルボへの投資は、短期または長期的にも金の紛失につながる可能性があります。
+karboに投資する人は、価格が広範囲に変動する可能性があることを理解する必要があります。
+ウェブサイトに掲載された情報は、カルボバネツへの投資家がお金を失うことを保証するものではありません。
+
+<h3>5．税法の遵守</h2>
+
+このWebサイトのユーザーは、karboとのトランザクションに適用される税（もしあれば）を独自に決定します。
+ウェブサイトの所有者および本ウェブサイトの開発に参加する者は、カルボとのトランザクションに適用される課税に対して責任がありません。
+
+<h3>6．このウェブサイトは、カルボを保存、受信、または送信しない</h3>
+
+本ウェブサイトは、karboを保存、受信、または送信しないし、karboが Karbovanetsネットワークで所有されている所有権の記録によってのみ存在するからです。
+
+<h3>7. 保証がない</h2>
+
+ウェブサイトは、ウェブサイトおよび/またはウェブサイト上で提供される内容、データ、資料および/またはサービスに関するいかなる種類の保証もなく、「現状のまま」という原理による提供されます。
+
+<h3>8. 責任の制限</h2>
+
+法律で定められていない限り、ウェブサイトの所有者および開発に参加する者は、どんなことがあっても、使用可能性の損失、利益およびデータの損失、ウェブサイトを利用することにどのような方法で関する損失を含み、それらに限定しないなどのいかなる種類の損害に対して責任がありません。
+
+<h3>9. 仲裁</h2>
+
+ウェブサイトのユーザーは、著作権、ロゴ、商標、商号、営業秘密および特許に関する紛争を除き、ウェブサイトまたはこの免責条項に関連するいかなる紛争も仲裁することに同意します。
+
+<h3>10. 最新の改正</h2>
+
+この情報は最後に更新されました： September 11th, 2017.
+
+		</div>
+
+	
+	</section>  
+    
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="grad1">
+   <div class="container">
+	 <div class="breath">
+        <div class="row">
+          <div class="col-lg-4">
+			<p>&copy; 2016-2017 カルボ. 
+		  
+			E-mail:&nbsp;krbcoin@ukr.net</p>
+			
+			<div
+			  class="fb-like"
+			  data-share="true"
+			  data-width="300"
+			  data-show-faces="true">
+			</div>
+		  </div>
+          <div class="col-lg-8">
+			<p  class="text-right">
+				<a href="/privacy">プライバシーポリシー</a>
+				|
+				<a href="/jp/terms">利用規約</a> 
+				|
+				<a href="https://donate.karbo.io/">寄付</a>
+				|
+				<a href="http://karbo.foundation">財団</a>
+				|
+				<a href="https://forum.karbo.io/">フォーラム</a>
+			</p>
+		  </div>
+		</div>
+	 </div>
+  </div>
+</footer>
+<!-- END FOOTER -->
+
+<!-- JS and analytics only. --> 
+<!-- Bootstrap core JavaScript
+================================================== --> 
+<script src="/js/jquery.js"></script> 
+<script src="/js/calc.js"></script> 
+<script src="/js/bootstrap.min.js"></script> 
+<script src="/js/easing.js"></script> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.8.0/css/flag-icon.min.css">
+
+
+</body>
+</html>

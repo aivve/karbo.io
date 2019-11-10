@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Meta, title, CSS, favicons, etc. -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Karbo Documentation - Information, documentation, guides, etc.">
+<title>Documentation for Karbo - Decentralized Exchange Medium</title>
+
+<link rel="alternate" href="/" hreflang="x-default" />
+<link rel="alternate" href="/ua/" hreflang="uk_UA" />
+<link rel="alternate" href="/ru/" hreflang="ru_RU" />
+<link rel="alternate" href="/pl/" hreflang="pl_PL" />
+<link rel="alternate" href="/es/" hreflang="es_ES" />
+<link rel="alternate" href="/cn/" hreflang="zh_CN" />
+<link rel="alternate" href="/jp/" hreflang="ja_JP" />
+<link rel="alternate" href="/kr/" hreflang="ko_KR" />
+
+<!-- Bootstrap core CSS -->
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Karbo CSS -->
+<link href="/css/karbo.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <script src="js/respond.min.js"></script>
+<![endif]-->
+
+<!-- Favicons -->
+<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="icon" type="image/icon" href="/images/favicon.ico" >
+<script src="/js/jquery.js"></script>
+<!-- Custom Google Font -->
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&amp;subset=cyrillic,latin-ext" rel="stylesheet">
+
+<script src="https://kit.fontawesome.com/2058fca1c3.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-78493281-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+
+<meta property="og:url" content="http://www.karbo.io" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Electronic Karbovanets" />
+<meta property="og:description" content="Karbo (Electronic Karbovanets) - digital exchange medium, algorithmic stablecoin" />
+<meta property="og:image" content="https://karbo.io/images/karbo_io.jpg" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1092" />
+<meta property="og:image:height" content="684" />
+
+<script src="https://kit.fontawesome.com/2058fca1c3.js"></script>
+</head>
+<body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1631255797202963',
+      xfbml      : true,
+      version    : 'v2.7'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Fixed navbar -->
+    <div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">
+			<div id="coinIcon">
+				<svg version="1.1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+					xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px"
+					height="32px" viewBox="0 0 206.569 206.568" enable-background="new 0 0 206.569 206.568" xml:space="preserve">
+					<!--path fill-rule="evenodd" clip-rule="evenodd" fill="#FFEC00" d="M103.284,0c57.042,0,103.285,46.242,103.285,103.284
+								c0,57.042-46.242,103.284-103.285,103.284S0,160.326,0,103.284C0,46.242,46.242,0,103.284,0"/-->
+					<g id="navbar-logo-k">			
+						<rect x="42.621" y="67.455" fill="#0E0740" width="121.327" height="14.829"/>
+						<polygon fill="#0E0740" points="164.002,142.947 103.339,82.284 42.675,142.947 53.162,153.434 103.339,103.256 153.516,153.434 "/>
+					</g>
+				</svg>
+				</div> <strong>Karbo</strong></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+			  <a href="/download">Download</a>
+			</li>
+			<li>
+			  <a href="https://wallet.karbo.org/">Web Wallet</a>
+			</li>
+			<li>
+              <a href="/use">Use</a>
+            </li>
+			<li>
+              <a href="/pay">Pay</a>
+            </li>
+			<li>
+              <a href="/info">Info</a>
+            </li>
+			<li>
+              <a href="https://explorer.karbo.io/">Explorer</a>
+            </li>
+			<li class="dropdown">
+			  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-language" aria-hidden="true"></i> <span class="caret"></span></a>
+			  <ul class="dropdown-menu" role="menu">
+				<li><a href="/"><span class="flag-icon flag-icon-us"></span> English</a></li>
+				<li><a href="/ua/"><span class="flag-icon flag-icon-ua"></span> Українська</a></li>
+				<li><a href="/ru/"><span class="flag-icon flag-icon-ru"></span> Русский</a></li>
+				<li><a href="/pl/"><span class="flag-icon flag-icon-pl"></span> Polski</a></li>
+				<li><a href="/es/"><span class="flag-icon flag-icon-es"></span> Español</a></li>
+				<li><a href="/cn/"><span class="flag-icon flag-icon-cn"></span> 简体中文</a></li>
+				<li><a href="/jp/"><span class="flag-icon flag-icon-jp"></span> 日本語</a></li>
+				<li><a href="/kr/"><span class="flag-icon flag-icon-kr"></span> 한국어</a></li>
+			  </ul>
+			</li>
+			<li class="dropdown">
+			<a href="#" class="price dropdown-toggle" data-toggle="dropdown"><span id="usd_price"></span> <span id="arrowplace"></span> <span class="caret"></span></a>
+			<ul class="dropdown-menu" role="menu">
+				<li><a href="#calc" id="btc_price"></a></li>
+				<li><a href="#calc" id="cny_price"></a></li>
+				<li><a href="#calc" id="eur_price"></a></li>
+				<li><a href="#calc" id="jpy_price"></a></li>
+				<li><a href="#calc" id="krw_price"></a></li>
+				<li><a href="#calc" id="rur_price"></a></li>
+				<li><a href="#calc" id="uah_price"></a></li>
+			</ul>
+			</li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+   </div>
+<!--// Navbar Ends-->
+
+<div class="wrapper"></div>
+
+<!--SUBPAGE HEAD-->
+
+<div class="subpage-head grad breath inverse">
+  <div class="container">
+    <div class="section-title">
+      <h2>Karbo Documentation</h2>
+      <h4>Manuals, instructions, how-tos</h4>
+    </div>
+  </div>
+</div>
+
+<!-- // END SUBPAGE HEAD -->
+
+
+	<div class="container breath">
+
+					<ul class="list-group">
+						<li class="list-group-item"><a href="https://github.com/seredat/karbowanec/wiki/Daemon-JSON-RPC-API">Daemon JSON RPC API</a></li>
+						<li class="list-group-item"><a href="https://github.com/seredat/karbowanec/wiki/Karbowanec-RPC-Wallet">Karbowanec RPC Wallet</a></li>
+						<li class="list-group-item"><a href="https://github.com/seredat/karbowanec/wiki/RPC-Wallet-API">RPC Wallet API</a></li>
+						<li class="list-group-item"><a href="https://github.com/seredat/karbowanec/wiki/Simplewallet-JSON-RPC-API">Simplewallet JSON RPC API</a></li>
+					</ul>
+	</div>
+	
+	<div class="breath" id="masternode">
+		<div class="container">
+	
+		<h3>Light Wallet</h3>
+
+			<p>It is possible to use wallet without blockchain, in remote mode it will be connected to the remote node. This allows to get fully functional wallet in minutes.
+			Just select remote node in settings and restart wallet if you're using GUI, or run simplewallet from CLI suite with <code>--daemon-address</code> or <code>--daemon-host</code> & <code>--daemon-port</code> flags. It is quite safe, the node can't steal your coins.</p>
+			
+
+			<p>If you choose node.karbowanec.com you will be connected to random 'masternode' running by community members. The list of awailable masternodes is available at our <a href="https://forum.karbo.io/viewtopic.php/?f=13&t=54">forum</a>.</p>
+
+
+
+		<h3>Masternodes for Lite Wallets</h3>
+
+			<p>Cryptonote coin's wallets can operate through remote daemon without downloading blockchain. It allows to start working quickly when needed. It is quite safe as remote daemon can't steal your coins, running own node is more secure of course. To work through remote daemon in simplewallet you need to specify remote daemon's address with flag for example <code>--daemon-address=136.243.158.27:32348</code>, in GUI you can just select remote node in settings or add custom one. But these remote nodes are not rewarded anyhow in any CN coin. Only in Karbowanec such remote nodes are rewarded for their service. We call them Masternodes because this term is well known.</p>
+
+			<p>So, basically, Masternode it is the CLI Karbowanec daemon running on a machine with open port which allows to connect to it for such light wallets and, most important, mobile wallets in the future. Karbowanec wallets, connected to Masternode, are paying small fees to that node when are sending transactions through it. These fees are supposed to help to cover the costs of operating Karbowanec nodes.</p>
+
+			<p>These Masternodes are providing service necessary for mobile wallets, and besides are helping to maintain and enlarge Karbowanec network. We have plans no incentivize such nodes even more in the future.</p>
+
+
+			<p>To start own Karbowanec masternode all is needed is just a machine with static IP and open port. Machine should have enough CPU power to handle load when parsing blockchain for connected wallets, it can be even spare PC at home. On such machine you can run karbowanec daemon  specifying a wallet address where fees would go like this:
+			
+			<pre class="terminal">./karbowanecd --restricted-rpc --enable-cors=*  --enable-blockchain-indexes --rpc-bind-ip=0.0.0.0 --rpc-bind-port=32348
+--fee-address=KaqCQAbx3BSKKv7ED98oQP9QSP3igqgo47hPYZ8q6KZyUY6GnDaQkh9WbVR4DxvmCq8mZcKPg3wfWFJQ5CsyrxPqKcXC3rx</pre></p>
+			
+			<p>You can specify any wallet address, it can be your GUI wallet address, even paper wallet. This is the wallet where you will receive fees.</p>
+			
+			<p>You need to make sure your port is open and not blocked by firewall. If you are running it at home behind router you need to do port forwarding.</p>
+
+			<p>If you have PC at home  constantly running with fast connection and static IP and  want to operate such Masternode to help Karbowaec network, run daemon as in example and send me you IP so I can add it do default nodes list.</p>
+			
+			<p>You can check if your node is running opening its IP in browser  like this
+			
+			<code>http://185.51.246.81:32348/feeaddress</code>
+			
+			and you should see something like this
+			
+			<code>{"fee_address":"KhjM2KE6CXnDqERpSQckdgaT1VcpPuqxKavZwLxYwtqs4j3eWCVE9MtEV4xxdQVp13V4NYMRWbQqYG9jRw5XNkRUKLjfHwR","status":"OK"}</code>
+			with your wallet address where fees should go.</p>
+
+			<p>You can also run Masternode on VPS with dedicated domain and publish here with description so people can add your node manually if they prefer it. It is not recommended to run node on VPS now specially for Karbowanec, do it only when you already have spare VPS and it is idling.</p>
+
+			<p>For now, do not expect yet to earn a lot of fees because there is very low usage of such remote nodes. </p>
+
+		</div>
+	</div>
+
+
+<!-- FOOTER -->
+<footer class="grad1">
+   <div class="container">
+	 <div class="breath">
+        <div class="row">
+          <div class="col-lg-4">
+			<p>&copy; 2016-2019 <strong>Karbo</strong>. 
+		  
+			E-mail:&nbsp;dev@karbo.io</p>
+			
+			<div class="fb-like" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+		  </div>
+          <div class="col-lg-8">
+			<p  class="text-right">
+				<a href="/privacy">Privacy policy</a>
+				|
+				<a href="/terms">Terms and conditions</a> 
+				|
+				<a href="/donate">Donate</a>
+				|
+				<a href="http://forum.karbo.io/">Forum</a>
+			</p>
+		  </div>
+		</div>
+	 </div>
+  </div>
+</footer>
+<!-- END FOOTER -->
+
+<!-- JS and analytics only. --> 
+<!-- Bootstrap core JavaScript
+================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="/js/rates.js"></script>
+<script src="/js/bootstrap.min.js"></script> 
+<script src="/js/easing.js"></script> 
+<script src="/js/isotope.pkgd.min.js"></script>
+
+<script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("navbar").classList.add("navbar-grad-reverse");
+  } else {
+    document.getElementById("navbar").classList.remove("navbar-grad-reverse");
+  }
+}
+</script>
+<script>
+$( document ).ready(function() {
+	$(function(){
+      
+		 // init Isotope
+		var $grid = $('.grid').isotope({
+		  itemSelector: '.grid-item',
+		  layoutMode: 'fitRows',
+		  percentPosition: true,
+		  masonry: {
+			// use outer width of grid-sizer for columnWidth
+			columnWidth: '.grid-sizer'
+		  }
+		});
+
+		// bind filter button click
+		$('.filters-button-group').on( 'click', 'button', function() {
+		  var filterValue = $( this ).attr('data-filter');
+		  // use filterFn if matches value
+		  $grid.isotope({ filter: filterValue });
+		});
+		// change is-checked class on buttons
+		$('.button-group').each( function( i, buttonGroup ) {
+		  var $buttonGroup = $( buttonGroup );
+		  $buttonGroup.on( 'click', 'button', function() {
+			$buttonGroup.find('.is-checked').removeClass('is-checked');
+			$( this ).addClass('is-checked');
+		  });
+		});
+		
+    });
+});
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.8.0/css/flag-icon.min.css">
+
+</body>
+</html>

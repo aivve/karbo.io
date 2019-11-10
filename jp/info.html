@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+<!-- Meta, title, CSS, favicons, etc. -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="電子カルボバネツという暗号化デジタル分散型交換ユニットまたは交換ネットワークに関する情報と仕様">
+<title>電子カルボバネツという分散型交換ネットワークに関する情報</title>
+
+<link rel="alternate" href="/" hreflang="x-default" />
+<link rel="alternate" href="/ua/" hreflang="uk_UA" />
+<link rel="alternate" href="/ru/" hreflang="ru_RU" />
+<link rel="alternate" href="/pl/" hreflang="pl_PL" />
+<link rel="alternate" href="/es/" hreflang="es_ES" />
+<link rel="alternate" href="/cn/" hreflang="zh_CN" />
+<link rel="alternate" href="/jp/" hreflang="ja_JP" />
+<link rel="alternate" href="/kr/" hreflang="ko_KR" />
+
+<!-- Bootstrap core CSS -->
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Startup CSS -->
+<link href="/css/startup.css" rel="stylesheet">
+<link href="/css/timeline.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <script src="js/respond.min.js"></script>
+<![endif]-->
+
+<!-- Favicons -->
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="icon" type="image/icon" href="/images/favicon.ico" >
+<script src="/js/pace.js"></script>
+<!-- Custom Google Font : Open Sans -->
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:100,100i,300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic' rel='stylesheet' type='text/css'>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-78493281-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<meta property="og:url" content="https://www.karbo.io" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="電子カルボ" />
+<meta property="og:description" content="分散交換手段" />
+<meta property="og:image" content="https://karbo.io/images/wallet.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1092" />
+<meta property="og:image:height" content="684" />
+</head>
+<body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1631255797202963',
+      xfbml      : true,
+      version    : 'v2.7'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/ja_JP/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<div class="preloader"></div>
+
+<!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">ナビゲーション</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/jp/"><span id="coinIcon">&#1180;</span> <strong>カルボ</strong></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+			  <a href="/jp/download">ダウンロード</a>
+			</li>
+			<li>
+              <a href="/jp/use">アプリケーション</a>
+            </li>
+			<li>
+              <a href="/jp/info">情報</a>
+            </li>
+			<li>
+              <a href="http://explorer.karbowanec.com/">エクスプローラー</a>
+            </li>
+			<li class="dropdown">
+			  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-language" aria-hidden="true"></i> <span class="caret"></span></a>
+			  <ul class="dropdown-menu" role="menu">
+				<li><a href="/"><span class="flag-icon flag-icon-us"></span> English</a></li>
+				<li><a href="/ua/"><span class="flag-icon flag-icon-ua"></span> Українська</a></li>
+				<li><a href="/ru/"><span class="flag-icon flag-icon-ru"></span> Русский</a></li>
+				<li><a href="/pl/"><span class="flag-icon flag-icon-pl"></span> Polski</a></li>
+				<li><a href="/es/"><span class="flag-icon flag-icon-es"></span> Español</a></li>
+				<li><a href="/cn/"><span class="flag-icon flag-icon-cn"></span> 简体中文</a></li>
+				<li><a href="/jp/"><span class="flag-icon flag-icon-jp"></span> 日本語</a></li>
+				<li><a href="/kr/"><span class="flag-icon flag-icon-kr"></span> 한국어</a></li>
+			  </ul>
+			</li>
+			<li class="dropdown">
+			<a href="#" class="price dropdown-toggle" data-toggle="dropdown"><span id="btc_price"></span> <span id="arrowplace"></span></a>
+			<ul class="dropdown-menu" role="menu">
+				<li><a href="#calc" id="usd_price"></a></li>
+				<li><a href="#calc" id="eur_price"></a></li>
+				<li><a href="#calc" id="rur_price"></a></li>
+				<li><a href="#calc" id="uah_price"></a></li>
+			</ul>
+			</li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+   </div>
+<!--// Navbar Ends-->
+
+<div class="wrapper"></div>
+
+<article class="content">
+
+<!--SUBPAGE HEAD-->
+
+	<div class="subpage-head grad breath inverse">
+	  <div class="container">
+		<div class="section-title">
+		  <h2>電子カルボバネツについて</h2>
+		  <h4>情報と仕様</h4>
+		</div>
+	  </div>
+	</div>
+
+<!-- // END SUBPAGE HEAD -->
+
+
+
+	<div class="container breath" id="links"> 
+		<div class="row">
+			<div class="col-sm-12 col-md-6 col-lg-4">
+				  <h2>有益なリソース</h2>
+					<ul class="list-group">
+						<!--li class="list-group-item"><a href="/ru/mining">マイニング</a></li-->
+						<li class="list-group-item"><a href="http://explorer.karbowanec.com/#pools">マイニングのためのプール</a></li>
+						<li class="list-group-item"><a href="http://explorer.karbowanec.com">ブロックチェーンの正式なエクスプローラー</a></li>
+						<!--li class="list-group-item"><a href="http://democats.org/blockchain/?name=karbowanec">代替ブラウザ democats.org</a></li-->
+						<li class="list-group-item"><a href="http://paperwallet.karbowanec.com/">ペーパーウォレット（クラシック）</a></li>
+						<li class="list-group-item"><a href="http://krb.paperwallet.pw/">ペーパーウォレット（ニーモニック）</a></li>
+						<li class="list-group-item"><a href="/ticker">コースのインフォーマ</a></li>
+						<li class="list-group-item"><a href="/doc">文書化</a></li>
+						<li class="list-group-item"><a href="https://github.com/seredat/karbowanec">ソースコード</a></li>
+						<li class="list-group-item"><a href="/promo">メディアキット（プロモーション資料）</a></li>
+					</ul>
+			</div>
+		
+		
+			<div class="col-sm-12 col-md-6 col-lg-4">
+				
+				<h2>コミュニティのサイト</h2>
+			
+				<div class="alert alert-dismissible alert-warning">
+				  <button type="button" class="close" data-dismiss="alert">&times;</button>
+				  <p>公式サイト: <a href="http://karbo.io">https://karbo.io</a>!</p>
+				</div>
+			
+				<p>この非公式サイトでは、より多くの情報を見つけることができます:</p>
+				
+					<ul class="list-group">
+						<li class="list-group-item"><a href="http://karbowanec.com">http://karbowanec.com</a></li>	
+						<li class="list-group-item"><a href="http://karbovanets.org">http://karbovanets.org</a></li>	
+						<li class="list-group-item"><a href="http://karbo.digital">http://karbo.digital</a></li>	
+						<li class="list-group-item"><a href="http://krb.digital">http://krb.digital</a></li>
+					</ul>
+			</div>
+		</div>
+	</div>
+
+	
+	<div class="container breath" id="about"> 
+		<div class="row">
+			<div class="col-md-12">
+				
+				<section>
+					<h2>カルボ、何でしょうか？</h2>
+					
+					<p>名称は、ウクライナ語とポーランド語で「カルビ」で呼ばれる木製の棒に特別なマークをつけることで支払いまたは債務を記録する古代の方法から来ています。この方法が中世の時代に近代的なウクライナの領土およびヨーロッパ全体に広がれた、時には20世紀の初めさえ使用されました。
+					棒は、沿って2つに分割され、記号付きの各半分が取引参加者に残っていました。
+					相互に半分を取り付けると、記号が偽造されているかどうかを確認することができました。
+					これは、Karbovanetsネットワークのブロックチェーンの作動と非常によく似ています。
+					</p>
+					
+					<p>「カルボバネツ」は、1996年までの歴史の異なる期間におけるウクライナの通貨単位であり、これもソビエト連邦の通貨単位のウクライナの名称です。</p>
+					
+					<p>
+					今それはグリブナというウクライナの領土で法的な支払い手段と取り替えられます。
+					したがって、「Karbovanets」は、とても有名な言葉であり、ウクライナだけでなく周辺諸国でもお金に強く関係しています。
+					この言葉は、人々にはよく知られているから、知覚を容易にします。
+					非スラブ語のリソースでは、読書と発音を容易にするようにウクライナ人のユーザーにも人気のある略語「Karbo」を使用しています。
+					</p>
+
+					<p>「カルボバネツ」は、一般的な交換手段（非公式で独立）としてデジタル暗号通貨で復元されました。</p>
+				
+				</section>
+				<section class="breath">
+				
+					<h3>ミッション</h3>
+					
+					<blockquote>
+					  <p><strong>「第4のカルボバネツ」という一般的なデジタル交換手段になります。</strong></p>
+					</blockquote>
+
+					
+					
+				</section>
+				
+					
+				<section class="breath">
+				
+					<p>
+					「Karbovanets」は、オーストリア学派経済学の原則に基づいています。
+					この学派は、価格決定メカニズムの自発的発注の可能性を強調し、者の主観的な選択の複雑さによって現在の市場の数学的モデリングが非常に困難（または不可能）であることを指摘し、したがって、経済の非介入のアプローチを支援しています。
+					
+					オーストリア学派の代表者は、経済主体間の自主協定の厳守、そして経済活動に可能な最小の介入（特に政府の）、または個人的な選択の最大の率直さ（交換の手段を自由に選択とともに）を保護してます。
+					</p>
+				
+					<p>特に、代表者は、貿易に対する政府の介入の有害な影響および歪曲に対して深刻な懸念を表明し、実際には、この分野で唯一のいくつかの政府の規範法が必要または望ましいものであると主張しています。現在の規範法に関連する問題には自由市場がよく間違って責められて、このとおりに市場へのさらなる介入が正当化されるから、多くの場合にアバランシェ効果を引き起こします。
+					彼らは、ただ1つの法定の支払手段に関する全ての法律の即時廃止を主唱したり、国家独占の完全な制御またはの独占の中央銀行下になくて、完全な準備および分散化された金融システムがある自由銀行サービスに戻ったりして、民間資金の生産の分野で長期的な政府の介入を特に批判しています。
+					</p>
+					
+					<p>
+					ノーベル賞受賞者のフリードリヒ・ハイエクは、自立通貨の競争がの大きなプラスの目的があると論文で証明しています。
+					
+					彼は、金銭の発行の分野では、自分の見方から、国家独占が社会のために有害であるので、お金を非国有化することを提案しています。
+					
+					国家独占は、すべての市場参加者に使用させるお金の代わりに競争する自分のお金を発行することを許すべきです。
+					
+					便利で信頼性のある通貨が引く手あまたであります。
+					
+					発行者は、製品を改善してユーザーを引き付けようとします。
+					
+					
+					</p>
+
+
+					<p>「Karbo」は、改善したプライバシーのある平等な分散化された、この価値が自由市場での需要と供給によってのみ形成されたシステムという自由な交換手段としてボランティアによって開発されています。このシステムには、エミッションがシステムの変化していないの数学的アルゴリズムに依存し、誰もが加わって、システムの運用をサポートするために通常のコンピュータが提供するリソースの報酬としてkarbovanetsを受け取って、それの発行に参加することができます。
+					
+					マイニングのカルボのために高価な特殊設備（ASIC）を必要としません。
+					</p>
+				</section>
+				
+				<section class="breath">
+				
+					<h3>カルボの機密性と均一性</h3>
+		
+					<strong>匿名性は、送信者を隠すリング署名、そして受信者を隠すワンタイムメールアドレスによって実行されました。</strong>
+					
+					<h6>機密性</h6>
+					  <p>カルボの送金は、追跡不能でリンク不能であります。  カルボは、ring signatureという暗号化技術を使用して機密性と均一性を提供します。 
+					  すべてのトランザクションは、グループからだれがトランザクションを署名しましたかと確実に識別することが不可能であり、したがってトランザクションを行った者はだれですかと確実に言うことは不可能であるようにグループのメンバーによって署名されています。
+					  
+					  グループの参加者が多ければ多いほど、操作の機密性は高くなります。
+					  
+					  さらに、カルボのトランザクションを関連付けることは不可能です。元のトランザクションが追跡されていない場合でも、アドレスに受け取った送金をとにかく見ることができるが、ディフィ・ヘルマン（Diffie-Hellman）の交換プロトコルのバリアントのおかげで受信者が自分の公開鍵から発信した多くのユニークなワンタイムメールアドレスを持っています。
+					  
+					  これらのアドレスに送信された資金は、受取人だけが使用することができます。
+					  
+					  ネットワーク上の他のトランザクションと区別できないトランザクションを相互に接続することはできません。
+					  </p>
+						 
+					<h6>均一性</h6>
+					  <p>ユニークなワンタイムアドレスとトランザクションのグループ署名（リング署名）は、ブロックの分析に対する抵抗を提供しています。 各トランザクションは、エントロピーを増加させ、カルボとのトランザクションに突っ込んだ研究をしたいと思う人には追加の障害を生成します。</p>
+							  
+					  <p>分析に対する抵抗は、今度、均一性という非常に重要な特性を提供します。  これは、同じ金種のすべてのバリエーションが同じ購買力を持つことを意味します。</p>
+
+					  <p>均一性は、ビットコインとの主な違いと利点であります。 ビットコインと違って、すべてのカルボは、互換および均一であります。ビットコインには、どんな者でもいつでも参加者全員の口座に関するすべてのトランザクションおよびすべてのアドレスの貸借対照表でのビットコインの数を見ることができるからです。 
+					  これは人々の資産の検閲につながる可能性があり、その結果、資金の一部がシステムの他の資金よりも「悪化すること」になります。
+					  たとえば、売り手は、以前の所有者が疑わしいトランザクションのために使用された、または盗まれたと思われるなどのビットコインを取ることを望まないかもしれません。
+					  カルボを使うと、現金を使うようにプライバシー、独立性、自由をもっと得ます。
+					  </p>
+					
+				</section>
+				
+			</div>
+		</div>
+	</div>
+	
+	<div class="container breath" id="roadmap">
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>開発計画</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+			
+				<ul class="timeline">
+					<li>
+					  <div class="timeline-badge success"><i class="fa fa-bullhorn"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> プロジェクトの開始</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 30.05.2016, 11:05:34</small></p>
+						</div>
+						<div class="timeline-body">
+						  <ul>
+							<li><a href="https://bitcointalk.org/index.php?topic=1491747">Bitcointalk</a>フォーラムに立ち上げについてお知らせとマイニングの開始。</li>
+							<li>公式ウェブサイト <a href="http://karbowanec.com">http://karbowanec.com</a></li>
+							<li>WindowsとLinux用のウォレット、およびCommand-line suite</li>
+						  </ul>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-binoculars"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> ブロックチェーンの正式なエクスプローラー</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 07.06.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>新しい独立したブラウザが開始されました: <a href="http://explorer.karbowanec.com/">http://explorer.karbowanec.com/</a></p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="glyphicon glyphicon-tint"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> 最初の蛇口</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 22.06.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p><a href="http://faucet.karbowanec.com/">最初</a>の公式の蛇口が開始されました。ここで無料試用カルボを受けることができます</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-paw"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Forknoteのサポート</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 27.06.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>カルボがDemocatsプールに追加されました：
+							<ul>
+								<li><a href="https://democats.org/pool/?name=karbowanec">プール</a></li>
+								<li><a href="https://democats.org/blockchain/?name=karbowanec">エクスプローラー</a></li>
+								<li><a href="https://democats.org/charts/?name=karbowanec">チャート</a></li>
+							</ul>
+						  </p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="fa fa-exchange"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> 取引所に出る</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 05.07.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p><a href="https://www.cryptopia.co.nz/Exchange?market=KRB_BTC">Cryptopia</a>の最初の取引所に配置されました</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-language"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> ウォレットの日本の象形文字のサポート</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 28.08.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>カルボのウォレットだけは、CryptoNoteのベースの暗号通貨のファイルとフォルダ名にはの日本の象形文字を完全にサポートしています。</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="glyphicon fa fa-apple"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> MacOS用ウォレット</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 28.09.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Mac OS用ウォレットがリリースされました。</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-exchange"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Livecoin.netという取引所へ入り口</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 07.10.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p><a href="https://www.livecoin.net/en/trade/orderbook?currencyPair=KRB%2FBTC">Livecoin.net</a>取引所で立会は、開始されました。</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="fa fa-code"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> 重要なアップデート、ハードフォークが計画されます。</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 19.10.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <ul>
+							<li>Bytecoin 1.0.11コアへの変化</li>
+							<li><strong>複雑さの計算のための新しいアルゴリズム</strong></li>
+							<li><strong>残余のエミッション</strong></li>
+							<li>制限付きのRPC（マスターノードのため）</li>
+							<li>マスターノードのための手数料</li>
+						  </ul>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-code-fork"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> ハードフォーク</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 22.12.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p><a href="https://explorer.karbowanec.com/en/?hash=8e39967eb50b8a922cbfe22fe02989218345cbd61ae651ddbecf00834910ff50#blockchain_block">高度60001の</a>ハードコアネットワーク。 このハードバックは、CryptoNoteの標準の複雑さアルゴリズムの遅い応答を悪用した強力なマイナーから保護することのために作られました。このマイナーは、ネットワークの平均電力に比べて非常に高い電力を突然注入して、すぐにたくさんのブロックと報酬を得るために、複雑さが最終的に反応し、それらの電力に対応するレベルに上昇するまでです。
+						  それから、マイニングを停止し、あまりにも高い複雑と戦うべき他のマイナーを残していました。
+						  その結果、ブロックの間に長いギャップまたはトランザクションの確認の遅延を引き起こして致命的な影響を及ぼす可能性があります。
+						  このような攻撃を阻止するために、私たちの変化のあるZawy difficulty algorithm v.1 という新しい複雑さを計算するためのアルゴリズムが導入されました。その元はここで説明されています。
+						  </p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					<li>
+					  <div class="timeline-badge success"><i class="fa fa-hand-o-up"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> ウォレットのURIサポート</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 23.12.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>使いやすいようにURI karbowanec:スキームのサポートが導入されました。 このように、より便利な方法で送金をリクエストする、または支払うことを可能にします。</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-mobile"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> 携帯電話の料金を支払うサービス</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 31.12.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>もう一つの主要管理点は、機会を示すように krbを使ってウクライナの携帯電話会社の携帯電話の料金を支払うための最初の実際のサービスです。</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="fa fa-id-card-o"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> OpenAliasとトラッキング・ウォレット</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 02.04.2017</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p><a href="https://openalias.org/"><em>OpenAlias</em></a>プロトコルのサポートは、使いやすさを向上させるためのもう一つのステップです。<br />
+						  
+						  また、ウォレットの変更点：
+						  <ul>
+							<li><strong>トラッキング・ウォレット</strong></li>
+							<li>マイニング・ソロ</li>
+							<li>Karboでのリブランディングの始まり</li>
+							<li>さまざまな修正、改善</li>
+						  </ul>
+						  </p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-bug"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> セキュリティアップデート</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 10.04.2016, 12:00 PM UTC</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>2017-05-17 00:00:00 +0200にMonero開発者によって公開された <a href="https://getmonero.org/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html">Disclosure of a Major Bug in CryptoNote Based Currencies</a>からの保護するためのセキュリティアップデートです。 
+						  
+						  開示の公開時点では、ForknoteからのslbとMoneroチームのおかげで、<a href="https://github.com/seredat/karbowanec/commit/4da156f2f07784ac24dde65d98517b1ffc99156f">この脆弱性はすでに解消されました</a>。</p>
+						  <p>このアップデート中にNetwork IDは、寄生ネットワークからのノードのスパムによって発生したエラーがなくなるため、またはすべてのユーザーの新しいバージョンへの移行を確実にするために変更されました。</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="fa fa-exchange"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> 1番のウクライナ取引所 - KRB/UAH</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 02.04.2017</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p><a href="https://btc-trade.com.ua/stock/krb_uah">BTC Trade UA</a>という1番のウクライナ取引所で立会は、開始されました。</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-shopping-cart"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> 支払いゲートウェイ、電子商Ｅコマースのためのプラグイン</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 02.04.2017</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>オンラインショップ用のプラグインのある無料の支払いゲートウェイ <a href="https://karbo.club/">karbo.club</a></strong></p>
+						  <ul>
+							<li><a href="https://github.com/Karbovanets/karbo-woocommerce"><strong>WooCommerce用のKarboプラグイン</strong></a></li>
+							<li><a href="https://github.com/Karbovanets/karbo-plugin-opencart"><strong>OpenCart用のKarboプラグイン</strong></a></li>
+						  </ul>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="glyphicon glyphicon-leaf"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> ウォレットのニーモニック・フレーズ</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 12.10.2017</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>ウォレットを復元するためのニーモニック・フレーズをサポートするウォレットの更新です。</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge primary"><i class="glyphicon glyphicon-phone"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-spinner fa-pulse fa-fw"></i> モバイルウォレット</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> ETA Q4 2017</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>リモートノードのネットワークを介して動作する簡単なモバイルウォレットです。 アルファ版の開発と検査は、続けられています。</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					<div class="timeline-badge primary"><i class="glyphicon glyphicon-globe"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-spinner fa-pulse fa-fw"></i> ブランド変更と新しいウェブサイト</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Q4 2017</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>世界中の視聴者の認識を良くするために新しいサイトとKarboの名称の変更です。</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					<div class="timeline-badge primary"><i class="glyphicon glyphicon-bullhorn"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-spinner fa-pulse fa-fw"></i> プロモーションキャンペーン</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Q4 2017</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>ウクライナと世界中に Karboプロジェクトに関する情報を広めるための活動です。</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge warning"><i class="fa fa-lightbulb-o"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-cogs" aria-hidden="true"></i> ライト・ウェブサイト/h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> ETA Q1 2018</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>簡素化されたインターフェイスのあるリモートノードのネットワークを介して動作するPC用のライト・ウェブサイトは、PCおよびブロックチェーンテクノロジーを詳しく知らないユーザー向けに設計されています。</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge primary"><i class="fa fa-cloud"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-spinner fa-pulse fa-fw"></i> ウェブ・ウォレット</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> ETA Q1 2018</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>ウェブ・ウォレットの開発が続いています。</p>
+						</div>
+					  </div>					  
+					</li>
+					<li>
+					  <div class="timeline-badge warning"><i class="fa fa-flask"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-cogs" aria-hidden="true"></i> 複雑さのアルゴリズム</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Q1 2018</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p><a href="https://github.com/seredat/karbowanec/commit/231db5270acb2e673a641a1800be910ce345668a#commitcomment-24807829">Zawy v1b</a>アルゴリズムを最新バージョンに更新します。 これは、Githubリポジトリに著者と一緒に開発されたアルゴリズムの改良です。</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge warning"><i class="fa fa-flask"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-cogs" aria-hidden="true"></i> 追跡不可能性の改善</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Q2 2018</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>出力を選択するアルゴリズムを更新します（三角分布）。</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge warning"><i class="fa fa-flask"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-cogs" aria-hidden="true"></i> 完全なトラッキング・ウォレット</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2019</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>トラッキング・キーは、入力および出力トランザクションのモニタリングを可能にします。</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge warning"><i class="fa fa-rocket"></i></div>
+					</li>
+				</ul>
+			
+			</div>
+		</div>
+	</div>		
+
+	
+	<div>
+		<div class="container breath" id="specs"> 
+			<div class="row">
+				<div class="col-md-12">
+					<h2>仕様</h2>
+				</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+			
+			</div>
+		</div>
+	
+		
+		
+		<div class="row">
+			<div class="col-md-6">
+			
+				<h3 style="margin-bottom:20px;">仕様</h3>
+				<ul style="margin-bottom:30px;padding-left:15px;">
+					<li>Proof-of-workアルゴリズム： CryptoNight</li>
+					<li>ブロック時間：240秒</li>
+					<li>難易度：各ブロックのターゲットを変更する</li>
+					<li>ブロックの報酬：方式に従って各ブロックの多少低下<br/>
+						<span class="text-primary text-center">BaseReward = (MSupply - A)/2<sup>18</sup></span><br/>
+						ここに「MSupply」は、最小単位の数、「A」は、すでに受けたコインの数です。
+					</li>
+					<li>可分：10<sup>12</sup>単位（小数点以下12桁まで）</li>
+					<li>エミッション：コインの一定の最初の量は、最小単位の10,000,000,000,000,000,000、または1,000万krbです。</li>
+					<li>追加エミッション：年間に当初量の~2%、ブロックの最低報酬は、1 krbです。
+					<br />
+					<small>ブロックの報酬が1 krbに減少した後 （最初のエミッションの97％）、それはずっとそのままであります。</small></li>
+				</ul>
+				
+			</div>
+			<div class="col-md-6">
+				
+				<h3 style="margin-bottom:20px;">リアルタイム統計</h3>
+				<ul style="margin-bottom:30px;padding-left:15px;">
+					<li>ブロックチェーンの高さ： <a href="http://explorer.karbowanec.com/" class="normal-links" target="_blank" id="last-block-url"><span id="blockchain-height">loading...</span></a></li>
+					<li>ネットワークの速度： <span id="hashrate">loading...</span></li>
+					<li>マイニングの複雑さ： <span id="difficulty">loading...</span></li>
+					<li>最後のブロックの報酬： <span id="reward">loading...</span></li>
+					<li>最後のブロック時間： <span id="last-block">loading...</span></li>
+					<li>鋳造したコインの合計： <span id="emission">loading...</span></li>
+				</ul>
+
+			</div>
+		
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<span class="label label-info">エミッションのスケジュール</span>
+				<div id="emission">
+					<canvas id="emissionChart"></canvas>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+
+</article>
+
+<!-- FOOTER -->
+<footer class="grad1">
+   <div class="container">
+	 <div class="breath">
+        <div class="row">
+          <div class="col-lg-4">
+			<p>&copy; 2016-2017 カルボ. 
+		  
+			E-mail:&nbsp;krbcoin@ukr.net</p>
+			
+			<div
+			  class="fb-like"
+			  data-share="true"
+			  data-width="300"
+			  data-show-faces="true">
+			</div>
+		  </div>
+          <div class="col-lg-8">
+			<p  class="text-right">
+				<a href="/privacy">プライバシーポリシー</a>
+				|
+				<a href="/jp/terms">利用規約</a> 
+				|
+				<a href="https://donate.karbo.io/">寄付</a>
+				|
+				<a href="http://karbo.foundation">財団</a>
+				|
+				<a href="https://forum.karbo.io/">フォーラム</a>
+			</p>
+		  </div>
+		</div>
+	 </div>
+  </div>
+</footer>
+<!-- END FOOTER -->
+
+<!-- JS and analytics only. --> 
+<!-- Bootstrap core JavaScript
+================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="/js/jquery.js"></script> 
+<script src="/js/bootstrap.min.js"></script> 
+<script src="/js/easing.js"></script> 
+<script src="/js/rates.js"></script>
+<script src="/js/tools.js"></script>
+<script src="/js/Chart.min.js"></script>
+
+
+<script>
+$(function () {
+            emissionSpeedFactor = 18;
+            difficultyTarget = 240;
+            moneySupply = 10000000;
+			
+	getEmission = function() {
+            var dots = [],
+                days = 10 * 365,
+                k = 1 / Math.pow(2, emissionSpeedFactor),
+                val;
+
+            for (var d = 0; d < days; d += 365) {
+                val = moneySupply * ((k - 1) * Math.pow((1 - k), (d * 86400 / difficultyTarget)) + 1);
+                dots.push(Math.round(val * 100 / moneySupply));
+            }
+            return dots;
+	}
+	getReward = function() {
+			var dots = [],
+                days = 10 * 365,
+                k = 1 / Math.pow(2, emissionSpeedFactor),
+                val2;
+
+            for (var d = 0; d < days; d += 365) {
+				var day0 = moneySupply * ((k - 1) * Math.pow((1 - k), (d * 86400 / difficultyTarget)) + 1);
+				var day1 = moneySupply * ((k - 1) * Math.pow((1 - k), ((d + 1) * 86400 / difficultyTarget)) + 1);
+				    val2 = Math.round(((day1 - day0) * difficultyTarget / (86400 * Math.pow(1, 12)))*100)/100;
+				// tail emission
+				if (val2 < 1) {
+					val2 = 1;
+				}
+				
+				dots.push(val2);
+			}
+            return dots;
+	}
+
+var ctx = document.getElementById('emissionChart').getContext('2d');
+var gradientE = ctx.createLinearGradient(0, 0, 0, 400);
+    gradientE.addColorStop(0, 'rgba(0, 87,184, 1)') // show this color at 0%;
+	gradientE.addColorStop(0.5, 'rgba(0, 162, 232, 0.2)'); // show this color at 50%
+	gradientE.addColorStop(1, 'rgba(255, 255, 255, 0)'); // show this color at 100%
+var gradientR = ctx.createLinearGradient(0, 0, 0, 400);
+	gradientR.addColorStop(0, 'rgba(255, 242,0, 0.8)') // show this color at 0%;
+	gradientR.addColorStop(0.5, 'rgba(255, 242,0, 0.7)'); // show this color at 50%
+	gradientR.addColorStop(1, 'rgba(239, 228, 176, 0.5)'); // show this color at 100%
+	
+var emChart = new Chart(ctx, {
+  type: 'line',
+  data: {
+      labels: ['初め', '1 年', '2 年', '3 年', '4 年', '5 年', '6 年', '7 年', '8 年', '9 年'],
+      datasets: [{
+      label: 'エミッション, %',
+      yAxisID: 'E',
+	  backgroundColor: gradientE,
+      borderColor: '#0057B8',
+	  borderWidth: 2,
+	  pointColor : "#fff",
+      pointBorderColor : "#0057B8",
+      pointHighlightFill: "#0057B8",
+      pointBackgroundColor: "#0057B8",
+	  pointBorderWidth: 4,
+	  pointRadius: 3,
+	  pointHoverRadius: 5,
+      data: getEmission()
+    }, {
+      label: '報酬, KRB',
+      yAxisID: 'R',
+	  backgroundColor: gradientR,
+      borderColor: '#FFF200',
+	  borderWidth: 2,
+	  pointColor : "#fff",
+      pointBorderColor : "#FFF200",
+      pointHighlightFill: "#FFF200",
+      pointBackgroundColor: "#FFF200",
+	  pointBorderWidth: 4,
+	  pointRadius: 3,
+	  pointHoverRadius: 5,
+      data: getReward()
+    }]
+  },
+  options: {
+	maintainAspectRatio: false,
+	responsive: true,
+    scales: {
+      yAxes: [{
+        id: 'E',
+        type: 'linear',
+        position: 'right',
+		scaleLabel: {
+			display: true,
+			labelString: 'エミッション %'
+		}
+		//gridLines: {
+        //    display:false
+        //},
+		//display: false
+      }, {
+        id: 'R',
+        type: 'linear',
+        position: 'left',
+		scaleLabel: {
+			display: true,
+			labelString: 'ブロックの報酬, KRB'
+		}
+		//gridLines: {
+        //    display:false
+        //},
+		//display: false
+      }],
+	  xAxes: [{
+		//display: false
+	  }]
+    }
+  }
+});
+	
+
+});
+</script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.8.0/css/flag-icon.min.css">
+
+</body>
+</html>

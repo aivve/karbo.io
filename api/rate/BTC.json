@@ -1,0 +1,39 @@
+{
+    "status": {
+        "timestamp": "2019-08-03T08:11:39.367Z",
+        "error_code": 0,
+        "error_message": null,
+        "elapsed": 14,
+        "credit_count": 1
+    },
+    "data": {
+        "KRB": {
+            "id": 1340,
+            "name": "Karbo",
+            "symbol": "KRB",
+            "slug": "karbo",
+            "num_market_pairs": 5,
+            "date_added": "2016-08-11T00:00:00.000Z",
+            "tags": [
+                "mineable"
+            ],
+            "max_supply": null,
+            "circulating_supply": 7706933.64347167,
+            "total_supply": 7706933.64347167,
+            "platform": null,
+            "cmc_rank": 876,
+            "last_updated": "2019-08-03T08:11:01.000Z",
+            "quote": {
+                "BTC": {
+                    "price": 0.000007775766919027078,
+                    "volume_24h": 0.17115262108846835,
+                    "percent_change_1h": 0.5343,
+                    "percent_change_24h": -2.0178,
+                    "percent_change_7d": -1.4189,
+                    "market_cap": 59.92731967204385,
+                    "last_updated": "2019-08-03T08:10:26.000Z"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Meta, title, CSS, favicons, etc. -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Cryptographic Digital Exchange Medium - P2P Exchange Network or Cryptocurrency">
+<title>Karbo - Decentralized Exchange Medium</title>
+
+<link rel="alternate" href="/" hreflang="x-default" />
+<link rel="alternate" href="/ua/" hreflang="uk_UA" />
+<link rel="alternate" href="/ru/" hreflang="ru_RU" />
+<link rel="alternate" href="/pl/" hreflang="pl_PL" />
+<link rel="alternate" href="/es/" hreflang="es_ES" />
+<link rel="alternate" href="/cn/" hreflang="zh_CN" />
+<link rel="alternate" href="/jp/" hreflang="ja_JP" />
+<link rel="alternate" href="/kr/" hreflang="ko_KR" />
+
+<!-- Bootstrap core CSS -->
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Karbo CSS -->
+<link href="/css/karbo.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <script src="js/respond.min.js"></script>
+<![endif]-->
+
+<!-- Favicons -->
+<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="icon" type="image/icon" href="/images/favicon.ico" >
+<script src="/js/pace.js"></script>
+<!-- Custom Google Font -->
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans:200,200i,300,300i,400,400i,700,700i,900,900i&amp;subset=cyrillic,latin-ext" rel="stylesheet">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-78493281-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<meta property="og:url" content="http://www.karbo.io" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Electronic Karbovanets" />
+<meta property="og:description" content="Karbo (Electronic Karbovanets) - digital exchange medium, algorithmic stablecoin" />
+<meta property="og:image" content="https://karbo.io/images/karbo_io.jpg" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1092" />
+<meta property="og:image:height" content="684" />
+
+<script src="https://kit.fontawesome.com/2058fca1c3.js"></script>
+</head>
+<body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1631255797202963',
+      xfbml      : true,
+      version    : 'v2.7'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Fixed navbar -->
+    <div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">
+			<div id="coinIcon">
+				<svg version="1.1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+					xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px"
+					height="32px" viewBox="0 0 206.569 206.568" enable-background="new 0 0 206.569 206.568" xml:space="preserve">
+					<g id="navbar-logo-k">			
+						<rect x="42.621" y="67.455" fill="#0E0740" width="121.327" height="14.829"/>
+						<polygon fill="#0E0740" points="164.002,142.947 103.339,82.284 42.675,142.947 53.162,153.434 103.339,103.256 153.516,153.434 "/>
+					</g>
+				</svg>
+				</div> <strong>Karbo</strong></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+			  <a href="/download">Download</a>
+			</li>
+			<li>
+			  <a href="https://wallet.karbo.org/">Web Wallet</a>
+			</li>
+			<li>
+              <a href="/use">Use</a>
+            </li>
+			<li>
+              <a href="/pay">Pay</a>
+            </li>
+			<li>
+              <a href="/info">Info</a>
+            </li>
+			<li>
+              <a href="https://explorer.karbo.io/">Explorer</a>
+            </li>
+			<li class="dropdown">
+			  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-language" aria-hidden="true"></i> <span class="caret"></span></a>
+			  <ul class="dropdown-menu" role="menu">
+				<li><a href="/"><span class="flag-icon flag-icon-us"></span> English</a></li>
+				<li><a href="/ua/"><span class="flag-icon flag-icon-ua"></span> Українська</a></li>
+				<li><a href="/ru/"><span class="flag-icon flag-icon-ru"></span> Русский</a></li>
+				<li><a href="/pl/"><span class="flag-icon flag-icon-pl"></span> Polski</a></li>
+				<li><a href="/es/"><span class="flag-icon flag-icon-es"></span> Español</a></li>
+				<li><a href="/cn/"><span class="flag-icon flag-icon-cn"></span> 简体中文</a></li>
+				<li><a href="/jp/"><span class="flag-icon flag-icon-jp"></span> 日本語</a></li>
+				<li><a href="/kr/"><span class="flag-icon flag-icon-kr"></span> 한국어</a></li>
+			  </ul>
+			</li>
+			<li class="dropdown">
+			<a href="#" class="price dropdown-toggle" data-toggle="dropdown"><span id="usd_price"></span> <span id="arrowplace"></span> <span class="caret"></span></a>
+			<ul class="dropdown-menu" role="menu">
+				<li><a href="#calc" id="btc_price"></a></li>
+				<li><a href="#calc" id="cny_price"></a></li>
+				<li><a href="#calc" id="eur_price"></a></li>
+				<li><a href="#calc" id="jpy_price"></a></li>
+				<li><a href="#calc" id="krw_price"></a></li>
+				<li><a href="#calc" id="rur_price"></a></li>
+				<li><a href="#calc" id="uah_price"></a></li>
+			</ul>
+			</li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+   </div>
+<!--// Navbar Ends-->
+
+<script src="/js/jquery.js"></script>
+<script src="/js/multicalc.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/easing.js"></script>
+<script src="/js/typer.js"></script>
+<script src="/js/Chart.min.js"></script>
+	
+	
+<!-- Parallax Header Starts -->
+<div class="wrapper">
+ <main id="top" class="masthead" role="main">
+  <div class="spash karbo grad-splash" id="splash" style="height: 1444px;">
+  <div class="lg-bg-overlay"></div>
+  <div class="intro">
+	<div class="container">
+		<div class="row">
+		  <div class="center-block" style="float: none;">
+			<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 splash-halve">
+			
+				<div class='logo'>
+					<div class="coins">
+					  <div class="avers">
+						<div>
+						  <div class='coin -one'></div>
+						  <div class='coin -two'></div>
+						  <!--div class='coin -four'></div-->
+						  <div class='coin -three'></div>
+						</div>
+						<div class='sign'>
+						  <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+							viewBox="0 0 2500000 2500000"
+							 xmlns:xlink="http://www.w3.org/1999/xlink">
+							 <defs>
+							  <style type="text/css">
+							   <![CDATA[
+								.kstr0 {stroke:#none;stroke-width:35250}
+								.kfil0 {fill:#ffed00}
+								.kfil1 {fill:#ffed00;fill-rule:nonzero}
+								.kfil2 {fill:#14B0FD}
+							   ]]>
+							  </style>
+							 </defs>
+							 <g id="krb-logo">
+							  <!--circle class="kfil2 kstr0" cx="1250000" cy="1250000" r="1214062"/-->
+							  <path class="kfil1 kstr0" d="M1251219 1162750c18009,-3203 34019,-10006 48025,-20412 14009,-10407 27215,-28016 39622,-52029l275750 -538290c10803,-18010 24012,-32419 39218,-43625 15210,-10806 33219,-16410 53232,-16410l174893 0 -343384 633144c-15209,26016 -32419,47228 -51628,63635 -19613,16409 -41225,28815 -64838,37221 36822,9604 67638,25213 92854,47225 24812,21610 48425,52025 70437,91247l330578 668363 -192503 0c-38822,0 -70041,-21213 -93653,-63235l-270947 -566303c-14006,-25215 -29216,-43225 -45622,-54034 -16409,-10803 -37222,-17206 -62034,-18809l0 287359 -151281 0 0 -288559 -111263 0 0 703581 -213716 0 0 -1540835 213716 0 0 673166 111263 0 0 -332981 151281 0 0 330581z"/>
+							 </g>
+							</svg>
+						</div>
+						<!-- div class='sign'>
+							<svg version="1.1" id="ks" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+								 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="256.569px"
+								 height="256.568px" viewBox="0 0 206.569 206.568" enable-background="new 0 0 206.569 206.568" xml:space="preserve">
+							<metadata>
+							</metadata>
+							< !--path fill-rule="evenodd" clip-rule="evenodd" fill="#196CE8" d="M103.284,0c57.042,0,103.285,46.242,103.285,103.284
+								c0,57.042-46.242,103.284-103.285,103.284S0,160.326,0,103.284C0,46.242,46.242,0,103.284,0"/ -- >
+							<rect x="42.621" y="67.455" fill="#FFEC00" width="121.327" height="14.829"/>
+							<polygon fill="#FFEC00" points="164.002,142.947 103.339,82.284 42.675,142.947 53.162,153.434 103.339,103.256 153.516,153.434 "/>
+							</svg>
+						</div -->
+					  </div>
+					</div>
+				</div>
+			
+			</div>
+			<div class="col-lg-6 col-md-5 col-sm-6 col-xs-12 col-md-offset-1 splash-halve">
+			
+				<h1 class="karb-logo" style="margin: 124px 0 10px -10px; color: #FFEC00;">Karbo</h1>
+				<!--h1 class="karb-sub-logo"><small>Electronic Karbovanets</small></h1-->
+				
+				<div>
+					<p>
+						<span data-typer-targets="Liberated,Decentralized,Digital,Alternative,Anonymous,Private,Free,Fungible,Untraceable">Decentralized</span>
+						Exchange Medium<br />
+						based&nbsp;on&nbsp;<strong>CryptoNote</strong> <strong><em>blockchain</em></strong> tech.
+					</p>
+				</div>
+
+				<div class="btn-group">
+				  <a id="download_for" href="" class="btn btn-success btn-lg"></a>
+				  <a href="#" class="btn btn-success dropdown-toggle btn-lg" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></a>
+				  <ul class="dropdown-menu">
+					<li id="ForWindows"><a href="">Wallet for Windows</a></li>
+					<li id="ForLinux"><a href="">Wallet for Linux</a></li>
+					<li id="ForMacOS"><a href="">Wallet for Mac OS X</a></li>
+					<li id="ForAndroid"><a href="">Wallet for Android</a></li>
+					<li class="divider"></li>
+					<li><a href="/download">All wallets and clients</a></li>
+					<li class="divider"></li>
+					<li><a href="https://github.com/seredat/karbowanec">Source code</a></li>
+				  </ul>
+				</div>
+				<div class="btn-group">
+					<a href="https://wallet.karbo.org/" class="btn btn-success btn-lg">Web Wallet</a>
+				</div>
+				<div class="btn-group">
+					<a href="/whitepaper.pdf" class="btn btn-success btn-lg">Whitepaper</a>
+				</div>
+
+				<div style="color: #C8EBFA; margin-top: 10px;"><small>By downloading and installing the wallet, you agree to the <a style="color: #C8EBFA; text-decoration: underline;" href="/terms">Terms</a></small></div>
+				
+			</div>
+		  </div>
+		  
+		</div>
+	</div>
+  </div>
+		<!--  Scroll to Explore --> 
+		<p class="scrollto">
+			<a href="#explore">
+				<span class="scrollto--arrow"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				 width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+				<g>
+					<polygon fill="#FFFFFF" points="48.293,23.293 32,39.586 15.707,23.293 14.293,24.854 31.293,42 32.707,42 49.707,24.854 	"/>
+				</g>
+				</svg></span>
+			</a>
+		</p>
+		<!-- // Scroll to Explore Ends --> 
+  </div>
+ </main>
+<script>
+	$(document).ready(function(){
+		// set up hover panels
+		// although this can be done without JavaScript, we've attached these events
+		// because it causes the hover to be triggered when the element is tapped on a touch device
+		$('.logo').hover(function(){
+			$('.logo').addClass('flip');
+		},function(){
+			$('.logo').removeClass('flip');
+		});
+	});
+</script>
+<script>
+function setSplashHeight() {
+	var splashheight = $( window ).height();
+	$('#splash').css('height', splashheight  + "px");
+}
+
+setSplashHeight();
+
+$(window).resize(function(){ 
+	setSplashHeight();
+});
+</script> 
+
+<!-- Typer --> 
+
+<script>
+var OSName="Unknown OS";
+
+function get_bits_system_architecture()
+{
+    var _to_check = [] ;
+    if ( window.navigator.cpuClass ) _to_check.push( ( window.navigator.cpuClass + "" ).toLowerCase() ) ;
+    if ( window.navigator.platform ) _to_check.push( ( window.navigator.platform + "" ).toLowerCase() ) ;
+    if ( navigator.userAgent ) _to_check.push( ( navigator.userAgent + "" ).toLowerCase() ) ;
+
+    var _64bits_signatures = [ "x86_64", "x86-64", "Win64", "x64;", "amd64", "AMD64", "WOW64", "x64_64", "ia64", "sparc64", "ppc64", "IRIX64" ] ;
+    var _bits = 32, _i, _c ;
+    outer_loop:
+    for( var _c = 0 ; _c < _to_check.length ; _c++ )
+    {
+        for( _i = 0 ; _i < _64bits_signatures.length ; _i++ )
+        {
+            if ( _to_check[_c].indexOf( _64bits_signatures[_i].toLowerCase() ) != -1 )
+            {
+               _bits = 64 ;
+               break outer_loop;
+            }
+        }
+    }
+    return _bits ; 
+}
+
+function is_32bits_architecture() { return get_bits_system_architecture() == 32 ? 1 : 0 ; }
+function is_64bits_architecture() { return get_bits_system_architecture() == 64 ? 1 : 0 ; }
+
+var WindowsWalletLink = is_32bits_architecture() ? "https://github.com/seredat/karbowanecwallet/releases/download/v.1.3.6/Karbo-setup-1.3.6-32-bit.exe"
+                                                 : "https://github.com/seredat/karbowanecwallet/releases/download/v.1.3.6/Karbo-setup-1.3.6-64-bit.exe";
+var LinuxWalletLink   = is_32bits_architecture() ? "https://github.com/seredat/karbowanecwallet/releases/download/v.1.3.6/Karbowanec_wallet-1.3.6-xenial-32-bit.deb"
+                                                 : "https://github.com/seredat/karbowanecwallet/releases/download/v.1.3.6/Karbowanec_wallet-1.3.6-xenial-64-bit.deb";
+var MacOSWalletLink   =                            "https://github.com/seredat/karbowanecwallet/releases/download/v.1.3.6/Karbo_wallet_1.3.6.dmg";
+var AndroidWalletLink =                            "https://play.google.com/store/apps/details?id=org.karbo.karbon";
+
+$('#ForWindows').find("a").attr("href", WindowsWalletLink);
+$('#ForLinux').find("a").attr("href", LinuxWalletLink);
+$('#ForMacOS').find("a").attr("href", MacOSWalletLink);
+$('#ForAndroid').find("a").attr("href", AndroidWalletLink);
+
+if (navigator.appVersion.indexOf("Win")!=-1) {
+	OSName="Windows";
+	$('#download_for').text("Download");
+	$('#download_for').attr("href", WindowsWalletLink);
+	$('#wForWindows').hide();
+};
+
+if (navigator.appVersion.indexOf("Linux")!=-1 || navigator.appVersion.indexOf("X11")!=-1) {
+	OSName="Linux";
+	$('#download_for').text("Download");
+	$('#download_for').attr("href", LinuxWalletLink);
+	$('#wForLinux').hide();
+};
+
+if (navigator.userAgent.indexOf("Android")!=-1) {
+	OSName="Android";
+	$('#download_for').text("Install");
+	$('#download_for').attr("href", AndroidWalletLink);
+	$('#wForLinux').show();
+};
+
+if (navigator.appVersion.indexOf("Mac")!=-1) {
+	OSName="Mac OS X";
+	$('#download_for').text("Download");
+	$('#download_for').attr("href", MacOSWalletLink);
+	$('#wForMacOS').hide();
+};
+
+//if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX";
+
+</script>
+
+
+<!-- // Parallax Header Ends --> 
+<!-- Container -->
+<div class="container" id="explore"> 
+    <!-- Features Section -->
+	<div class="row">
+        <div class="col-lg-12">
+			<div id="features" class="section-title">
+
+				<h2 class="text-center">Decentralized Exchange Medium</h2>
+				<div class="text-left breath">
+					<p><strong>Karbo</strong> is a decentralized peer-to-peer exchange network and stable exchange medium, designed to be used by customers and merchants as private Internet money that respects and protects their privacy. It does not have centralized management or issuer and ensures privacy and anonymity of transactions without intermediaries and regulators. Its units of exchange are units of information, cryptographically protected (encrypted) from copying and counterfeiting by the <em>blockchain</em>.</p>
+					
+					<p>Karbo is people's electronic cash, a cryptocurrency, just like Bitcoin but Ukrainian and anonymous thanks to Cryptonote technology. The key principle of CryptoNote is adaptive parameters. Karbo already has adaptive block size limit and adaptive difficulty, which we improved, and which ensures it's stable emission rate and thus makes Karbo sound money. In addition in Karbo was implemented adaptive fee to keep transaction costs stable regardless of karbo price...</p>
+
+
+					<p><a class="text-primary" href="/whitepaper.pdf">More in Whitepaper...</a></p>
+					<a class="text-primary" href="/info">More about Karbo...</a></p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!-- div class="row">
+        <div class="col-lg-12">
+		  < !-- Hero Image -- >
+		  <section class="row heroimg">
+			<div class="col-md-12 text-center"><img src="images/wallet.png" alt="Karbo Wallet"></div>
+		  </section>
+		  < !-- //Hero Image -- > 
+		</div>
+	</div -->
+	  <section class="row feature"> 
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+			<h2>Privacy and<br /> anonymity</h2>
+			<p>
+				The anonymity of payments without the ability to track them, resistance to the blockchain analysis is provided by technology <a href="https://cryptonote.org/"><em>CryptoNote</em></a>. 
+				
+				Privacy is mandatory for all operations, in order for it to be effective. 
+				
+				Due to this, all karbos have the same value and are fungible, that is, they are interchangeable because their history cannot be traced. 
+				
+				Fungibility is required for Karbo to be a full-fledged and effective exchange medium.
+				
+			</p>
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+			<h2>Liberty, reliability<br />
+			and security</h2>
+			<p>
+				The network, transactions, your account, and karbos are cryptographically protected (encrypted). 
+				
+				Only you control your karbos and are responsible for their safety. No one can take them away from you or confiscate them, seize them, deny you access, or restrict your freedom to dispose of your karbos. 
+				
+				You can send them to anyone, anywhere in the world anytime.
+			</p>
+		</div>
+	  </section>
+	  <section class="row feature"> 
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+			<h2>No intermediaries<br /> and regulators</h2>
+			<p>
+				Transactions take place through a decentralized peer-to-peer network without any intermediaries.
+				
+				The emissions system operates according to a predefined mathematical algorithm without central control bodies.
+				
+				The protocol emulates central bank.
+				
+			</p>
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+			<h2>Openness and<br /> accessibility</h2>
+			<p>
+				Karbo is an open and decentralized network. Everyone is welcomed to contribute, participate in mining, development and governance.
+
+				There are no monthly account fees, there is no need for a bank card, license or permission, – you can download a Karbo wallet free of charge.
+			</p>
+		</div>
+	  </section>
+</div>
+
+<!-- div class="container" style="margin-bottom: -150px;"> 
+	<section class="row feature"> 
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+			<h2>Karbo increases your capital</h2>
+			<h4>With each user its value grows*</h4>
+			<p>By holding or using it you directly affect its future.
+			The value of the Karbo is formed solely by the demand and supply in the free market.</p>
+			<p><small>* <a href="https://en.wikipedia.org/wiki/Metcalfe%27s_law">Metcalfe's law</a>: the value of the Karbo network is directly proportional to the square of the number of active users.</small></p>
+		</div>
+	</section>
+</div -->
+<!-- div id="price">
+	<canvas id="priceChart"></canvas>
+</div -->
+
+<div style="background-color: rgba(11, 130, 204, 1);" id="calc">
+  	<div class="container">
+		<div class="section-title">
+			<h2 style="color: white;">Price calculator</h2>
+		</div>
+	  <div class="row">
+		<div class="col-md-12 has-margin-bottom">
+			<div class="breath">
+				<div class="col-md-6 col-md-offset-3">
+				  <div class="panel-body">
+					<div class="form-group">
+					  <div class="col-md-6">
+						<div class="input-group">
+							<input type="text" class="form-control input-lg" id="inputAmountKRB" name="krb" placeholder="1" value="1">
+							<span class="input-group-addon">KRB</span>
+						</div>
+					  </div>
+					  <div class="col-md-6">
+						<div class="input-group">
+							<input type="text" class="form-control input-lg" id="inputAmountCUR" name="cur">
+							<div class="input-group-btn" id="curr-selector">
+							<input type="hidden" id="xcurrency" value="USD">
+							  <button id="curr" class="btn btn-secondary dropdown-toggle input-lg" type="button" data-toggle="dropdown">
+							  <span id="curr_name">USD</span>
+							  <span class="caret"></span></button>
+							  <ul id="select_curr" class="dropdown-menu dropdown-menu-right" aria-describedby="curr-selector">
+								<li><a href="#">BTC</a></li>
+								<li><a href="#">CNY</a></li>
+								<li><a href="#">EUR</a></li>
+								<li><a href="#">JPY</a></li>
+								<li><a href="#">KRW</a></li>
+								<li><a href="#">RUR</a></li>
+								<li><a href="#">UAH</a></li>
+								<li><a href="#">USD</a></li>
+							  </ul>
+							</div>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			</div>
+		</div>      
+	  </div>
+	</div>
+</div>
+
+
+
+<div class="footercta cta grad1" id="cta">
+  	<div class="container">
+	
+		<div class="row">
+			<div class="col-md-12 breath text-center">
+				<a href="/info" class="btn btn-success btn-lg">LEARN MORE</a> 
+				<a href="/mining" class="btn btn-success btn-lg">START MINING</a> 
+				<a href="/use#exchange" class="btn btn-success btn-lg">GET NOW</a> 
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- FOOTER -->
+<footer class="grad1">
+   <div class="container">
+	 <div class="breath">
+        <div class="row">
+          <div class="col-lg-4">
+			<p>&copy; 2016-2019 <strong>Karbo</strong>. 
+		  
+			E-mail:&nbsp;dev@karbo.io</p>
+			
+			<div class="fb-like" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+		  </div>
+          <div class="col-lg-8">
+			<p class="text-right">
+				<a href="/privacy">Privacy policy</a>
+				|
+				<a href="/terms">Terms and conditions</a> 
+				|
+				<a href="/donate">Donate</a>
+				|
+				<a href="http://forum.karbo.io/">Forum</a>
+			</p>
+		  </div>
+		</div>
+	 </div>
+  </div>
+</footer>
+<!-- END FOOTER -->
+
+</div>
+
+<a href="https://psm7.com/awards-2018/nomination/company/project-cryptocurrency/" target="_blank" style="position:fixed; right:0; top:60px; z-index:9999;"><span id="psm-awards-2018" style="background: url(https://psm7.com/awards-2018/wp-content/themes/psmawards-theme/commons/src/images/winners/var-4-bronze.svg) center center no-repeat; width:76px; height:114px; display:inline-block;"></span> </a>
+
+<!-- JS and analytics only. --> 
+<!-- Bootstrap core JavaScript
+================================================== --> 
+
+<script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("navbar").classList.add("navbar-grad-reverse");
+  } else {
+    document.getElementById("navbar").classList.remove("navbar-grad-reverse");
+  }
+}
+</script>
+<script>
+$(function () {
+    $('a').tooltip({
+    trigger: "hover"
+	});
+});
+</script>
+
+<script>
+    $(function () {
+	  $.typer.options.typerInterval = 5000;
+      $('[data-typer-targets]').typer();
+    });
+</script> 
+
+<!-- Scroll to Explore --> 
+<script>
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top - 60
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+</script>
+<script>
+/*
+var dates = [];
+var prices = [];
+var volumes = [];
+var caps = [];
+var dateOptions = {
+					year: 'numeric',
+					month: 'long',
+					day: 'numeric',
+				};
+
+$(document).ready(function() {
+    $.ajax({
+        type: "GET",
+        url: "data/price.txt",
+        dataType: "text",
+        success: function(data) {processData(data);}
+     });
+});
+
+function processData(allText) {
+    var allTextLines = allText.split(/\r\n|\n/);
+    var headers = allTextLines[0].split(';');
+    var lines = [];
+
+    for (var i=1; i<allTextLines.length; i++) {
+        var data = allTextLines[i].split(';');
+        if (data.length == headers.length) {
+
+            var tarr = [];
+            for (var j=0; j<headers.length; j++) {
+                tarr.push(data[j]);
+			}
+            lines.push(tarr);
+        }
+    }
+
+	lines.reverse();
+	
+	for (var i=1; i < lines.length; i++) {
+		dates.push(new Date(lines[i][0]).toLocaleDateString());
+		prices.push(lines[i][4]);
+		volumes.push(lines[i][5]);
+		caps.push(lines[i][6]);
+	}
+	
+}
+
+var ctx = document.getElementById('priceChart').getContext('2d');
+var gradientE = ctx.createLinearGradient(0, 0, 0, 400);
+    gradientE.addColorStop(0, 'rgba(14, 7, 63, 1)') // show this color at 0%;
+	gradientE.addColorStop(1, 'rgba(11, 130, 204, 1)'); // show this color at 100%
+	
+setTimeout(function(){
+var myChart = new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: dates,
+    datasets: [
+	{
+      yAxisID: "Volume",
+	  label: 'Volume, $',
+      data: volumes,
+	  backgroundColor: "rgba(14, 7, 63, 0.1)",
+	  borderWidth: 0,
+	  type: 'bar'
+    },
+	{
+      yAxisID: "Cap",
+	  label: 'Market Cap, $',
+      data: caps,
+      backgroundColor: "rgba(200, 235, 250,0.0)",
+	  borderColor: "rgba(200, 235, 250, 1)",
+	  pointBackgroundColor: "rgba(200, 235, 250,1)",
+	  pointBorderColor: "rgba(200, 235, 250, 1)",
+	  borderWidth: 1,
+	  pointRadius: 0,
+	  pointHoverRadius: 3,
+	  pointHitRadius: 20,
+	  type: 'line'
+    },
+	{
+      yAxisID: "Price",
+	  label: 'Price, $',
+      data: prices,
+      backgroundColor: gradientE,
+	  borderColor: "rgba(6, 32, 130, 0)",
+	  pointBackgroundColor: "rgba(24,131,202,1)",
+	  pointBorderColor: "rgba(24,131,202,1)",
+	  borderWidth: 2,
+	  pointRadius: 0,
+	  pointHoverRadius: 3,
+	  pointHitRadius: 20,
+	  type: 'line'
+    }
+	]
+  },
+  options: {
+            maintainAspectRatio: false,
+			elements: {
+				line: {
+					tension: 0
+				}
+			},
+			responsive: true,
+			title: {
+				display: false
+			},
+			legend: {
+				display: false
+			},
+			scales: {
+			  xAxes: [{
+				display: false
+			  }],
+			  yAxes: [{
+				id: 'Price',
+				type: 'linear',
+				position: 'left',
+				scaleLabel: {
+					display: false,
+					labelString: 'Price'
+				},
+				gridLines: {
+					display:false
+				},
+				ticks: {
+					fontSize: 9,
+					display:false
+				},
+				display: false
+			  },
+			  {
+				id: 'Cap',
+				type: 'linear',
+				position: 'left',
+				scaleLabel: {
+					display: false,
+					labelString: 'Market Cap'
+				},
+				gridLines: {
+					display:false
+				},
+				ticks: {
+					fontSize: 9,
+					display:false
+				},
+				display: false
+			  },
+			  {
+				id: 'Volume',
+				type: 'linear',
+				position: 'left',
+				scaleLabel: {
+					display: false,
+					labelString: 'Volume'
+				},
+				gridLines: {
+					display:false
+				},
+				ticks: {
+					fontSize: 9,
+					display:false
+				},
+				display: false
+			  }
+			  ],
+			},
+			tooltips: {
+				enabled: true,
+				mode: 'single',
+				//mode: 'index',
+				intersect: true,
+				//displayColors: false,
+				callbacks: {
+					title: function(tooltipItem, data) {
+						var time = data.labels[tooltipItem[0].index];
+						return time + '';
+					},
+					label: function(tooltipItem, data) { 
+						var vol			= data.datasets[0].data[tooltipItem.index];
+						var cap			= data.datasets[1].data[tooltipItem.index];
+						var price		= data.datasets[2].data[tooltipItem.index];
+
+						var multistringText = [];
+  
+						var str1 = 'Price: ' + price + '$';
+						var str2 = 'Volume: ' + vol + '$';
+						var str3 = 'Market Cap: ' + cap + '$';
+  
+						multistringText.push(str1);
+						multistringText.push(str2);
+						multistringText.push(str3);
+  
+						return multistringText;
+					}
+				}
+			  }
+			
+  }
+});
+}, 2000);
+*/
+</script>
+<!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.8.0/css/flag-icon.min.css">
+
+</body>
+</html>

@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Meta, title, CSS, favicons, etc. -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Technical specification of Karbo Cryptographic Digital Exchange Medium - p2p exchange network">
+<title>Information and Specification of Karbo - Decentralized Exchange Medium</title>
+
+<link rel="alternate" href="/" hreflang="x-default" />
+<link rel="alternate" href="/ua/" hreflang="uk_UA" />
+<link rel="alternate" href="/ru/" hreflang="ru_RU" />
+<link rel="alternate" href="/pl/" hreflang="pl_PL" />
+<link rel="alternate" href="/es/" hreflang="es_ES" />
+<link rel="alternate" href="/cn/" hreflang="zh_CN" />
+<link rel="alternate" href="/jp/" hreflang="ja_JP" />
+<link rel="alternate" href="/kr/" hreflang="ko_KR" />
+
+<!-- Bootstrap core CSS -->
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Karbo CSS -->
+<link href="/css/karbo.css" rel="stylesheet">
+<link href="/css/timeline.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <script src="js/respond.min.js"></script>
+<![endif]-->
+
+<!-- Favicons -->
+<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="icon" type="image/icon" href="/images/favicon.ico" >
+<!-- Custom Google Font -->
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans:200,200i,300,300i,400,400i,700,700i,900,900i&amp;subset=cyrillic,latin-ext" rel="stylesheet">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-78493281-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<meta property="og:url" content="http://www.karbo.io" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Electronic Karbovanets" />
+<meta property="og:description" content="Karbo (Electronic Karbovanets) - digital exchange medium, algorithmic stablecoin" />
+<meta property="og:image" content="https://karbo.io/images/karbo_io.jpg" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1092" />
+<meta property="og:image:height" content="684" />
+
+<script src="https://kit.fontawesome.com/2058fca1c3.js"></script>
+</head>
+<body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1631255797202963',
+      xfbml      : true,
+      version    : 'v2.7'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Fixed navbar -->
+    <div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">
+			<div id="coinIcon">
+				<svg version="1.1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+					xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px"
+					height="32px" viewBox="0 0 206.569 206.568" enable-background="new 0 0 206.569 206.568" xml:space="preserve">
+					<!--path fill-rule="evenodd" clip-rule="evenodd" fill="#FFEC00" d="M103.284,0c57.042,0,103.285,46.242,103.285,103.284
+								c0,57.042-46.242,103.284-103.285,103.284S0,160.326,0,103.284C0,46.242,46.242,0,103.284,0"/-->
+					<g id="navbar-logo-k">			
+						<rect x="42.621" y="67.455" fill="#0E0740" width="121.327" height="14.829"/>
+						<polygon fill="#0E0740" points="164.002,142.947 103.339,82.284 42.675,142.947 53.162,153.434 103.339,103.256 153.516,153.434 "/>
+					</g>
+				</svg>
+				</div> <strong>Karbo</strong></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+			  <a href="/download">Download</a>
+			</li>
+			<li>
+			  <a href="https://wallet.karbo.org/">Web Wallet</a>
+			</li>
+			<li>
+              <a href="/use">Use</a>
+            </li>
+			<li>
+              <a href="/pay">Pay</a>
+            </li>
+			<li>
+              <a href="/info">Info</a>
+            </li>
+			<li>
+              <a href="https://explorer.karbo.io/">Explorer</a>
+            </li>
+			<li class="dropdown">
+			  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-language" aria-hidden="true"></i> <span class="caret"></span></a>
+			  <ul class="dropdown-menu" role="menu">
+				<li><a href="/"><span class="flag-icon flag-icon-us"></span> English</a></li>
+				<li><a href="/ua/"><span class="flag-icon flag-icon-ua"></span> Українська</a></li>
+				<li><a href="/ru/"><span class="flag-icon flag-icon-ru"></span> Русский</a></li>
+				<li><a href="/pl/"><span class="flag-icon flag-icon-pl"></span> Polski</a></li>
+				<li><a href="/es/"><span class="flag-icon flag-icon-es"></span> Español</a></li>
+				<li><a href="/cn/"><span class="flag-icon flag-icon-cn"></span> 简体中文</a></li>
+				<li><a href="/jp/"><span class="flag-icon flag-icon-jp"></span> 日本語</a></li>
+				<li><a href="/kr/"><span class="flag-icon flag-icon-kr"></span> 한국어</a></li>
+			  </ul>
+			</li>
+			<li class="dropdown">
+			<a href="#" class="price dropdown-toggle" data-toggle="dropdown"><span id="usd_price"></span> <span id="arrowplace"></span> <span class="caret"></span></a>
+			<ul class="dropdown-menu" role="menu">
+				<li><a href="#calc" id="btc_price"></a></li>
+				<li><a href="#calc" id="cny_price"></a></li>
+				<li><a href="#calc" id="eur_price"></a></li>
+				<li><a href="#calc" id="jpy_price"></a></li>
+				<li><a href="#calc" id="krw_price"></a></li>
+				<li><a href="#calc" id="rur_price"></a></li>
+				<li><a href="#calc" id="uah_price"></a></li>
+			</ul>
+			</li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+   </div>
+<!--// Navbar Ends-->
+
+<div class="wrapper"></div>
+
+<article>
+
+<!--SUBPAGE HEAD-->
+
+	<div class="subpage-head grad breath inverse">
+	  <div class="container">
+		<div class="section-title">
+		  <h2>Information about Karbo</h2>
+		  <h4>Information and Specification</h4>
+		</div>
+	  </div>
+	</div>
+
+<!-- // END SUBPAGE HEAD -->
+
+
+
+	<div class="container breath" id="links"> 
+		<div class="row">
+			<div class="col-sm-12 col-md-6 col-lg-4">
+				  <h2>Useful links</h2>
+					<ul class="list-group">
+						<li class="list-group-item"><a href="/mining">Mining</a></li>
+						<li class="list-group-item"><a href="https://explorer.karbowanec.com/#pools">Mining pools</a></li>
+						<li class="list-group-item"><a href="http://bootstrap.karbo.io/">Download blockchain</a></li>
+						<li class="list-group-item"><a href="https://explorer.karbo.io/">Official blockchain explorer</a></li>
+						<li class="list-group-item"><a href="https://explorer.karbo.io/">Alt. official blockchain explorer</a></li>
+						<li class="list-group-item"><a href="https://karbo.io/paperwallet/old/">Paperwallet (classic/nondeterministic)</a></li>
+						<li class="list-group-item"><a href="https://karbo.io/paperwallet/">Mnemonic Paperwallet (offline wallet generator)</a></li>
+						<li class="list-group-item"><a href="/paymentid">Payment ID generator</a></li>
+						<li class="list-group-item"><a href="/doc">Documentation</a></li>
+						<li class="list-group-item"><a href="https://github.com/seredat/karbowanec">Source code</a></li>
+						<li class="list-group-item"><a href="/promo">Media kit</a></li>
+					</ul>
+			</div>
+			
+			<div class="col-sm-12 col-md-6 col-lg-4">
+				
+				<h2>Community sites</h2>
+			
+				<div class="alert alert-dismissible alert-warning">
+				  <button type="button" class="close" data-dismiss="alert">&times;</button>
+				  <p>The official Karbo site is <a href="https://karbo.io">karbo.io</a> & <a href="https://karbo.org">karbo.org</a></p>
+				</div>
+				
+					<ul class="list-group">
+						<li class="list-group-item"><a href="https://karbo.wiki/">karbo.wiki</a> – user guides, knowledge base and help</li>
+						<li class="list-group-item"><a href="http://map.karbo.xyz/">map.karbo.xyz</a> - nodes map</li>
+					</ul>
+			
+				<p>Alternative/old domains:</p>
+				
+					<ul class="list-group">
+						<li class="list-group-item"><a href="http://karbowanec.com">http://karbowanec.com</a></li>
+						<li class="list-group-item"><a href="http://karbovanets.org">http://karbovanets.org</a></li>
+					</ul>
+			</div>
+			
+			<div class="col-sm-12 col-md-6 col-lg-4">
+				
+				<h2>Accept Karbo</h2>
+			
+				<p>Payment Gateways:</p>
+				
+					<ul class="list-group">
+						<li class="list-group-item"><a href="/pay">Simple POS</a> – free Point of sale app that works with any wallet and with any Karbo node decentralized API</li>
+						<li class="list-group-item"><a href="https://karbo.club">Karbo.Club</a> - free payment gateway with e-commerce plugins, requires registration</li>
+					</ul>
+			</div>
+		
+		
+		</div>
+	</div>
+
+	<div>
+		<div class="container breath" id="specs"> 
+			<div class="row">
+				<div class="col-md-12">
+					<h2>Specification</h2>
+				</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+			
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-6">
+			
+				<h3 style="margin-bottom:20px;">Specification</h3>
+				<ul style="margin-bottom:30px;padding-left:15px;">
+					<li>Ticker: KRB</li>
+					<li>Symbol: Ҝ &ndash; Ka with vertical stroke, it is a letter of the Cyrillic script. Its form is derived from the Cyrillic letter Ka (К к) by the addition of a stroke through the short horizontal bar in the centre of the letter.</li>
+					<li>Proof-of-work algorithm: CryptoNight</li>
+					<li>Block time: 240 seconds</li>
+					<li>Difficulty: retarget each block</li>
+					<li>Block reward: slight decrease every block according to formula:<br/>
+						<span class="text-primary text-center">BaseReward = (MSupply - A)/2<sup>18</sup></span><br/>
+						where MSupply is the number of atomic units and 'A' is amount of already generated coins
+					</li>
+					<li>Divisible up to: 10<sup>12</sup> atomic units (up to 12 decimal places)</li>
+					<li>Emission: infinite, initial supply &ndash; 10,000,000,000,000,000,000 atomic units, or 10 million krb.</li>
+					<li>Tail emission: ~2% of initial supply per year, minimal block reward: 1 krb.</li>
+				</ul>
+				
+			</div>
+			<div class="col-md-6">
+				
+				<h3 style="margin-bottom:20px;">Live stats</h3>
+				<ul style="margin-bottom:30px;padding-left:15px;">
+					<li>Blockchain height: <a href="http://explorer.karbowanec.com/" class="normal-links" target="_blank" id="last-block-url"><span id="blockchain-height">loading...</span></a></li>
+					<li>Hashrate: <span id="hashrate">loading...</span></li>
+					<li>Difficulty: <span id="difficulty">loading...</span></li>
+					<li>Last block reward: <span id="reward">loading...</span></li>
+					<li>Last block time: <span id="last-block">loading...</span></li>
+					<li>Available supply: <span id="emission">loading...</span></li>
+				</ul>
+
+			</div>
+		
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<span class="label label-info">Emission chart</span>
+				<div id="emission">
+					<canvas id="emissionChart"></canvas>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	
+	<div class="breath" id="about"> 
+		<div class="container">
+					
+			<section>
+				<h2>What is Karbo?</h2>
+
+				<p>The goal of Karbo project is to create <strong>anonymous algorithmic <em>stablecoin</em></strong> – decentralized cryptocurrency with <em>low price volatility</em> by using new to world of cryptocurrency techniques of regulating coin supply and its market price.</p>
+
+				<p>Key principle of CryptoNote is adaptive parameters. Karbo already has adaptive block size limit and difficulty. In addition to it Karbo will implement adaptive emission, minimal transaction fee and monetary deposit interest rate to achieve this goal.</p>
+
+				<p>These changes are based on Vitalik Buterin [2] and Scott Roberts [1] idea that coin price can be determined by difficulty. Hence it can be regulated by adapting above parameters.</p>
+
+				<strike><h6>Adaptive emission</h6>
+
+				<p>As described by Scott Roberts (Zawy), one of the Karbo whitepaper authors, all variables for smoothing out volatility must be obtained not from third-party source, but from blockchain itself to be fully decentralized. It is possible and will be first implemented in Karbo:
+
+				<li>“difficulty is exactly proportional to network hashrate, and network hashrate is closely proportional to coin price” (Zawy [1])</li>
+				<li>“difficulty is a function of both price and Moore’s law” (Buterin [2])</li></p>
+
+
+				<p>Presented whitepaper describes how price can be substituted with difficulty in equations (it’s not that simple, but will use this example for clarity sake) to calculate parameters for price stabilization.</p>
+
+				<p>If difficulty (price) grows at the rate higher than Moore’s Law Karbo supply (mining rate) will slightly increase to reflect increase in mining efforts (demand). If difficulty (price) falls we decrease next block reward according to equation, making Karbo more scarce and thus creating deficit required for price stabilisation.</p></strike>
+
+
+				<h6>Dynamic minimum fees</h6>
+
+				<p>Minimum transaction fees should be adaptive instead of being hardcoded as flat rate. This would prevent fees from skyrocketing if price grows (even for low volatility coin) and also prevent hard forks every time fees needed to be adjusted manually by devs.</p>
+
+				<p>Premise for dynamic fees is the same as for less volatility in Karbo. Fees can adapt to price change without referring to outside source, using only difficulty and some other variables to calculate new value that balances itself even if price is changing.</p>
+
+				
+				<h6>Deposits on blockchain</h6>
+
+				<p>Deposits in Karbo is another mechanism to smooth out volatility in price. Deposit interest rate will adjust itself according to the coin price.</p>
+
+				<p>When difficulty (price) is dropping deposit interest rate will increase to stimulate deposits and therefore create deficit of coins which will lead to price support; and vice versa — lower deposit interest rate when difficulty (price) is raising.</p>
+
+				<p>The maximum interest rate is proposed at level of 1,5%. Inflation levels of 1-2% per year are generally considered acceptable in economics.</p>
+
+				<h6>PoW/PoS hybrid and Masternodes</h6>
+
+				<p>We identified a problem in current state of PoW — the lack of security ensured by stake in equipment [3] and are going to implement the solution: add to PoW, what has become missing — a <em>stake</em>, combining PoS and PoW as a better alternative in <strong>PoW with Stake</strong>.</p>
+				
+				<p>Adding PoW with Stake and Masternodes doesn’t eradicate all problems, but helps to prevent: 
+				double spends,
+				’jump’ pools,
+				centralisation of mining,
+				erratic block times,
+				transaction capacity limitation,
+				stalled blockchain.
+				</p>
+
+				<p>In order to run a masternode, a node must prove it holds a collateral of a dynamically selected minimal amount of KRB.
+				The reward and transaction fees will be divided between POW and POS participants.</p>
+
+				<h6>In summary</h6>
+				
+				<p>New Karbo Whitepaper (34 pages) describes several innovative mechanisms to smooth out such a negative characteristic of decentralized coins as volatility. Being a stable coin doesn’t mean Karbo can’t rise in price. Whitepaper only describes how to prevent big swings in price so Karbo can become true decentralized medium of exchange and can be used normally as decentralized stablecoin in volatile price environment. With decentralized stablecoin participants of exchange can be less worried to lose buying power of their coins while exchange is processed.</p>
+
+
+				<p>[1] <a href="http://zawy1.blogspot.com/2017/12/using-difficulty-to-get-constant-value.html">“Using difficulty to get constant-value dev fees”</a>, Scott Roberts</p>
+				<p>[2] <a href="https://blog.ethereum.org/2014/11/11/search-stable-cryptocurrency/">“The Search for a Stable Cryptocurrency”</a>, Vitalik Buterin</p>
+				<p>[3] <a href="https://twitter.com/zawy3/status/1082199522812612608">https://twitter.com/zawy3/status/1082199522812612608</a>, Scott Roberts</p>
+
+		</div>
+	</div>
+	<div class="highlight breath" id="history"> 
+		<div class="container">
+			<section class="breath">
+			
+				<h3>Our misson</h3>
+				
+				<blockquote>
+				  <p><strong>To become "Fourth karbovanets" &ndash; People's Digital Exchange Medium</strong></p>
+				</blockquote>
+
+			</section>
+			
+			<section class="breath">
+
+				<p>The name "Karbo" is derived from Ukrainian word "karbovanets", that comes from an ancient way of recording settlements or debts by marking wooden stick called "tally stick" or "tally" with a system of notches that was very popular in the Mediaeval Europe from Antiquity up to the first decades of XX century. The stick would be split in half, down its length from one end to the other. The debtor would retain half, called the "foil". The creditor would retain the other half, called the "stock". Because wooden stick has natural and distinctive irregularities, the two halves would match only each other providing simple and effective protection against forgery. The way medieval tally sticks system worked resembles how blockchain works. Hence comes the name "karbovanets" and its shortened version "Karbo".</p>
+				
+				<p><a href="https://en.wikipedia.org/wiki/Ukrainian_karbovanets">The "karbovanets"</a> has been a distinct unit of currency in Ukraine during three separate periods in its history. Nowadays it is obsolete and replaced by Ukrainian Hryvnia.</p>
+				
+				<p>"Karbovanets" therefore is a very well-known word, with very strong associations with "money" not only in Ukraine but also in Russia and other neighboring countries. It sounds familiar to people, which makes it more easy to adopt.</p>
+
+				<p>It was resurrected in the digital form of cryptocurrency as people’s unofficial, independent exchange medium.</p>
+		
+			</section>
+
+		</div>
+	</div>
+	<div class="breath" id="austrian"> 
+		<div class="container">
+			<section class="breath">
+				<p>Karbo is based on principles of the <a href="https://wiki.mises.org/wiki/Austrian_School"><strong>Austrian school of economics</strong></a> which emphasizes the spontaneous organizing power of the price mechanism and holds that the complexity of subjective human choices makes mathematical modeling of the evolving market practically impossible. Its scholars eschew what they consider "naïve" and pointless mathematical modeling of the economy, considering much of mainstream economics a form of economic charlatanism. Its proponents tend to emphasize the organic, subjective and evolving nature of market dynamics, advocating the strong protection of private property rights and the strict enforcement of voluntary contractual agreements between economic agents as the best way of facilitating economic exchange, and generally advocate a laissez-faire approach to the economy, arguing that the smallest imposition of coercive force (especially government-imposed force) on commercial transactions is the most effective way to secure long-run economic stability and well-being.
+
+				<p>In particular, they voice serious concerns about the distorting and damaging effects of government involvement in commerce, arguing that few government regulations in this area are necessary or desirable and often trigger a "ratchet effect" as problems associated with existing regulations are often blamed on the free market, thereby justifying further damaging, coercive incursions into the market. They are particularly critical of long-standing governmental incursions into the area of private money production, advocating instead the immediate abolition of all coercive legal tender laws and the return to full reserve - or free - banking, where the financial system is decentralized and not dominated or controlled by coercive monopoly government or a monopoly central bank.</p>
+				  
+				<p>One of the most known scholars, Noble Prize laureate, economist and philosopher Friedrich Hayek it it's book <strong>The Denationalization of Money</strong> states that instead of a national government issuing a specific currency, use of which is imposed on all members of its economy by force in the form of legal tender laws, private businesses should be allowed to issue their own forms of money, deciding how to do so on their own. Hayek advocates a system of private currency in which financial institutions create currencies that compete for acceptance.</p>
+
+				<p>Karbo is proposed as one of such free exchange medium – egalitarian, decentralized system with enhanced privacy, where value of its units is based solely on supply and demand in the market, emission depends on constant mathematical algorithm, where everyone can participate in emissions of karbos, receiving them as a reward for the provided computing resources of their regular PC to support the network. For mining expensive specialized equipment (ASIC) is not required.</p>
+			</section>
+		</div>
+	</div>
+	<div class="highlight breath" id="fungibility"> 
+		<div class="container">
+				
+			<section class="breath">
+			
+				<h3>Fungibility and privacy of Karbo</h3>
+	
+				<strong>Anonymity is implemented by ring signatures to hide the sender and one-time addresses that are hiding the recipient.</strong>
+				
+				<div class="row">
+					<div class="col-md-6">
+						<h6>Privacy</h6>
+						  <p>Transactions in Karbo are untraceable and unlinkable. Karbo provides complete anonymity and privacy using cryptographic technology <strong>ring signatures</strong>. All transactions signed on behalf of a group so that it is impossible to determine who exactly from the group signed the transaction and, accordingly, one can not say with certainty who carried out the payment. The more participants in the group, the more confidential operation is. In addition, the transactions cannot be associated, – even if outgoing transactions are untraceable, everyone may still be able to see the transactions you have received. However, by using a variation of the Diffie-Hellman exchange protocol, a receiver has multiple unique <strong>one-time addresses</strong> derived from his single public key. After funds are sent to these addresses they can only be redeemed by the receiver and it would be impossible to cross-link these transactions.</p>
+					</div>
+					<div class="col-md-6">
+						<h6>Fungibility</h6>
+						  <p>Unique one-time addresses and ring signatures of transactions are providing <strong>resistance to blockchain analysis</strong>. Every transaction only increases entropy and creates additional obstacles for those who wish to dig into financial operations with Karbos.</p>
+								  
+						  <p>Resistance to the analysis, in turn, provides a very important characteristic inherent in real money, &ndash; <strong><em>fungibility</em></strong>.
+						  Fungibility of money means that all units of one denomination have the same purchasing power.</p>
+
+						  <p><em>Fungibility</em> is the key difference and advantage over Bitcoin. All the karbos are interchangeable and uniform, unlike bitcoins. It is because in Bitcoin everyone can at any time view all transactions on the accounts of any and all participants and see how many Bitcoins is at the balance of an address. This can lead to censorship of the assets of people. Using Karbo you have enhanced privacy, independence, and freedom as if you used cash.</p>
+					</div>
+				</div>
+			</section>
+				
+		</div>
+	</div>
+	
+	<div class="container breath" id="roadmap">
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Roadmap</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+			
+				<ul class="timeline">
+					
+					
+					<li style="margin: -80px 0 120px 0;">
+					  <div class="timeline-badge"><i class="fas fa-arrow-up"></i></div>
+					</li>
+					
+					
+					
+					<li>
+					  <div class="timeline-badge warning"><i class="fa fa-users"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-spinner fa-pulse fa-fw" aria-hidden="true"></i> SSL Support</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> ETA Q1 2019</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>SSL (HTTPS) support for nodes and eventually for wallets. In production.</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge warning"><i class="fa fa-flask"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-cogs warning" aria-hidden="true"></i> PoW change</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> ETA 2019</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>The change of mining PoW algo. Preliminary candidates: Argon2 (testnet ongoing), Cuckoo Cycle.</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge warning"><i class="fa fa-flask"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-cogs warning" aria-hidden="true"></i> PoW with Stake</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> ETA 2019</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Combine PoW and PoS into a simple PoW/PoS hybrid called "PoW with Stake" or "Membership PoW" (mPOW). <a href="https://medium.com/@karbo.org/pow-with-stake-5d0ddbb44e94">Read an article...</a></p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge warning"><i class="fa fa-flask"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-cogs warning" aria-hidden="true"></i> Adaptive emission</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> ETA 2019</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>The change of flat tail emission to dynamic, satisfying demand estimated via difficulty. More info in <a href="/whitepaper.pdf">Whitepaper</a>...</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge warning"><i class="fa fa-flask"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-cogs warning" aria-hidden="true"></i> Deposits on blockchain</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> ETA 2019</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Deposits on blockchain with variable algorithmic rate depending on difficulty and value insurance for long term deposits. More info in <a href="/whitepaper.pdf">Whitepaper</a>...</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge warning"><i class="fa fa-flask"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-cogs warning" aria-hidden="true"></i> Masternodes</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> ETA 2019</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Decision making Masternodes that create and vote for checkpoints and resolve network splits using gossip protocol.</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge warning"><i class="fa fa-flask"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-arrows warning" aria-hidden="true"></i> Dandelion</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> ETA 2019</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Privacy improvement when sending transactions.</p>
+						</div>
+					  </div>
+					</li>
+					
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-cloud"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success"></i> Client-side Web-wallet</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 01.2019</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Released Cliend-Side Open Source <a href="https://wallet.karbo.org/">Web-wallet</a>.</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="fa fa-flask"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Prevent transaction cancellation in 51%-attack</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 9.12.2018</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Update with <a href="https://medium.com/@karbo.org/prevent-transaction-cancellation-in-51-attack-79ba03d191f0"><strong>protection against 51% attacks</strong></a>.</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-flask"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Proof of Funds</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Q4 2018</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Instead of modifying the viewkey to see outgoing transactions for tracking wallets we implemented the Proof of Funds that allows to prove the possession of specified amount while retaining privacy.</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="fa fa-flask"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Proof of Payment</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Q3 2018</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Possibility to issue proof of payment or transaction's secret key to prove payment to destination address.</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-shopping-cart"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Karbo Payment Gateway with decentralized API</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 22.09.2018</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Released <a href="https://github.com/Karbovanets/karbo-simple-pay">karbo-simple-pay</a> — a simple POS for receiving payments in Karbo that works via decentralized API of any Karbo node.</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="fa fa-cut"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Stable fee</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Q2 2018</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Transactions minimum fee stable in fiat equivalent regardless of coin price (will stay on the same level if the coin price surges up). It will not be a fixed amount in KRB. It means stable low fee even in case of rapid value growth of the coin.</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-flask"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check successs" aria-hidden="true"></i> Untraceability enchancement</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Q2 2018</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Updating the output selection algorithm (triangular distribution) and other steps towards privacy enhancement.</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="fa fa-flask"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Improvement of the Difficulty algorithm</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Q1 2018</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p><a href="https://github.com/seredat/karbowanec/commit/231db5270acb2e673a641a1800be910ce345668a#commitcomment-24807829">Newest version of Zawy Difficulty algorithm</a>. This is the improvement of v1 algorithm that was discussed at our Github repository.</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-cloud"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success"></i> Web-wallet</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 13.02.2018</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>First Web-wallet <a href="https://karbo.me">karbo.me</a> is live.</p>
+						</div>
+					  </div>					  
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="fas fa-feather-alt"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Lite wallet</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Q1 2018</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Lite Desktop Wallet that will work via remote nodes is planned with emphasis on ease of use for non-tech-savvy users.</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge primary"><i class="glyphicon glyphicon-bullhorn"></i></div>
+					   <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-spinner fa-pulse fa-fw"></i> Promotion campaign</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Q4 2017</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Promotion campaign to inform and promote Karbo in Ukraine and worldwide.</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					 <div class="timeline-badge primary"><i class="glyphicon glyphicon-globe"></i></div>
+					   <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-spinner fa-pulse fa-fw"></i> Rebranding & new website</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Q4 2017</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>New website and transition to the name <strong>Karbo</strong> to be more friendly to the worldwide auditory.</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="glyphicon glyphicon-phone"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success"></i> Mobile Wallet</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 13.02.2018</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>The light mobile wallet that works via remote nodes and stores private keys and wallets on the device. <a href="https://play.google.com/store/apps/details?id=org.karbo.karbon">Android</a> version released. Ongoing development of improvements and new features.</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="glyphicon glyphicon-leaf"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Mnemonic seed in wallets</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 12.10.2017</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Wallet update released with support of <strong>mnemonic phrase</strong> that allows to restore wallet.</p>
+						</div>
+					  </div>
+					</li>
+					
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-shopping-cart"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Payment Gateway, E-Commerce plugins</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 02.04.2017</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p><strong>Free Payment Gateway <a href="https://karbo.club/"><em>karbo.club</em></a></strong> with e-commerce plugins arrived.</p>
+						  <ul>
+							<li><a href="https://github.com/Karbovanets/karbo-woocommerce"><strong>Karbo plugin for WooCommerce</strong></a></li>
+							<li><a href="https://github.com/Karbovanets/karbo-plugin-opencart"><strong>Karbo plugin for OpenCart </strong></a></li>
+						  </ul>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="fas fa-exchange-alt"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> KRB/UAH exchange</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 02.04.2017</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Listed on Ukrainian exchange <a href="https://btc-trade.com.ua/stock/krb_uah">BTC Trade UA</a>.</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-bug"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Security update</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 10.04.2016, 12:00 PM UTC</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Security update to address <a href="https://getmonero.org/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html">Disclosure of a Major Bug in CryptoNote Based Currencies</a> wich was published later at 2017-05-17 00:00:00 +0200 by Monero developers. By the time of the disclosure, vulnarability <a href="https://github.com/seredat/karbowanec/commit/4da156f2f07784ac24dde65d98517b1ffc99156f">was already fixed</a> thanks to slb from Forknote and Monero team.</p>
+						  <p>Network ID was changed with this update to get rid of errors from foreign network spam and to ensure everyone is updated.</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="fas fa-address-card"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> OpenAlias & Tracking wallets</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 02.04.2017</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Introducing <a href="https://openalias.org/"><em>OpenAlias</em></a> support that is another step towards usability and ease of use.<br />
+						  
+						  Also released in wallet:
+						  <ul>
+							<li><strong>Tracking wallets</strong></li>
+							<li>'Transactions' tab overhaul</li>
+							<li>'Contacts' tab overhaul</li>
+							<li>'Mining' tab overhaul</li>
+							<li>Solo mining</li>
+							<li>Starting transition to Karbo branding</li>
+							<li>Various amendmends, usability improvements and fixes</li>
+						  </ul>
+						  </p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-mobile"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Mobile phone top up service</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 31.12.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>First real-world usage of krb! <a href="http://krbtel.top/">Here you can top up your mobile phone</a> paying with krb.</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="fas fa-link"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> URI support for wallets</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 23.12.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Introducing <em>karbowanec:</em> URI scheme support that is important usability improvement which allows to request and make payments conveniently.</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fas fa-code-branch"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Hardfork</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 22.12.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Hardfork at height <a href="http://explorer.karbowanec.com/en/?hash=8e39967eb50b8a922cbfe22fe02989218345cbd61ae651ddbecf00834910ff50#blockchain_block">60001</a>. This hardfork was made to withstand incursions of big miners who performed selfish mining, abusing slow reacting default CryptoNote difficulty algorithm by applying massive hashrate (in comparison to the average network hashrate) to quickly mine a range of blocks before difficulty was slowly starting to react and raise. Then they were going away leaving honest miners to struggle with too high difficulty to push through next blocks. This caused long gaps between blocks and unacceptable delays in transactions confirmations. 
+						  To resolve this issue new Zawy difficulty algorithm v.1 was adopted as described <a href="https://github.com/monero-project/research-lab/issues/3#issuecomment-245966676">here</a> with our modifications.</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="fa fa-code"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Major update, scheduled hardfork</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 19.10.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <ul>
+							<li>transition to Bytecoin 1.0.11 core</li>
+							<li><strong>new difficulty algorithm</strong></li>
+							<li><strong>tail emission</strong></li>
+							<li>restricted RPC (for masternodes)</li>
+							<li>fee for masternodes</li>
+						  </ul>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fas fa-exchange-alt"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Livecoin.net exchange listing</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 07.10.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Listed at <a href="https://www.livecoin.net/en/trade/orderbook?currencyPair=KRB%2FBTC">Livecoin.net</a></p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="fab fa-apple"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Mac OS Wallet</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 28.09.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Mac OS GUI wallet and Command-line suite released</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-language"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Cyrillic support in wallets</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 28.08.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Only Karbo wallets have Cyrillic support of filenames and paths in its wallets among CryptoNote coins. This is a quite important fix because lack of non-latin letters support can lead to the loss of the wallets and funds.</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					<li>
+					  <div class="timeline-badge success"><i class="fas fa-exchange-alt"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> First exchange listing</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 05.07.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Listed at <a href="https://www.cryptopia.co.nz/Exchange?market=KRB_BTC">Cryptopia exchange</a></p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-paw"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Forknote support</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 27.06.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Karbowanec was added to Democats pool:
+							<ul>
+								<li><a href="http://democats.org/pool/?name=karbowanec">Karbowanec pool</a></li>
+								<li><a href="http://democats.org/blockchain/?name=karbowanec">Karbowanec blockchain explorer</a></li>
+								<li><a href="http://democats.org/charts/?name=karbowanec">Karbowanec charts</a></li>
+							</ul>
+						  </p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="glyphicon glyphicon-tint"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> First faucet</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 22.06.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>First <a href="http://faucet.karbowanec.com/">official faucet</a> was launched</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-binoculars"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Karbowanec Blockchain Explorer</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 07.06.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>New standalone block explorer: <a href="http://explorer.karbowanec.com/">http://explorer.karbowanec.com/</a></p>
+						  <p><a href="https://github.com/Karbovanets/Karbowanec-Blockchain-Explorer">Open sourced</a> and used by multiple CryptoNote cryptocurrencies.</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="fa fa-bullhorn"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Launch</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 30.05.2016, 11:05:34</small></p>
+						</div>
+						<div class="timeline-body">
+						  <ul>
+							<li><a href="https://bitcointalk.org/index.php?topic=1491747">The announcement at Bitcointalk</a> and start of the mining.</li>
+							<li>Official website at <a href="http://karbowanec.com">http://karbowanec.com</a></li>
+							<li>Windows and Linux wallets as well as Command-line suite</li>
+						  </ul>
+						</div>
+					  </div>
+					</li>
+					
+					
+					<li>
+					  <div class="timeline-badge success"><i class="fa fa-rocket"></i></div>
+					</li>
+					
+				</ul>
+			
+			</div>
+		</div>
+	</div>
+
+</article>
+
+<!-- FOOTER -->
+<footer class="grad1">
+   <div class="container">
+	 <div class="breath">
+        <div class="row">
+          <div class="col-lg-4">
+			<p>&copy; 2016-2019 <strong>Karbo</strong>. 
+		  
+			E-mail:&nbsp;dev@karbo.io</p>
+			
+			<div class="fb-like" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+		  </div>
+          <div class="col-lg-8">
+			<p  class="text-right">
+				<a href="/privacy">Privacy policy</a>
+				|
+				<a href="/terms">Terms and conditions</a> 
+				|
+				<a href="/donate">Donate</a>
+				|
+				<a href="http://forum.karbo.io/">Forum</a>
+			</p>
+		  </div>
+		</div>
+	 </div>
+  </div>
+</footer>
+<!-- END FOOTER -->
+
+<!-- JS and analytics only. --> 
+<!-- Bootstrap core JavaScript
+================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="/js/jquery.js"></script> 
+<script src="/js/bootstrap.min.js"></script> 
+<script src="/js/easing.js"></script> 
+<script src="/js/rates.js"></script>
+<script src="/js/tools.js"></script>
+<script src="/js/Chart.min.js"></script>
+
+<script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("navbar").classList.add("navbar-grad-reverse");
+  } else {
+    document.getElementById("navbar").classList.remove("navbar-grad-reverse");
+  }
+}
+</script>
+<script>
+$(function () {
+            emissionSpeedFactor = 18;
+            difficultyTarget = 240;
+            moneySupply = 10000000;
+			
+	getEmission = function() {
+            var dots = [],
+                days = 10 * 365,
+                k = 1 / Math.pow(2, emissionSpeedFactor),
+                val;
+
+            for (var d = 0; d < days; d += 365) {
+                val = moneySupply * ((k - 1) * Math.pow((1 - k), (d * 86400 / difficultyTarget)) + 1);
+                dots.push(Math.round(val * 100 / moneySupply));
+            }
+            return dots;
+	}
+	getReward = function() {
+			var dots = [],
+                days = 10 * 365,
+                k = 1 / Math.pow(2, emissionSpeedFactor),
+                val2;
+
+            for (var d = 0; d < days; d += 365) {
+				var day0 = moneySupply * ((k - 1) * Math.pow((1 - k), (d * 86400 / difficultyTarget)) + 1);
+				var day1 = moneySupply * ((k - 1) * Math.pow((1 - k), ((d + 1) * 86400 / difficultyTarget)) + 1);
+				    val2 = Math.round(((day1 - day0) * difficultyTarget / (86400 * Math.pow(1, 12)))*100)/100;
+				// tail emission
+				if (val2 < 1) {
+					val2 = 1;
+				}
+				
+				dots.push(val2);
+			}
+            return dots;
+	}
+
+var ctx = document.getElementById('emissionChart').getContext('2d');
+var gradientE = ctx.createLinearGradient(0, 0, 0, 400);
+    gradientE.addColorStop(0, 'rgba(0, 87,184, 1)') // show this color at 0%;
+	gradientE.addColorStop(0.5, 'rgba(0, 162, 232, 0.2)'); // show this color at 50%
+	gradientE.addColorStop(1, 'rgba(255, 255, 255, 0)'); // show this color at 100%
+var gradientR = ctx.createLinearGradient(0, 0, 0, 400);
+	gradientR.addColorStop(0, 'rgba(255, 242,0, 0.8)') // show this color at 0%;
+	gradientR.addColorStop(0.5, 'rgba(255, 242,0, 0.7)'); // show this color at 50%
+	gradientR.addColorStop(1, 'rgba(239, 228, 176, 0.5)'); // show this color at 100%
+	
+var emChart = new Chart(ctx, {
+  type: 'line',
+  data: {
+      labels: ['Start', '1st year', '2nd year', '3rd year', '4th year', '5th year', '6th year', '7th year', '8th year', '9th year'],
+      datasets: [{
+      label: 'Emission, %',
+      yAxisID: 'E',
+	  backgroundColor: gradientE,
+      borderColor: '#0057B8',
+	  borderWidth: 2,
+	  pointColor : "#fff",
+      pointBorderColor : "#0057B8",
+      pointHighlightFill: "#0057B8",
+      pointBackgroundColor: "#0057B8",
+	  pointBorderWidth: 4,
+	  pointRadius: 3,
+	  pointHoverRadius: 5,
+      data: getEmission()
+    }, {
+      label: 'Reward, KRB',
+      yAxisID: 'R',
+	  backgroundColor: gradientR,
+      borderColor: '#FFF200',
+	  borderWidth: 2,
+	  pointColor : "#fff",
+      pointBorderColor : "#FFF200",
+      pointHighlightFill: "#FFF200",
+      pointBackgroundColor: "#FFF200",
+	  pointBorderWidth: 4,
+	  pointRadius: 3,
+	  pointHoverRadius: 5,
+      data: getReward()
+    }]
+  },
+  options: {
+	maintainAspectRatio: false,
+	responsive: true,
+    scales: {
+      yAxes: [{
+        id: 'E',
+        type: 'linear',
+        position: 'right',
+		scaleLabel: {
+			display: true,
+			labelString: 'Emission %'
+		}
+		//gridLines: {
+        //    display:false
+        //},
+		//display: false
+      }, {
+        id: 'R',
+        type: 'linear',
+        position: 'left',
+		scaleLabel: {
+			display: true,
+			labelString: 'Reward per block, KRB'
+		}
+		//gridLines: {
+        //    display:false
+        //},
+		//display: false
+      }],
+	  xAxes: [{
+		//display: false
+	  }]
+    }
+  }
+});
+	
+
+});
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.8.0/css/flag-icon.min.css">
+
+</body>
+</html>

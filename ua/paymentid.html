@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<!-- Meta, title, CSS, favicons, etc. -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Генератор Payment ID (ідентифікатора платежу) для Електронного Карбованця.">
+<title>Генератор Payment ID - Український Електронний Карбованець</title>
+
+<link rel="alternate" href="/" hreflang="x-default" />
+<link rel="alternate" href="/ua/" hreflang="uk_UA" />
+<link rel="alternate" href="/ru/" hreflang="ru_RU" />
+<link rel="alternate" href="/pl/" hreflang="pl_PL" />
+<link rel="alternate" href="/es/" hreflang="es_ES" />
+<link rel="alternate" href="/cn/" hreflang="zh_CN" />
+<link rel="alternate" href="/jp/" hreflang="ja_JP" />
+<link rel="alternate" href="/kr/" hreflang="ko_KR" />
+
+<!-- Bootstrap core CSS -->
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Karbo CSS -->
+<link href="/css/karbo.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <script src="js/respond.min.js"></script>
+<![endif]-->
+
+<!-- Favicons -->
+<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="icon" type="image/icon" href="/images/favicon.ico" >
+
+<!-- Custom Google Font -->
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans:200,200i,300,300i,400,400i,700,700i,900,900i&amp;subset=cyrillic,latin-ext" rel="stylesheet">
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-78493281-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<meta property="og:url" content="http://www.karbo.io" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Електронний Карбованець" />
+<meta property="og:description" content="Karbo (Електронний Карбованець) - Децентралізований обмінний засіб" />
+<meta property="og:image" content="https://karbo.io/images/karbo_io.jpg" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1092" />
+<meta property="og:image:height" content="684" />
+
+<script src="https://kit.fontawesome.com/2058fca1c3.js"></script>
+</head>
+<body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1631255797202963',
+      xfbml      : true,
+      version    : 'v2.7'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/uk_UA/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Fixed navbar -->
+    <div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/ua/">
+			<div id="coinIcon">
+				<svg version="1.1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+					xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px"
+					height="32px" viewBox="0 0 206.569 206.568" enable-background="new 0 0 206.569 206.568" xml:space="preserve">
+					<!--path fill-rule="evenodd" clip-rule="evenodd" fill="#FFEC00" d="M103.284,0c57.042,0,103.285,46.242,103.285,103.284
+								c0,57.042-46.242,103.284-103.285,103.284S0,160.326,0,103.284C0,46.242,46.242,0,103.284,0"/-->
+					<g id="navbar-logo-k">			
+						<rect x="42.621" y="67.455" fill="#0E0740" width="121.327" height="14.829"/>
+						<polygon fill="#0E0740" points="164.002,142.947 103.339,82.284 42.675,142.947 53.162,153.434 103.339,103.256 153.516,153.434 "/>
+					</g>
+				</svg>
+				</div> <strong>Карбо</strong><em>ванець</em></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+			  <a href="/download">Завантажити</a>
+			</li>
+			<li>
+			  <a href="https://wallet.karbo.org/">Веб-гаманець</a>
+			</li>
+			<li>
+              <a href="/ua/use">Екосистема</a>
+            </li>
+			<li>
+              <a href="/ua/pay">Оплата</a>
+            </li>
+			<li>
+              <a href="/ua/info">Інформація</a>
+            </li>
+			<li>
+              <a href="https://explorer.karbo.io/">Оглядач</a>
+            </li>
+			<li class="dropdown">
+			  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-language" aria-hidden="true"></i> <span class="caret"></span></a>
+			  <ul class="dropdown-menu" role="menu">
+				<li><a href="/"><span class="flag-icon flag-icon-us"></span> English</a></li>
+				<li><a href="/ua/"><span class="flag-icon flag-icon-ua"></span> Українська</a></li>
+				<li><a href="/ru/"><span class="flag-icon flag-icon-ru"></span> Русский</a></li>
+				<li><a href="/pl/"><span class="flag-icon flag-icon-pl"></span> Polski</a></li>
+				<li><a href="/es/"><span class="flag-icon flag-icon-es"></span> Español</a></li>
+				<li><a href="/cn/"><span class="flag-icon flag-icon-cn"></span> 简体中文</a></li>
+				<li><a href="/jp/"><span class="flag-icon flag-icon-jp"></span> 日本語</a></li>
+				<li><a href="/kr/"><span class="flag-icon flag-icon-kr"></span> 한국어</a></li>
+			  </ul>
+			</li>
+			<li class="dropdown">
+			<a href="#" class="price dropdown-toggle" data-toggle="dropdown"><span id="usd_price"></span> <span id="arrowplace"></span> <span class="caret"></span></a>
+			<ul class="dropdown-menu" role="menu">
+				<li><a href="#calc" id="btc_price"></a></li>
+				<li><a href="#calc" id="cny_price"></a></li>
+				<li><a href="#calc" id="eur_price"></a></li>
+				<li><a href="#calc" id="jpy_price"></a></li>
+				<li><a href="#calc" id="krw_price"></a></li>
+				<li><a href="#calc" id="rur_price"></a></li>
+				<li><a href="#calc" id="usd_price"></a></li>
+			</ul>
+			</li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+   </div>
+<!--// Navbar Ends-->
+
+<div class="wrapper"></div>
+
+<article class="content">
+
+<!--SUBPAGE HEAD-->
+
+<div class="subpage-head  grad breath inverse">
+  <div class="container">
+    <div class="section-title">
+      <h2>Генератор Payment ID</h2>
+    </div>
+  </div>
+</div>
+
+<!-- // END SUBPAGE HEAD -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2 has-margin-bottom">
+      <article class="page-content">
+		<div class="breath">
+			<p>Натисніть кнопку щоб згенерувати випадковий PaymentID або впишіть Payment ID щоб розкодувати його</p>
+			<div class="form-group">
+			  <input class="form-control input-lg" type="text" id="paymentid" maxlength="64">
+			</div>
+			<button onclick="generate()" class="btn btn-primary btn-lg">Згенерувати PaymentID</button>
+			<button onclick="decode()" class="btn btn-primary btn-lg">Розшифрувати PaymentID</button>
+		</div>
+		<div class="breath">
+			<p>Впишіть примітку щоб закодувати в ідентифікатор (тільки ASCII)</p>
+			<div class="form-group">
+			  <input class="form-control input-lg" type="text" id="text2encode" maxlength="32">
+			</div>
+			<button onclick="encode()" class="btn btn-primary btn-lg">Закодувати у PaymentID</button>		
+		</div>
+	
+		<div class="breath">
+			<div class="breath">
+				<p>Payment ID це ідентифікатор платежу який включається в транзакцію і дозволяє ідентифікувати платіж. Оскільки транзакції у мережі Карбованець анонімні інакше це зробити неможливо. Ви можете згенерувати такий ідентифікатор і дати його тому, хто має здійснити вам переказ карбованців. Таким чином ви зможете розрізняти платежі.</p>
+			</div>
+		</div>
+      </article>
+    </div>
+    <!--// col md 12--> 
+  </div>  
+</div>   
+
+<!-- FOOTER -->
+<footer class="grad1">
+   <div class="container">
+	 <div class="breath">
+        <div class="row">
+          <div class="col-lg-4">
+			<p>&copy; 2016-2019 Карбованець. 
+		  
+			E-mail:&nbsp;dev@karbo.io</p>
+			
+			<div class="fb-like" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+		  </div>
+          <div class="col-lg-8">
+			<p class="text-right">
+				<a href="/ua/privacy">Конфіденційність</a>
+				та
+				<a href="/ua/terms">Умови</a> 
+				|
+				<a href="/donate">Donate</a>
+				|
+				<a href="https://forum.karbo.io/">Форум</a>
+			</p>
+		  </div>
+		</div>
+	 </div>
+  </div>
+</footer>
+<!-- END FOOTER -->
+
+<!-- JS and analytics only. --> 
+<!-- Bootstrap core JavaScript
+================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="/js/jquery.js"></script>
+<script src="/js/rates.js"></script>
+<script src="/js/bootstrap.min.js"></script> 
+<script src="/js/easing.js"></script> 
+
+<script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("navbar").classList.add("navbar-grad-reverse");
+  } else {
+    document.getElementById("navbar").classList.remove("navbar-grad-reverse");
+  }
+}
+</script>
+<script>
+function generate() {
+	function generateHexString(length) {
+  var ret = "";
+  while (ret.length < length) {
+	ret += Math.random().toString(16).substring(2);
+  }
+  return ret.substring(0,length);
+}
+// PaymentID
+ document.getElementById("paymentid").value = generateHexString(64);
+}
+
+function encode() {
+	var toenconde = document.getElementById("text2encode").value;
+	if (toenconde.length < 32) {
+		var padding = Array(32).join('0');
+		toenconde = pad(padding,toenconde,true);
+	}
+	document.getElementById("paymentid").value = a2hex(toenconde);
+}
+function decode() {
+	var decoded = hex2a(document.getElementById("paymentid").value);
+	document.getElementById("text2encode").value = decoded;
+}
+
+function pad(pad, str, padLeft) {
+  if (typeof str === 'undefined') 
+    return pad;
+  if (padLeft) {
+    return (pad + str).slice(-pad.length);
+  } else {
+    return (str + pad).substring(0, pad.length);
+  }
+}
+
+function a2hex(str) {
+  var arr = [];
+  for (var i = 0, l = str.length; i < l; i ++) {
+	var hex = Number(str.charCodeAt(i)).toString(16);
+	arr.push(hex);
+  }
+  return arr.join('');
+}
+
+function hex2a(hexx) {
+	var hex = hexx.toString();//force conversion
+	var str = '';
+	for (var i = 0; i < hex.length; i += 2)
+		str += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
+	return str;
+}
+
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.8.0/css/flag-icon.min.css">
+
+</body>
+</html>

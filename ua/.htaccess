@@ -1,0 +1,12 @@
+#Header set Access-Control-Allow-Origin "*"
+#DirectoryIndex index.html index.php index.htm parking-page.html
+
+RewriteEngine On
+RewriteRule ^use/?$ /ua/use.html?&%{QUERY_STRING}
+RewriteRule ^pay/?$ /ua/pay.html?&%{QUERY_STRING}
+RewriteRule ^info/?$ /ua/info.html?&%{QUERY_STRING}
+RewriteRule ^mining/?$ /ua/mining.html?&%{QUERY_STRING}
+RewriteRule ^paymentid/?$ /ua/paymentid.html?&%{QUERY_STRING}
+RewriteRule ^terms/?$ /ua/terms-and-conditions.html?&%{QUERY_STRING}
+RewriteRule ^privacy/?$ /ua/privacy-policy.html?&%{QUERY_STRING}
+

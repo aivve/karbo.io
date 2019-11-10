@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+<!-- Meta, title, CSS, favicons, etc. -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="电子卡博币币的资料及参数表：加密数字分散交易单位及网络">
+<title>关于电子卡博币币的资料：分散交易网咯</title>
+
+<link rel="alternate" href="/" hreflang="x-default" />
+<link rel="alternate" href="/ua/" hreflang="uk_UA" />
+<link rel="alternate" href="/ru/" hreflang="ru_RU" />
+<link rel="alternate" href="/pl/" hreflang="pl_PL" />
+<link rel="alternate" href="/es/" hreflang="es_ES" />
+<link rel="alternate" href="/cn/" hreflang="zh_CN" />
+<link rel="alternate" href="/jp/" hreflang="ja_JP" />
+<link rel="alternate" href="/kr/" hreflang="ko_KR" />
+
+<!-- Bootstrap core CSS -->
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Startup CSS -->
+<link href="/css/startup.css" rel="stylesheet">
+<link href="/css/timeline.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <script src="js/respond.min.js"></script>
+<![endif]-->
+
+<!-- Favicons -->
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="icon" type="image/icon" href="/images/favicon.ico" >
+<script src="/js/pace.js"></script>
+<!-- Custom Google Font : Open Sans -->
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:100,100i,300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic' rel='stylesheet' type='text/css'>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-78493281-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<meta property="og:url" content="https://www.karbo.io" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="卡博币" />
+<meta property="og:description" content="电子 卡博币 (Karbo) 为一种分散交易工具" />
+<meta property="og:image" content="https://karbo.io/images/wallet.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1092" />
+<meta property="og:image:height" content="684" />
+</head>
+<body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1631255797202963',
+      xfbml      : true,
+      version    : 'v2.7'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/zh_CN/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<div class="preloader"></div>
+
+<!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">菜单指南</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/cn/"><span id="coinIcon">&#1180;</span> 卡博币</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+			  <a href="/cn/download">下载</a>
+			</li>
+			<li>
+              <a href="/cn/use">用途</a>
+            </li>
+			<li>
+              <a href="/cn/info">有关消息</a>
+            </li>
+			<li>
+              <a href="http://explorer.karbowanec.com/">评论员</a>
+            </li>
+			<li class="dropdown">
+			  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-language" aria-hidden="true"></i> <span class="caret"></span></a>
+			  <ul class="dropdown-menu" role="menu">
+				<li><a href="/"><span class="flag-icon flag-icon-us"></span> English</a></li>
+				<li><a href="/ua/"><span class="flag-icon flag-icon-ua"></span> Українська</a></li>
+				<li><a href="/ru/"><span class="flag-icon flag-icon-ru"></span> Русский</a></li>
+				<li><a href="/pl/"><span class="flag-icon flag-icon-pl"></span> Polski</a></li>
+				<li><a href="/es/"><span class="flag-icon flag-icon-es"></span> Español</a></li>
+				<li><a href="/cn/"><span class="flag-icon flag-icon-cn"></span> 简体中文</a></li>
+				<li><a href="/jp/"><span class="flag-icon flag-icon-jp"></span> 日本語</a></li>
+				<li><a href="/kr/"><span class="flag-icon flag-icon-kr"></span> 한국어</a></li>
+			  </ul>
+			</li>
+			<li class="dropdown">
+			<a href="#" class="price dropdown-toggle" data-toggle="dropdown"><span id="usd_price"></span> <span id="arrowplace"></span></a>
+			<ul class="dropdown-menu" role="menu">
+				<li><a href="#calc" id="btc_price"></a></li>
+				<li><a href="#calc" id="eur_price"></a></li>
+				<li><a href="#calc" id="uah_price"></a></li>
+				<li><a href="#calc" id="rur_price"></a></li>
+			</ul>
+			</li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+   </div>
+<!--// Navbar Ends-->
+
+<div class="wrapper"></div>
+
+<article class="content">
+
+<!--SUBPAGE HEAD-->
+
+	<div class="subpage-head grad breath inverse">
+	  <div class="container">
+		<div class="section-title">
+		  <h2>关于电子卡博币</h2>
+		  <h4>资料及参数表</h4>
+		</div>
+	  </div>
+	</div>
+
+<!-- // END SUBPAGE HEAD -->
+
+
+
+	<div class="container breath" id="links"> 
+		<div class="row">
+			<div class="col-sm-12 col-md-6 col-lg-4">
+				  <h2>有用资料</h2>
+					<ul class="list-group">
+						<!--li class="list-group-item"><a href="/mining">挖矿</a></li-->
+						<li class="list-group-item"><a href="http://explorer.karbowanec.com/#pools">挖矿池</a></li>
+						<li class="list-group-item"><a href="http://explorer.karbowanec.com">块链接官方评论员</a></li>
+						<!--li class="list-group-item"><a href="http://democats.org/blockchain/?name=karbowanec">democats.org评论员</a></li-->
+						<li class="list-group-item"><a href="http://paperwallet.karbowanec.com/">纸板钱包（典型）</a></li>
+						<li class="list-group-item"><a href="http://krb.paperwallet.pw/">纸板钱包（记忆）</a></li>
+						<li class="list-group-item"><a href="/ticker">兑换率</a></li>
+						<li class="list-group-item"><a href="/doc">文件</a></li>
+						<li class="list-group-item"><a href="https://github.com/seredat/karbowanec">源代码</a></li>
+						<li class="list-group-item"><a href="/promo">宣传资料</a></li>
+					</ul>
+			</div>
+		
+		
+			<div class="col-sm-12 col-md-6 col-lg-4">
+				
+				<h2>会社网站</h2>
+			
+				<div class="alert alert-dismissible alert-warning">
+				  <button type="button" class="close" data-dismiss="alert">&times;</button>
+				  <p>官方网站： <a href="https://karbo.io">https://karbo.io</a>, <a href="https://karbo.org">https://karbo.org</a>!</p>
+				</div>
+			
+				<p>以下非官方网站提供更多信息:</p>
+				
+					<ul class="list-group">
+						<li class="list-group-item"><a href="http://karbowanec.com">http://karbowanec.com</a></li>	
+						<li class="list-group-item"><a href="http://karbovanets.org">http://karbovanets.org</a></li>	
+						<li class="list-group-item"><a href="http://karbo.digital">http://karbo.digital</a></li>	
+						<li class="list-group-item"><a href="http://krb.digital">http://krb.digital</a></li>
+					</ul>
+			</div>
+		</div>
+	</div>
+
+	
+	<div class="container breath" id="about"> 
+		<div class="row">
+			<div class="col-md-12">
+				
+				<section>
+					<h2>卡博币是什么？</h2>
+					
+					<p>卡博币这个名称来源于古代结算或债务记录方式。当时在一条木板上砍了记号（这种记号在乌克兰语和波兰语叫做“Karb ”），这种结算和债务记录方式在中世纪的现代乌克兰和全欧洲地区很普遍，连20世纪还可见。该条木板裂开成两个小条，两个人各有一条。将这两条按在一起，就可以核对该记号是否伪造。这种方式跟Karbovanest网络块链接的操作很像。</p>
+					
+					<p>“卡博币”是乌克兰至1966年的货币单位，前苏联时乌克兰人用这个名称叫苏联的货币单位。目前卡博币已被乌克兰法律支付媒介Hryvnya代替。</p>
+					
+					<p>可见，“卡博币”这个词很有名，不仅在乌克兰，而在邻居国家跟钱币联想起来。对这个词人民很熟悉，方便于理解。在非斯拉夫资源为了阅读及发音更方便，使用缩写词“Karbo”。这个缩写词也很受乌克兰人的欢迎。</p>
+
+					<p>“卡博币”在加密货币数字格式恢复乌克兰民族自由及非正式交换手段。</p>
+				
+				</section>
+				<section class="breath">
+				
+					<h3>目标</h3>
+					
+					<blockquote>
+					  <p><strong>变成“第四版卡博币” – 民族电子交换手段</strong></p>
+					</blockquote>
+
+					
+					
+				</section>
+				
+					
+				<section class="breath">
+				
+					<p>“卡博币”基于奥地利经济学派。它强调价格形成机构自生调整的能力，而且由于各人选择很难（或无法）进行当前市场的数字模拟，所以支持对经济不干涉的政策。奥地利经济学派代表人保护经纪人自愿同意的协议严格遵守、经济活动的最可能的不干涉（特别是国家的不干涉）、和个人选择的自由（包括选择交易单位的自由）。</p>
+				
+					<p>具体来说，他们很担心国家对贸易的不佳干涉：他们认为在这方面上有很少国家规范性法令才必要或理想，而很多时间它们引起雪冰效应，因为在跟当前规范有关的问题上，很多时间自由市场错误地为责备对象，导致进一步的干涉。他们特别反对政府长期干涉私人钱币的生产，支持取消所有强加唯一合法支付媒介的法律，并返回完全储备或自由银行服务。财政制度应为分散，不受国家垄断或中央银行垄断的完全控制。</p>
+					
+					<p>诺贝尔奖获得者弗里德里希·奥古斯特·冯·哈耶克在他的著作证明自由货币竞争的良好意义。他提议需要分散钱币，因为据他看法，在货币发行方面上国家垄断对社会很有害。与其把国家货币的使用强加于市场，不如允许市场发行彼此竞争的货币。最方便及可靠的货币会受最大的欢迎。发行人会通过他产品的改善来吸引用户。</p>
+
+
+					<p>“卡博币”由自愿者开发，以自由交易媒介、平等分散改善保密的系统。该系统单位价值只基于自由市场的供求，发行依赖于系统不变的数学算法，每个人都能够参与卡博币币的发行（只要提供他普通电脑的资源支持全系统的操作，就能够收到报酬）。挖矿卡博币币不需要任何高价专门设备（ASIC）。
+					</p>
+				</section>
+				
+				<section class="breath">
+				
+					<h3>卡博币的同质性及机密性</h3>
+		
+					<strong>匿名通过隐瞒发送人的互相签名及通过隐瞒收款人的一次性地址而实现。</strong>
+					
+					<h6>机密性</h6>
+					  <p>卡博币汇款无法跟踪或链接。卡博币通过ring signature加密技术来保证若茗及机密性。所有业务以全群签名，导致无法判断全群中具体是谁签了本交易，也无法判断具体是谁进行交易。群里的人越多，交易的机密性越高。不仅如此，卡博币的交易无法链接，虽然源交易不跟踪，还是能够看见您地址收到的汇款，不过多亏迪菲-赫尔曼密钥交换协议，收款人具有多数来自他公共密钥的唯一一次性地址。向这些地址汇款的资金只有收款人才可以使用。这些业务无法链接的，因为无法区别跟网络其他的业务。</p>
+						 
+					<h6>同质性</h6>
+					  <p>唯一一次性的地址和业务的坏签名保证对块链接分析的抵抗力。每个业务只增加熵，并以想进行卡博币跟踪的人建立更多障碍。</p>
+							  
+					  <p>对块链接分析的抵抗力保证一个很重要的性能：同质性。一个定额的变分具有同等的购买力。</p>
+
+					  <p>跟Bitcoin相比起来，卡博币最大的区别和优势就是同质性。所有卡博币币互换及统一，而在Bincoin上任何人都可以随时查看群里每个人账户的金融业务，并且查看任何地址上的bitcoin币金额。这种情况会导致人们资产的审查，结果一部分资金跟别人资金相比的话，会变成“有怀疑的”。比如说，一个卖家会拒绝接收某种bitcoin因为它之前的所有者曾进行怀疑的业务，或这些bitcoin是偷来的。而使用卡博币的话，您收到更大的隐私、独立和自由，跟使用现金一样。</p>
+					
+				</section>
+				
+			</div>
+		</div>
+	</div>
+	
+	<div class="container breath" id="roadmap">
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>发展计划</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+			
+				<ul class="timeline">
+					<li>
+					  <div class="timeline-badge success"><i class="fa fa-bullhorn"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> 项目履行</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 30.05.2016, 11:05:34</small></p>
+						</div>
+						<div class="timeline-body">
+						  <ul>
+							<li><a href="https://bitcointalk.org/index.php?topic=1491747">Bitcointalk</a>论坛上的开动通告及挖矿的发起。</li>
+							<li>官方网站: <a href="http://karbowanec.com">http://karbowanec.com</a></li>
+							<li>符合Windows和Linux的钱包，Command-line suite</li>
+						  </ul>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-binoculars"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> 块链接官方评论员</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 07.06.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>以发起新的自由评论员： <a href="http://explorer.karbowanec.com/">http://explorer.karbowanec.com/</a></p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="glyphicon glyphicon-tint"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> 第一台起重机</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 22.06.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>已发起<a href="http://faucet.karbowanec.com/">第一台起重机</a>，在那里曾能够免费收到测试卡博币币。</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-paw"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Forknote支持</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 27.06.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>卡博币已加到Democats池：
+							<ul>
+								<li><a href="https://democats.org/pool/?name=karbowanec">池</a></li>
+								<li><a href="https://democats.org/blockchain/?name=karbowanec">评论员</a></li>
+								<li><a href="https://democats.org/charts/?name=karbowanec">图表</a></li>
+							</ul>
+						  </p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="fa fa-exchange"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> 向交易所的进入</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 05.07.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>已进入第一个交易所<a href="https://www.cryptopia.co.nz/Exchange?market=KRB_BTC">Cryptopia</a></p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-language"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> 钱包支持基利尔文字</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 28.08.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>只有卡博币钱包才在所有基于CryptoNote加密货币文件及文件夹名称上据有基利尔文字的完全支持。这种修改很重要，因为非拉丁文字支持的缺乏会导致用户钱包和资金的丢失。</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="glyphicon fa fa-apple"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> 符合Mac OS的钱包</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 28.09.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>符合Mac OS的钱包已出产。</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-exchange"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> 进入Livecoin.net的交易所</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 10.10.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>已进入<a href="https://www.livecoin.net/en/trade/orderbook?currencyPair=KRB%2FBTC">Livecoin.net</a>交易所的交易</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="fa fa-code"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> 重要的更新：网络的Hardfork</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 19.10.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <ul>
+							<li>转到Bytecoin 1.0.11核心</li>
+							<li><strong>新的难度计算方法</strong></li>
+							<li><strong>剩余发行</strong></li>
+							<li>有限RPC（为了Masternodes）</li>
+							<li>Masternodes的手续费</li>
+						  </ul>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-code-fork"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Hardfork</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 22.12.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>网络在<a href="https://explorer.karbowanec.com/en/?hash=8e39967eb50b8a922cbfe22fe02989218345cbd61ae651ddbecf00834910ff50#blockchain_block">60001</a>高度的hard-fork。这个hard-fork是为了反对滥用标准CryptoNote难度算法的慢响应的强大挖矿机。他们通过突然喷入跟网络平均功率相比更大的功率，为了收到大数量的块及报酬，一直到难度终于响应提高了到他们水平的难度。然后他们结束挖矿，留者其他挖矿机勉强斗争对他们来说超高的难度。这导致了块之间很大的间隔和业务确认的拖延，会导致遇险。为了避免同类攻击，采用了带我们修改的新Zawy difficulty algorithm v.1难度计算方法，<a href="https://github.com/monero-project/research-lab/issues/3#issuecomment-245966676">原版描述如下</a>。</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					<li>
+					  <div class="timeline-badge success"><i class="fa fa-hand-o-up"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> 钱包支持URI</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 23.12.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>为了提供卡博币的可用性，已采用URI karbowanec的支持，就可以更方便地进行汇款查询及汇款。</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-mobile"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> 充手机的服务</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 31.12.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>很重要的成果：第一个实际能够使用卡博币币充乌克兰手机的服务。</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="fa fa-id-card-o"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> OpenAlias及跟踪钱包</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 02.04.2017</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p><a href="https://openalias.org/"><em>OpenAlias</em></a>协议的支持，使用性的再一个改善。<br />
+						  
+						  钱包的升级：
+						  <ul>
+							<li>跟踪钱包</li>
+							<li>单独挖矿</li>
+							<li>Karbo品牌再造的发起</li>
+							<li>不同修改，升级</li>
+						  </ul>
+						  </p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-bug"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> 安全更新</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 10.04.2016, 12:00 PM UTC</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>安全更新为了预防<a href="https://getmonero.org/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html">Disclosure of a Major Bug in CryptoNote Based Currencies</a>，2017-05-17 00:00:00 +0200 由Monero开发者发布。发布的时候，对亏Forknote的slb和Monero队，<a href="https://github.com/seredat/karbowanec/commit/4da156f2f07784ac24dde65d98517b1ffc99156f">易损性已消除</a>。</p>
+						  <p>该更新时，改变过Network ID为了免得寄生网络垃圾节点的错误，并且为了保证所有用户升级到最新版本。</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="fa fa-exchange"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> 乌克兰第一个交易所：KRB/UAH</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 02.04.2017</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>在乌克兰第一个交易所<a href="https://btc-trade.com.ua/stock/krb_uah">BTC Trade UA</a>已开始交易。</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-shopping-cart"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> 支付网关，电子商贸插件</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 02.04.2017</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>带电子商店插件的免费<a href="https://karbo.club/"><em>karbo.club</em></a>支付网关</p>
+						  <ul>
+							<li><a href="https://github.com/Karbovanets/karbo-woocommerce"><strong>WooCommerce的Karbo插件</strong></a></li>
+							<li><a href="https://github.com/Karbovanets/karbo-plugin-opencart"><strong>OpenCart的Karbo插件</strong></a></li>
+						  </ul>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="glyphicon glyphicon-leaf"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> 钱包里的记忆句</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 12.10.2017</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>为了恢复钱包，支持记忆据钱包的更新</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge primary"><i class="glyphicon glyphicon-phone"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success"></i> 移动钱包</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 13.02.2018</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>简化版移动钱包，易于通过遥远节点网络操作。 下载<a href="https://play.google.com/store/apps/details?id=org.karbo.karbon">Android</a>。</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					<div class="timeline-badge primary"><i class="glyphicon glyphicon-globe"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-spinner fa-pulse fa-fw"></i> 品牌再造及新的网站</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Q4 2017</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>新的网站和Karbo简称以减轻全球受众的掌握和理解。</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					<div class="timeline-badge primary"><i class="glyphicon glyphicon-bullhorn"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-spinner fa-pulse fa-fw"></i> 宣传运动</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Q4 2017</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>在乌克兰和全世界推广关于Karbo项目信息的活动。</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge warning"><i class="fa fa-lightbulb-o"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-cogs" aria-hidden="true"></i> 简化版钱包</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> ETA Q1 2018</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>各人电脑的简化接口钱包通过遥远节点网络操作，为跟电脑及块链接技术不太熟悉的用户用的。</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge primary"><i class="fa fa-cloud"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success"></i> 电子钱包</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 13.02.2018</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p><a href="https://karbo.me">karbo.me</a></p>
+						</div>
+					  </div>					  
+					</li>
+					<li>
+					  <div class="timeline-badge warning"><i class="fa fa-flask"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-cogs" aria-hidden="true"></i> 难度计算方法</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Q1 2018</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>转移到Zawy v1b计算方法新的版本。为已采用计算方法的升级，与其开发人在一起开发在我们 <a href="https://github.com/seredat/karbowanec/commit/231db5270acb2e673a641a1800be910ce345668a#commitcomment-24807829">Github</a>.仓库上。</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge warning"><i class="fa fa-flask"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-cogs" aria-hidden="true"></i> 无法跟踪的改善</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Q2 2018</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>选出口算法的升级（三角测量分配）。</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge warning"><i class="fa fa-flask"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-cut" aria-hidden="true"></i> 稳定的费用</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Q2 2018</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Transactions minimum fee stable in fiat equivalent regardless of coin price (will stay on the same level if the coin price surges up). It will not be a fixed amount in KRB. It means stable low fee even in case of rapid value growth of the coin.</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge warning"><i class="fa fa-flask"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-cogs" aria-hidden="true"></i> 有用跟踪钱包</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2019</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>跟踪钥匙，能够调查输入及输出业务。</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge warning"><i class="fa fa-rocket"></i></div>
+					</li>
+				</ul>
+			
+			</div>
+		</div>
+	</div>		
+
+	
+	<div>
+		<div class="container breath" id="specs"> 
+			<div class="row">
+				<div class="col-md-12">
+					<h2>参数表</h2>
+				</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+			
+			</div>
+		</div>
+	
+		
+		
+		<div class="row">
+			<div class="col-md-6">
+			
+				<h3 style="margin-bottom:20px;">参数表</h3>
+				<ul style="margin-bottom:30px;padding-left:15px;">
+					<li>Proof-of-work算法： CryptoNight</li>
+					<li>一块的时间：240秒</li>
+					<li>难度水平：个块的重新瞄准/li>
+					<li>一块的奖金：按照数字公式平稳减低<br/>
+						<span class="text-primary text-center">BaseReward = (MSupply - A)/2<sup>18</sup></span><br/>
+						其中MSupply = 最小单位的总数，'A' = 已挖矿钱币的总数
+					</li>
+					<li>可除：10<sup>12</sup>单位（至逗号后面的12单位）</li>
+					<li>发行：不断的，初步钱币总数：10,000,000,000,000,000,000个最小单位，就是千万个卡博币币。</li>
+					<li>补充发行：初步总数的~2%一年，一块最小的奖金为1个卡博币.
+					<br />
+					<small>一块奖金降低到1个卡博币之后（97%初步发行时），该奖金为固定的。</small></li>
+				</ul>
+				
+			</div>
+			<div class="col-md-6">
+				
+				<h3 style="margin-bottom:20px;">实际时间的统计</h3>
+				<ul style="margin-bottom:30px;padding-left:15px;">
+					<li>块链接高度： <a href="http://explorer.karbowanec.com/" class="normal-links" target="_blank" id="last-block-url"><span id="blockchain-height">loading...</span></a></li>
+					<li>网络速度： <span id="hashrate">loading...</span></li>
+					<li>挖矿难度： <span id="difficulty">loading...</span></li>
+					<li>最后一块的奖金： <span id="reward">loading...</span></li>
+					<li>最后一块的时间： <span id="last-block">loading...</span></li>
+					<li>一共已发行钱币的总数： <span id="emission">loading...</span></li>
+				</ul>
+
+			</div>
+		
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<span class="label label-info">发行表</span>
+				<div id="emission">
+					<canvas id="emissionChart"></canvas>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+
+</article>
+
+<!-- FOOTER -->
+<footer class="grad1">
+   <div class="container">
+	 <div class="breath">
+        <div class="row">
+          <div class="col-lg-4">
+			<p>&copy; 2016-2017 Karbo. 
+		  
+			E-mail:&nbsp;krbcoin@ukr.net</p>
+			
+			<div
+			  class="fb-like"
+			  data-share="true"
+			  data-width="300"
+			  data-show-faces="true">
+			</div>
+		  </div>
+          <div class="col-lg-8">
+			<p  class="text-right">
+				<a href="/cn/terms">机密性</a>
+				|
+				<a href="/cn/terms">条件</a> 
+				|
+				<a href="https://donate.karbo.io/">捐款</a>
+				|
+				<a href="http://karbo.foundation">宪章</a>
+				|
+				<a href="https://forum.karbo.io/">论坛</a>
+			</p>
+		  </div>
+		</div>
+	 </div>
+  </div>
+</footer>
+<!-- END FOOTER -->
+
+<!-- JS and analytics only. --> 
+<!-- Bootstrap core JavaScript
+================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="/js/jquery.js"></script> 
+<script src="/js/bootstrap.min.js"></script> 
+<script src="/js/easing.js"></script> 
+<script src="/js/rates.js"></script>
+<script src="/js/tools.js"></script>
+<script src="/js/Chart.min.js"></script>
+
+
+<script>
+$(function () {
+            emissionSpeedFactor = 18;
+            difficultyTarget = 240;
+            moneySupply = 10000000;
+			
+	getEmission = function() {
+            var dots = [],
+                days = 10 * 365,
+                k = 1 / Math.pow(2, emissionSpeedFactor),
+                val;
+
+            for (var d = 0; d < days; d += 365) {
+                val = moneySupply * ((k - 1) * Math.pow((1 - k), (d * 86400 / difficultyTarget)) + 1);
+                dots.push(Math.round(val * 100 / moneySupply));
+            }
+            return dots;
+	}
+	getReward = function() {
+			var dots = [],
+                days = 10 * 365,
+                k = 1 / Math.pow(2, emissionSpeedFactor),
+                val2;
+
+            for (var d = 0; d < days; d += 365) {
+				var day0 = moneySupply * ((k - 1) * Math.pow((1 - k), (d * 86400 / difficultyTarget)) + 1);
+				var day1 = moneySupply * ((k - 1) * Math.pow((1 - k), ((d + 1) * 86400 / difficultyTarget)) + 1);
+				    val2 = Math.round(((day1 - day0) * difficultyTarget / (86400 * Math.pow(1, 12)))*100)/100;
+				// tail emission
+				if (val2 < 1) {
+					val2 = 1;
+				}
+				
+				dots.push(val2);
+			}
+            return dots;
+	}
+
+var ctx = document.getElementById('emissionChart').getContext('2d');
+var gradientE = ctx.createLinearGradient(0, 0, 0, 400);
+    gradientE.addColorStop(0, 'rgba(0, 87,184, 1)') // show this color at 0%;
+	gradientE.addColorStop(0.5, 'rgba(0, 162, 232, 0.2)'); // show this color at 50%
+	gradientE.addColorStop(1, 'rgba(255, 255, 255, 0)'); // show this color at 100%
+var gradientR = ctx.createLinearGradient(0, 0, 0, 400);
+	gradientR.addColorStop(0, 'rgba(255, 242,0, 0.8)') // show this color at 0%;
+	gradientR.addColorStop(0.5, 'rgba(255, 242,0, 0.7)'); // show this color at 50%
+	gradientR.addColorStop(1, 'rgba(239, 228, 176, 0.5)'); // show this color at 100%
+	
+var emChart = new Chart(ctx, {
+  type: 'line',
+  data: {
+      labels: ['开始', '1 年', '2 年', '3 年', '4 年', '5 年', '6 年', '7 年', '8 年', '9 年'],
+      datasets: [{
+      label: '发行, %',
+      yAxisID: 'E',
+	  backgroundColor: gradientE,
+      borderColor: '#0057B8',
+	  borderWidth: 2,
+	  pointColor : "#fff",
+      pointBorderColor : "#0057B8",
+      pointHighlightFill: "#0057B8",
+      pointBackgroundColor: "#0057B8",
+	  pointBorderWidth: 4,
+	  pointRadius: 3,
+	  pointHoverRadius: 5,
+      data: getEmission()
+    }, {
+      label: '奖金, KRB',
+      yAxisID: 'R',
+	  backgroundColor: gradientR,
+      borderColor: '#FFF200',
+	  borderWidth: 2,
+	  pointColor : "#fff",
+      pointBorderColor : "#FFF200",
+      pointHighlightFill: "#FFF200",
+      pointBackgroundColor: "#FFF200",
+	  pointBorderWidth: 4,
+	  pointRadius: 3,
+	  pointHoverRadius: 5,
+      data: getReward()
+    }]
+  },
+  options: {
+	maintainAspectRatio: false,
+	responsive: true,
+    scales: {
+      yAxes: [{
+        id: 'E',
+        type: 'linear',
+        position: 'right',
+		scaleLabel: {
+			display: true,
+			labelString: '发行 %'
+		}
+		//gridLines: {
+        //    display:false
+        //},
+		//display: false
+      }, {
+        id: 'R',
+        type: 'linear',
+        position: 'left',
+		scaleLabel: {
+			display: true,
+			labelString: '一块的奖金, KRB'
+		}
+		//gridLines: {
+        //    display:false
+        //},
+		//display: false
+      }],
+	  xAxes: [{
+		//display: false
+	  }]
+    }
+  }
+});
+	
+
+});
+</script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.8.0/css/flag-icon.min.css">
+
+</body>
+</html>

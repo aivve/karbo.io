@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+<!-- Meta, title, CSS, favicons, etc. -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="전자 카르보에 대한 정보 및 사양- 암호화 디지털 분산형 환전 단위 및 환전 네트워크">
+<title>전자 카르보에 대한 정보- 분산형 환전 네트워크</title>
+
+<link rel="alternate" href="/" hreflang="x-default" />
+<link rel="alternate" href="/ua/" hreflang="uk_UA" />
+<link rel="alternate" href="/ru/" hreflang="ru_RU" />
+<link rel="alternate" href="/pl/" hreflang="pl_PL" />
+<link rel="alternate" href="/es/" hreflang="es_ES" />
+<link rel="alternate" href="/cn/" hreflang="zh_CN" />
+<link rel="alternate" href="/jp/" hreflang="ja_JP" />
+<link rel="alternate" href="/kr/" hreflang="ko_KR" />
+
+<!-- Bootstrap core CSS -->
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Startup CSS -->
+<link href="/css/startup.css" rel="stylesheet">
+<link href="/css/timeline.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <script src="js/respond.min.js"></script>
+<![endif]-->
+
+<!-- Favicons -->
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="icon" type="image/icon" href="/images/favicon.ico" >
+<script src="/js/pace.js"></script>
+<!-- Custom Google Font : Open Sans -->
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:100,100i,300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic' rel='stylesheet' type='text/css'>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-78493281-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<meta property="og:url" content="https://www.karbo.io" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="전자 카르보" />
+<meta property="og:description" content="분산형 환전 수단" />
+<meta property="og:image" content="https://karbo.io/images/wallet.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1092" />
+<meta property="og:image:height" content="684" />
+</head>
+<body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1631255797202963',
+      xfbml      : true,
+      version    : 'v2.7'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/ko_KR/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<div class="preloader"></div>
+
+<!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">내비게이션</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/kr/"><span id="coinIcon">&#1180;</span> <strong>카르보</strong></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+			  <a href="/kr/download">다운로드</a>
+			</li>
+			<li>
+              <a href="/kr/use">적용</a>
+            </li>
+			<li>
+              <a href="/kr/info">정보</a>
+            </li>
+			<li>
+              <a href="http://explorer.karbowanec.com/">관찰자</a>
+            </li>
+			<li class="dropdown">
+			  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-language" aria-hidden="true"></i> <span class="caret"></span></a>
+			  <ul class="dropdown-menu" role="menu">
+				<li><a href="/"><span class="flag-icon flag-icon-us"></span> English</a></li>
+				<li><a href="/ua/"><span class="flag-icon flag-icon-ua"></span> Українська</a></li>
+				<li><a href="/ru/"><span class="flag-icon flag-icon-ru"></span> Русский</a></li>
+				<li><a href="/pl/"><span class="flag-icon flag-icon-pl"></span> Polski</a></li>
+				<li><a href="/es/"><span class="flag-icon flag-icon-es"></span> Español</a></li>
+				<li><a href="/cn/"><span class="flag-icon flag-icon-cn"></span> 简体中文</a></li>
+				<li><a href="/jp/"><span class="flag-icon flag-icon-jp"></span> 日本語</a></li>
+				<li><a href="/kr/"><span class="flag-icon flag-icon-kr"></span> 한국어</a></li>
+			  </ul>
+			</li>
+			<li class="dropdown">
+			<a href="#" class="price dropdown-toggle" data-toggle="dropdown"><span id="btc_price"></span> <span id="arrowplace"></span></a>
+			<ul class="dropdown-menu" role="menu">
+				<li><a href="#calc" id="usd_price"></a></li>
+				<li><a href="#calc" id="eur_price"></a></li>
+				<li><a href="#calc" id="rur_price"></a></li>
+				<li><a href="#calc" id="uah_price"></a></li>
+			</ul>
+			</li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+   </div>
+<!--// Navbar Ends-->
+
+<div class="wrapper"></div>
+
+<article class="content">
+
+<!--SUBPAGE HEAD-->
+
+	<div class="subpage-head grad breath inverse">
+	  <div class="container">
+		<div class="section-title">
+		  <h2>전자 카르보 소개</h2>
+		  <h4>정보 및 사양</h4>
+		</div>
+	  </div>
+	</div>
+
+<!-- // END SUBPAGE HEAD -->
+
+
+
+	<div class="container breath" id="links"> 
+		<div class="row">
+			<div class="col-sm-12 col-md-6 col-lg-4">
+				  <h2>유용한 자료</h2>
+					<ul class="list-group">
+						<!--li class="list-group-item"><a href="/mining">마이닝</a></li-->
+						<li class="list-group-item"><a href="http://explorer.karbowanec.com/#pools">마이닝용 풀</a></li>
+						<li class="list-group-item"><a href="http://explorer.karbowanec.com/">블록체인의 공식 관찰자</a></li>
+						<!--li class="list-group-item"><a href="http://democats.org/blockchain/?name=karbowanec">democats.org 대체 관찰자</a></li-->
+						<li class="list-group-item"><a href="http://paperwallet.karbowanec.com/">종이 지갑 (고전)</a></li>
+						<li class="list-group-item"><a href="http://krb.paperwallet.pw/">종이 지갑 (니모닉)</a></li>
+						<li class="list-group-item"><a href="/ticker">환율에 대한 정보 제공 장치</a></li>
+						<li class="list-group-item"><a href="/doc">문서</a></li>
+						<li class="list-group-item"><a href="https://github.com/seredat/karbowanec">소스 코드</a></li>
+						<li class="list-group-item"><a href="/promo">미디어 세트 (광고 자료)</a></li>
+					</ul>
+			</div>
+		
+		
+			<div class="col-sm-12 col-md-6 col-lg-4">
+				
+				<h2>커뮤니티 사이트</h2>
+			
+				<div class="alert alert-dismissible alert-warning">
+				  <button type="button" class="close" data-dismiss="alert">&times;</button>
+				  <p>공식 웹 사이트: <a href="http://karbo.io">http://karbo.io</a>!</p>
+				</div>
+			
+				<p>이 비공식 사이트에서 자세한 정보를 찾을 수 있습니다:</p>
+				
+					<ul class="list-group">
+						<li class="list-group-item"><a href="http://karbowanec.com">http://karbowanec.com</a></li>	
+						<li class="list-group-item"><a href="http://karbovanets.org">http://karbovanets.org</a></li>	
+						<li class="list-group-item"><a href="http://karbo.digital">http://karbo.digital</a></li>	
+						<li class="list-group-item"><a href="http://krb.digital">http://krb.digital</a></li>
+					</ul>
+			</div>
+		</div>
+	</div>
+
+	
+	<div class="container breath" id="about"> 
+		<div class="row">
+			<div class="col-md-12">
+				
+				<section>
+					<h2>카르보 무엇인가요?</h2>
+					
+					<p>카르보 (카르보바네츠란) 현대 우크라이나의 영토와 중세의 모든 유럽에 사용된 우크라이나어와 폴란드어로 "카르보"로 불리는 나무 막대기의 특별한 자국 노치를 적용하여 결제나 부채를 기록하는 고대의 방법에서 나온 것입니다. 때때로 카르보가 XX 세기에도 사용되었습니다. 스틱은 두 부분으로 나뉘었고 세리프가 있는 각 부분은 거래 참가자에 남아 있었습니다. 스틱의 반을 서로 붙이면 세리프가 위조되었는지 확인할 수 있었습니다. 이것은 카르보 네트워크의 블록체인 작업과 매우 유사합니다.</p>
+					
+					<p>카르보바네츠는 1996년까지 그 역사의 여러 기간에 우크라이나 화폐 단위이며 소련 공화국 화폐 단위의 우크라이나어 이름입니다. 현재 우크라이나의 영토 내에서 합법적인 결제 수단 인 그리브니아로 대체됩니다.</p>
+					
+					<p>따라서 카르보바네츠는 잘 알려진 단어이며, 우크라이나뿐만 아니라 이웃 국가에서도 돈과 밀접한 관련이 있습니다. 사람들은 이 단어를 잘 알고 있어서 인식에 도움이 됩니다. 비슬라브 자료에서, 읽기 및 발음을 용이하게 하기 위해 약어 "카르보" ("Karbo")는 사용됩니다.</p>
+
+					<p>카르보는 암호 화폐의 디지털 형식으로 공식 및 독립 환전 수단으로 복원되어 있습니다.</p>
+				
+				</section>
+				<section class="breath">
+				
+					<h3>미션</h3>
+					
+					<blockquote>
+					  <p><strong>4째 카르보바네츠가 되기 &ndash; 전자 환전 수단</strong></p>
+					</blockquote>
+
+					
+					
+				</section>
+				
+					
+				<section class="breath">
+				
+					<p>카르보 오스트리아 경제 학교의 원칙을 기반으로 합니다. 이 학교는 가격 결정 메커니즘 조직을 강조하고 사람의 주관적인 선택의 복잡성으로 인해 운영 시장에 대한 수학적 모델링이 매우 복잡하거나 불가능하므로 경제에서의 비간섭 방식을 지원합니다. 오스트리아 학교의 대표자는 경제 에이전트 사이에 자발적으로 체결된 협약 준수를 보호하고 경제 활동에서의 가능한 최소한 간섭 (특히 국가로부터) 및 개인 선택의 최대 개방성 (자유롭게 선택된 환전 수단 포함)의 엄격한 준수를 보호합니다.</p>
+					<p>특히 그들은 무역에 대한 정부 개입의 왜곡과 해로운 영향에 대해 심각한 우려를 표합니다. 실제로 이 분야의 일부 국립 규제만 필요하거나 바람직합니다. 종종 기존 규범과 관련된 문제를 고려하여 자유 시장을 비난해서 자유 시장에 더 많은 개입을 정당화합니다. 그들은 단일 법적 결제 수단의 부과와 완전한 예비 또는 자유 은행 업무로 복귀에 관한 모든 법률의 즉각적인 폐지를 주장하면서 사적 자금의 생산에 대한 정부의 장기간 개입에 비판적입니다. 국가 독점이나 독점 중앙 은행의 통제하에 있는 않은 분산형 금융 시스템으로 복귀하기를 원합니다.</p>
+					<p>노벨상 수상자인 프리드리히 하이에크 (Friedrich Hayek)는 독립적인 통화의 경쟁이 엄청난 긍정적인 가치가 있음을 증명합니다. 그는 국가 독점이 사회에 해를 끼치기 때문에 돈 발행 과정이 분산형되어야 한다고 생각합니다. 모든 시장 참여자들이 사용하도록 강제하는 국가 돈 대신에, 경쟁할 수있는 돈을 발행 할 수 있어야 합니다. 편리하고 안정적인 통화가 가장 수요가 많습니다. 발행자는 제품을 개선하여 사용자를 끌어들이려고 합니다.</p>
+					<p>카르보는 자유로운 환전 수단으로 봉사자들에 의해 개발되어 있습니다. 이것은 프라이버시가 개선된 평등주의적이고 자유 시장에서의 수요와 공급에만 근거하는 분산된 시스템입니다. 여기에 방출은 변경되지 않은 수학적 알고리즘에 달려 있으며 모두가 시스템의 작동을 지원하기 위해 일반 컴퓨터에서 제공하는 자원에 대한 보상으로 카르보바네츠의 방출에 참여할 수 있습니다. 마이닝을 위해 카르보바네츠에는 특별한 비싼 장비 (ASIC)가 필요하지 않습니다.</p>
+				</section>
+				
+				<section class="breath">
+				
+					<h3>카르보의 동질성 및 기밀성</h3>
+		
+					<strong>익명성은 발신자를 숨기는 원형 서명과 수신자를 숨기는 일회성 주소에 의해 구현됩니다.</strong>
+					
+					<h6>기밀성 유지</h6>
+					  <p>카르보 송금은 추적되지 않고 결합되지 않습니다. 카르보는 ring sigature   암호화된 기술을 사용하여 익명성과 기밀성을 보장합니다. 모든 거래가 그룹에 의해 서명되어서 그룹에서 누가 서명하고 누가 거래를 수행한다는 것을 확실하게 알아볼 수 없습니다. 그룹 회원이 많으면 많을 수록 거래의 기밀성도 높습니다. 원래 거래가 추적되지 않는 경우에도 카르보 거래를 결합할 수 없습니다. 사용자가 주소에 있는 송금을 볼 수 있지만 Diffie-Hellman 환전 프로토콜 덕분에 수신자는 자신의 공개 키에서 많은 고유한 일회성 주소를 가지고 있습니다. 수신자만 이 주소로 보낸 자금을 이용할 수 있습니다. 네트워크의 다른 거래 간 구별할 수 없으므로 이 거래를 결합할 수 없습니다. 거래의 비밀 그룹에 더 많은 참여, 더 높은. 또한, 연결하는 것은 불가능 거래를 카르보 - 원래 트랜잭션이 추적되지 않는 경우에도, 여전히 통신 프로토콜 디피 - 헬만의 실시 예에 당신이 당신의 주소에서 수신 번역하지만, 덕분에 볼 수, 수신자는 공공에서 발생하는 다수의 고유 한 일회용 주소가 열쇠. 이 주소로 전송 기금은 수신자 만 사용할 수 있습니다. 이러한 트랜잭션은 네트워크상의 다른 트랜잭션간에 구별 될 수 없으므로 서로 연결할 수 없습니다.</p>
+						 
+					<h6>동질성</h6>
+					  <p>고유한 일회성 주소 및 거래의 그룹 서명 (ring signature)은 블록체인 분석에 안정성을 제공합니다. 각 거래는 엔트로피를 증가시키고 카르보과의 거래를 탐구하고자 하는 사람들에게 추가적인 장애물을 만듭니다.</p>
+							  
+					  <p>분석에 관한 안정성은 매우 중요한 특성인 동질성을 제공합니다. 즉, 모든 화폐는 동일한 구매력을 갖습니다.</p>
+
+					  <p>비트코인에 비해 카르보의 주요 차이점과 이점은 동질성입니다. 모든 모두가 언제든지 모든 사용자의 계정에서 거래 내역을 보고 각 계정에서 비트코인이 얼마인지 확인할 수 있어서 비트코인과 달리 표준화되어 서로 교환될 수 있습니다. 이것은 사람들의 자산에 대한 검열로 이어질 수 있으며, 그 결과 자금의 일부가 시스템의 다른 수단보다 "악화"될 수 있습니다. 예를 들어 판매자는 이전 소유자가 의심스러운 거래를 수행하거나 도난당한 것으로 의심되기 때문에 비트코인을 수령하는 것을 거부할 수 있습니다. 카르보를 사용하면 현금 사용과 마찬가지로 개인 정보, 독립성 및 자유가 향상됩니다.</p>
+					
+				</section>
+				
+			</div>
+		</div>
+	</div>
+	
+	<div class="container breath" id="roadmap">
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>개발 계획</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+			
+				<ul class="timeline">
+					<li>
+					  <div class="timeline-badge success"><i class="fa fa-bullhorn"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> 프로젝트 출시</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 30.05.2016, 11:05:34</small></p>
+						</div>
+						<div class="timeline-body">
+						  <ul>
+							<li><a href="https://bitcointalk.org/index.php?topic=1491747">Bitcointalk</a> 포럼에서 마이닝 시작과 출시에 관한 발표.</li>
+							<li>공식 웹 사이트 <a href="http://karbowanec.com">http://karbowanec.com</a></li>
+							<li>Windows 및 Linux 용 지갑 및 Command-line suite</li>
+						  </ul>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-binoculars"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> 블록체인의 공식 관찰자</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 07.06.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>새로운 독립적인 관찰자가 시작되어 있습니다:  <a href="http://explorer.karbowanec.com/">http://explorer.karbowanec.com/</a></p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="glyphicon glyphicon-tint"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> 첫째 크레인</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 22.06.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>무료로 샘플 카르보바네츠를 받을 수 있는 첫째 공식 <a href="http://faucet.karbowanec.com/">크레인입니다</a></p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-paw"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Forknote 지원</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 27.06.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>카르보바네츠가 Democats풀에 추가되었습니다:
+							<ul>
+								<li><a href="https://democats.org/pool/?name=karbowanec">풀</a></li>
+								<li><a href="https://democats.org/blockchain/?name=karbowanec">관찰자</a></li>
+								<li><a href="https://democats.org/charts/?name=karbowanec">그래픽</a></li>
+							</ul>
+						  </p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="fa fa-exchange"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> 거래소에 진입하기</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 05.07.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>첫째 <a href="https://www.cryptopia.co.nz/Exchange?market=KRB_BTC">Cryptopia</a> 거래소에 있음</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-language"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> 지갑에 한글 지원</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 28.08.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>카르보 지갑만 CryptoNote를 기반으로 모든 암호화 통화의 파일 및 폴더 이름에 한글를 지원합니다. 비라틴 문자에 대한 지원이 없었으면 지갑과 사용자 자금이 손실될 수 있었을 것입니다.</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="glyphicon fa fa-apple"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Mac OS 용 지갑</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 28.09.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Mac OS 용 지갑.</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-exchange"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Livecoin.net 거래소에 진입하기</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 07.10.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p><a href="https://www.livecoin.net/en/trade/orderbook?currencyPair=KRB%2FBTC">Livecoin.net</a> 거래소에서 거래 시작</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="fa fa-code"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> 중요한 갱신, 하드포크 (hardfork) 계획</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 19.10.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <ul>
+							<li>Bytecoin 1.0.11 코어로 이동하기</li>
+							<li><strong>복잡도를 계산하는 새로운 알고리즘</strong></li>
+							<li><strong>잔류 배출</strong></li>
+							<li>제한된 RPC (마스터용)</li>
+							<li>마스터용 수수료</li>
+						  </ul>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-code-fork"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> 하드포크</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 22.12.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>하드코프 (hardfork) 네트워크의 <a href="https://explorer.karbowanec.com/en/?hash=8e39967eb50b8a922cbfe22fe02989218345cbd61ae651ddbecf00834910ff50#blockchain_block">60001</a>높입니다. 이 하트코프는 네트워크의 표준 전력에 비해 더 높은 전력으로 인해 전력이 반응해서 해당 수준으로 올라갈 때까지 많은 블록과 보상을 받기 위해 표준 알고리즘의 복잡성 CryptoNote의 느린 응답을 오용하는 심각한 마이너로부터 보호하도록 설계되었습니다. 그 후, 그들은 마이닝을 중단하고 나머지 마이너가 너무 복잡하게 싸우도록 남겨 두었습니다. 이로 인해 블록 사이에 거리가 크고 거래 확인 지연을 초래해서 치명적인 결과를 가져오게 합니다. 이러한 공격을 막기 위해 복잡도를 계산하는 새로운 Zawy difficulty algorithm v.1이 도입되었습니다. <a href="https://github.com/monero-project/research-lab/issues/3#issuecomment-245966676">이 알고리즘의 원본은 여기에 설명되어 있습니다</a>.
+						</div>
+					  </div>
+					</li>
+					<li>
+					<li>
+					  <div class="timeline-badge success"><i class="fa fa-hand-o-up"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> 지갑 URI 지원</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 23.12.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>편의성을 향상시키기 위해 <em>karbowanec:</em> URI 스킴의 지원이 구현되었습니다. 이것은 번역 요청을 하고 더 편리한 방법으로 결제할 수 있습니다.</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-mobile"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> 휴대 전화 보충 서비스</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 31.12.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>또 다른 중요한 이정표는 우크라이나 운영자의 <a href="https://krbtel.top/">모바일 전화를 카르보로 보충하는</a> 최초 실제 서비스입니다.</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="fa fa-id-card-o"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> OpenAlias 및 지갑 추적</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 02.04.2017</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p><a href="https://openalias.org/"><em>OpenAlias</em></a> 프로토콜 지원은 유용성을 개선하기 위한 또 다른 단계입니다.<br />
+						  
+						  지갑의 변경 사항:
+						  <ul>
+							<li><strong>추적 지갑</strong></li>
+							<li>마이닝 솔로</li>
+							<li>Karbo에 브랜드 변경 시작</li>
+							<li>다양한 수정, 개선</li>
+						  </ul>
+						  </p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-bug"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> 보안 업데이트</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 10.04.2016, 12:00 PM UTC</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Monero 개발자가 나중에 2017-05-17 00:00:00 +0200에 게시한 <a href="https://getmonero.org/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html">Disclosure of a Major Bug in CryptoNote Based Currencies</a>로부터 보안용 업데이트. 공개될 당시 취약점은 이미 Forknote와 Monero 팀에 <a href="https://github.com/seredat/karbowanec/commit/4da156f2f07784ac24dde65d98517b1ffc99156f">의해 제거되었습니다</a>. 
+						  <p>기생 네트워크의 노드 스팸으로 인해 발생한 오류를 제거하고 모든 사용자가 새 버전으로 이동하도록 업데이트 도중 Network ID가 변경되었습니다.</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="fa fa-exchange"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> 전체 우크라이나 거래소 - KRB/UAH</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 02.04.2017</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p><a href="https://btc-trade.com.ua/stock/krb_uah">BTC Trade UA</a> 최초 우크라이나 거래소에서 거래 시작.</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-shopping-cart"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> 결제 게이트웨이, 전자 상거래용 플러그인</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 02.04.2017</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>인터넷 상점용 플러그인과 무료 결제 게이트웨어 <a href="https://karbo.club/"><em>karbo.club</em></a>.</p>
+						  <ul>
+							<li><a href="https://github.com/Karbovanets/karbo-woocommerce"><strong>WooCommerce용 Karbo 플러그인</strong></a></li>
+							<li><a href="https://github.com/Karbovanets/karbo-plugin-opencart"><strong>OpenCart용 Karbo 플러그인</strong></a></li>
+						  </ul>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="glyphicon glyphicon-leaf"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> 지갑에서 니모닉 문구</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 12.10.2017</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>지갑을 복원하기 위해 니모닉 문구를 지원하여 지갑을 업데이트함.</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge primary"><i class="glyphicon glyphicon-phone"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-spinner fa-pulse fa-fw"></i> 모바일 지갑</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> ETA Q4 2017</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>원격 노드의 네트워크를 통해 작동하는 손쉬운 모바일 지갑. 알파 버전의 개발과 테스트가 계속됩니다.</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					<div class="timeline-badge primary"><i class="glyphicon glyphicon-globe"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-spinner fa-pulse fa-fw"></i> 브랜딩 재설정 및 새로운 웹 사이트</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Q4 2017</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>전 세계 관객의 인식을 촉진하기 위해 새로운 웹 사이트 및 <strong>Karbo</strong> 명칭을 변경하기.</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					<div class="timeline-badge primary"><i class="glyphicon glyphicon-bullhorn"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-spinner fa-pulse fa-fw"></i> 홍보 캠페인</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Q4 2017</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>우크라이나와 세계에서 Karbo 프로젝트에 대한 정보를 보급하는 활동.</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge warning"><i class="fa fa-lightbulb-o"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-cogs" aria-hidden="true"></i> 라이트 지갑</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> ETA Q1 2018</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>단순화된 인터페이스로 원격 노드 네트워크를 통해 작동할 PC용 라이트 지갑은 PC 및 블록체인 기술을 잘 모르는 사용자를 위해 설계되었습니다.</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge primary"><i class="fa fa-cloud"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-spinner fa-pulse fa-fw"></i> 웹 지갑</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> ETA Q1 2018</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>웹 지갑을 개발하고 있습니다.</p>
+						</div>
+					  </div>					  
+					</li>
+					<li>
+					  <div class="timeline-badge warning"><i class="fa fa-flask"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-cogs" aria-hidden="true"></i> 복잡도 알고리즘</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Q1 2018</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>알고리즘 <a href="https://github.com/seredat/karbowanec/commit/231db5270acb2e673a641a1800be910ce345668a#commitcomment-24807829">Zawy v1b의 업데이트된 버전으로</a> 이동합니다. Github 저장소에 작성자와 함께 개발된 알고리즘의 개선 사항입니다.</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge warning"><i class="fa fa-flask"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-cogs" aria-hidden="true"></i> 비추적 기능 개선</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Q2 2018</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>출력 선택 알고리즘 업데이트 (삼각형 분포).</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge warning"><i class="fa fa-flask"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-cogs" aria-hidden="true"></i> 완벽한 지갑 추적</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2019</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>입력 및 출력 거래를 관리할 수 있는 추적 키.</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge warning"><i class="fa fa-rocket"></i></div>
+					</li>
+				</ul>
+			
+			</div>
+		</div>
+	</div>		
+
+	
+	<div>
+		<div class="container breath" id="specs"> 
+			<div class="row">
+				<div class="col-md-12">
+					<h2>사양</h2>
+				</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+			
+			</div>
+		</div>
+	
+		
+		
+		<div class="row">
+			<div class="col-md-6">
+			
+				<h3 style="margin-bottom:20px;">사양</h3>
+				<ul style="margin-bottom:30px;padding-left:15px;">
+					<li>알고리즘 Proof-of-work: CryptoNight</li>
+					<li>블록 시간: 240초</li>
+					<li>복잡 수준: 각 블록의 목표 재설정</li>
+					<li>블록당 보상: 각 블록의 수식에 따라 조금씩 감소됩니다<br/>
+						<span class="text-primary text-center">BaseReward = (MSupply - A)/2<sup>18</sup></span><br/>
+						MSupply = 가장 작은 단위로, 'A' –이미 수집된 동전
+					</li>
+					<li>나누기: 10<sup>12</sup> 단위 (쉼표 뒤에 최대 12자까지)</li>
+					<li>배출: 동전의 일정한 최초 질량- 최소 단위의 10,000,000,000,000,000,000 또는 1,000 만 krb. 추가</li>
+					<li>배출: 연간 초기 질량의~ 1.2 %임, 블록체인당 최소 보상은 1 krb입니다.
+					<br />
+					<small>블록에 대한 보상이 1 krb로 줄어든 후 (초기 배출량의 97 %까지), 그렇게 계속해서 유지될 것입니다.</small></li>
+				</ul>
+				
+			</div>
+			<div class="col-md-6">
+				
+				<h3 style="margin-bottom:20px;">실시간 통계</h3>
+				<ul style="margin-bottom:30px;padding-left:15px;">
+					<li>블록체인 높이: <a href="http://explorer.karbowanec.com/" class="normal-links" target="_blank" id="last-block-url"><span id="blockchain-height">loading...</span></a></li>
+					<li>네트워크 속도: <span id="hashrate">loading...</span></li>
+					<li>생산 복잡성: <span id="difficulty">loading...</span></li>
+					<li>마지막 블록당 보상: <span id="reward">loading...</span></li>
+					<li>마지막 블록 시간: <span id="last-block">loading...</span></li>
+					<li>발행된 동전 총수: <span id="emission">loading...</span></li>
+				</ul>
+
+			</div>
+		
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<span class="label label-info">배출 일정</span>
+				<div id="emission">
+					<canvas id="emissionChart"></canvas>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+
+</article>
+
+<!-- FOOTER -->
+<footer class="grad1">
+   <div class="container">
+	 <div class="breath">
+        <div class="row">
+          <div class="col-lg-4">
+			<p>&copy; 2016-2017 카르보. 
+		  
+			E-mail:&nbsp;krbcoin@ukr.net</p>
+			
+			<div
+			  class="fb-like"
+			  data-share="true"
+			  data-width="300"
+			  data-show-faces="true">
+			</div>
+		  </div>
+          <div class="col-lg-8">
+			<p  class="text-right">
+				<a href="/kr/privacy">개인 정보 보호 정책</a>
+				|
+				<a href="/kr/terms">이용 약관</a> 
+				|
+				<a href="https://donate.karbo.io/">기부</a>
+				|
+				<a href="http://karbo.foundation">재단</a>
+				|
+				<a href="https://forum.karbo.io/">포럼</a>
+			</p>
+		  </div>
+		</div>
+	 </div>
+  </div>
+</footer>
+<!-- END FOOTER -->
+
+<!-- JS and analytics only. --> 
+<!-- Bootstrap core JavaScript
+================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="/js/jquery.js"></script> 
+<script src="/js/bootstrap.min.js"></script> 
+<script src="/js/easing.js"></script> 
+<script src="/js/rates.js"></script>
+<script src="/js/tools.js"></script>
+<script src="/js/Chart.min.js"></script>
+
+
+<script>
+$(function () {
+            emissionSpeedFactor = 18;
+            difficultyTarget = 240;
+            moneySupply = 10000000;
+			
+	getEmission = function() {
+            var dots = [],
+                days = 10 * 365,
+                k = 1 / Math.pow(2, emissionSpeedFactor),
+                val;
+
+            for (var d = 0; d < days; d += 365) {
+                val = moneySupply * ((k - 1) * Math.pow((1 - k), (d * 86400 / difficultyTarget)) + 1);
+                dots.push(Math.round(val * 100 / moneySupply));
+            }
+            return dots;
+	}
+	getReward = function() {
+			var dots = [],
+                days = 10 * 365,
+                k = 1 / Math.pow(2, emissionSpeedFactor),
+                val2;
+
+            for (var d = 0; d < days; d += 365) {
+				var day0 = moneySupply * ((k - 1) * Math.pow((1 - k), (d * 86400 / difficultyTarget)) + 1);
+				var day1 = moneySupply * ((k - 1) * Math.pow((1 - k), ((d + 1) * 86400 / difficultyTarget)) + 1);
+				    val2 = Math.round(((day1 - day0) * difficultyTarget / (86400 * Math.pow(1, 12)))*100)/100;
+				// tail emission
+				if (val2 < 1) {
+					val2 = 1;
+				}
+				
+				dots.push(val2);
+			}
+            return dots;
+	}
+
+var ctx = document.getElementById('emissionChart').getContext('2d');
+var gradientE = ctx.createLinearGradient(0, 0, 0, 400);
+    gradientE.addColorStop(0, 'rgba(0, 87,184, 1)') // show this color at 0%;
+	gradientE.addColorStop(0.5, 'rgba(0, 162, 232, 0.2)'); // show this color at 50%
+	gradientE.addColorStop(1, 'rgba(255, 255, 255, 0)'); // show this color at 100%
+var gradientR = ctx.createLinearGradient(0, 0, 0, 400);
+	gradientR.addColorStop(0, 'rgba(255, 242,0, 0.8)') // show this color at 0%;
+	gradientR.addColorStop(0.5, 'rgba(255, 242,0, 0.7)'); // show this color at 50%
+	gradientR.addColorStop(1, 'rgba(239, 228, 176, 0.5)'); // show this color at 100%
+	
+var emChart = new Chart(ctx, {
+  type: 'line',
+  data: {
+      labels: ['시작', '1 년', '2 년', '3 년', '4 년', '5 년', '6 년', '7 년', '8 년', '9 년'],
+      datasets: [{
+      label: '방출, %',
+      yAxisID: 'E',
+	  backgroundColor: gradientE,
+      borderColor: '#0057B8',
+	  borderWidth: 2,
+	  pointColor : "#fff",
+      pointBorderColor : "#0057B8",
+      pointHighlightFill: "#0057B8",
+      pointBackgroundColor: "#0057B8",
+	  pointBorderWidth: 4,
+	  pointRadius: 3,
+	  pointHoverRadius: 5,
+      data: getEmission()
+    }, {
+      label: '보상, KRB',
+      yAxisID: 'R',
+	  backgroundColor: gradientR,
+      borderColor: '#FFF200',
+	  borderWidth: 2,
+	  pointColor : "#fff",
+      pointBorderColor : "#FFF200",
+      pointHighlightFill: "#FFF200",
+      pointBackgroundColor: "#FFF200",
+	  pointBorderWidth: 4,
+	  pointRadius: 3,
+	  pointHoverRadius: 5,
+      data: getReward()
+    }]
+  },
+  options: {
+	maintainAspectRatio: false,
+	responsive: true,
+    scales: {
+      yAxes: [{
+        id: 'E',
+        type: 'linear',
+        position: 'right',
+		scaleLabel: {
+			display: true,
+			labelString: '방출 %'
+		}
+		//gridLines: {
+        //    display:false
+        //},
+		//display: false
+      }, {
+        id: 'R',
+        type: 'linear',
+        position: 'left',
+		scaleLabel: {
+			display: true,
+			labelString: '블록당 보상, KRB'
+		}
+		//gridLines: {
+        //    display:false
+        //},
+		//display: false
+      }],
+	  xAxes: [{
+		//display: false
+	  }]
+    }
+  }
+});
+	
+
+});
+</script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.8.0/css/flag-icon.min.css">
+
+</body>
+</html>

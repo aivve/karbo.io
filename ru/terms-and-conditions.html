@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<!-- Meta, title, CSS, favicons, etc. -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Условия использования, Отказ от ответственности, Риски">
+<title>Условия - Электронный Карбованец - Децентрализованное обменное средство</title></title>
+
+<link rel="alternate" href="/" hreflang="x-default" />
+<link rel="alternate" href="/ua/" hreflang="uk_UA" />
+<link rel="alternate" href="/ru/" hreflang="ru_RU" />
+<link rel="alternate" href="/pl/" hreflang="pl_PL" />
+<link rel="alternate" href="/es/" hreflang="es_ES" />
+<link rel="alternate" href="/cn/" hreflang="zh_CN" />
+<link rel="alternate" href="/jp/" hreflang="ja_JP" />
+<link rel="alternate" href="/kr/" hreflang="ko_KR" />
+
+<!-- Bootstrap core CSS -->
+<link href="/css/bootstrap.css" rel="stylesheet">
+
+<!-- Startup CSS -->
+<link href="/css/startup.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <script src="js/respond.min.js"></script>
+<![endif]-->
+
+<!-- Favicons -->
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="icon" type="image/icon" href="/images/favicon.ico" >
+<script src="/js/pace.js"></script>
+<!-- Custom Google Font : Open Sans -->
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:100,100i,300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic' rel='stylesheet' type='text/css'>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-78493281-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<meta property="og:url" content="https://www.karbo.io" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Электронный Карбованец" />
+<meta property="og:description" content="Децентрализованное средство обмена" />
+<meta property="og:image" content="https://karbo.io/images/wallet.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1092" />
+<meta property="og:image:height" content="684" />
+</head>
+<body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1631255797202963',
+      xfbml      : true,
+      version    : 'v2.7'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/ru_RU/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<div class="preloader"></div>
+
+<!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Навигация</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/ru/"><span id="coinIcon">&#1180;</span> <strong>Карбо</strong><em>ванец</em></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+			  <a href="/ru/download">Cкачать</a>
+			</li>
+			<li>
+              <a href="/ru/use">Применение</a>
+            </li>
+			<li>
+              <a href="/ru/info">Информация</a>
+            </li>
+			<li>
+              <a href="http://explorer.karbowanec.com/">Обозреватель</a>
+            </li>
+			<li class="dropdown">
+			  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-language" aria-hidden="true"></i> <span class="caret"></span></a>
+			  <ul class="dropdown-menu" role="menu">
+				<li><a href="/"><span class="flag-icon flag-icon-us"></span> English</a></li>
+				<li><a href="/ua/"><span class="flag-icon flag-icon-ua"></span> Українська</a></li>
+				<li><a href="/ru/"><span class="flag-icon flag-icon-ru"></span> Русский</a></li>
+				<li><a href="/pl/"><span class="flag-icon flag-icon-pl"></span> Polski</a></li><li><a href="/es/"><span class="flag-icon flag-icon-es"></span> Español</a></li><li><a href="/cn/"><span class="flag-icon flag-icon-cn"></span> 简体中文</a></li><li><a href="/jp/"><span class="flag-icon flag-icon-jp"></span> 日本語</a></li><li><a href="/kr/"><span class="flag-icon flag-icon-kr"></span> 한국어</a></li>
+			  </ul>
+			</li>
+			<li class="dropdown">
+			<a href="#" class="price dropdown-toggle" data-toggle="dropdown"><span id="rur_price"></span> <span id="arrowplace"></span></a>
+			<ul class="dropdown-menu" role="menu">
+				<li><a href="#calc" id="btc_price"></a></li>
+				<li><a href="#calc" id="usd_price"></a></li>
+				<li><a href="#calc" id="eur_price"></a></li>
+				<li><a href="#calc" id="uah_price"></a></li>
+			</ul>
+			</li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+   </div>
+<!--// Navbar Ends-->  
+
+	<div class="wrapper"></div>
+	
+<!--SUBPAGE HEAD-->
+
+<div class="subpage-head grad breath inverse">
+  <div class="container">
+    <div class="section-title">
+		<h2>Условия использования</h2>
+		<h4>Отказ от ответственности</h4>
+	</div>
+  </div>
+</div>
+
+<!-- // END SUBPAGE HEAD -->
+
+<div class="breath">
+  <div class="container"> 
+		
+
+	<section class="row">
+
+
+		<div class="col-lg-12">
+
+<h3>1. Информация опубликованная на  karbo.io</h2>
+
+Веб-сайт https://karbo.io/ (далее именуемый - "Веб-сайт") предоставляет информацию и материалы общего характера. Вы не вправе и не должны полагаться на Веб-сайт для целей юридического консультирования, бизнес-консультирования и иного консультирования любого рода. Вы действуете на свой риск, если полагаетесь на содержание Веб-сайта. Если принимаете решение действовать или не действовать, Вам следует обратиться к лицензированному юристу в соответствующей юрисдикции, в которой Вы хотите или должны получить помощь. Ни при каких обстоятельствах владельцы Веб-сайта и участники проектов не несут ответственности за Ваши действия, решения и поведение, которые Вы принимаете и совершаете, полагаясь на Веб-сайт.
+
+<h3>2. Перевод</h2>
+
+Веб-сайт может содержать перевод английской версии содержимого, доступного на сайте. Такой перевод дается исключительно для удобства. В случае любого противоречия между версией на английском языке и переведенной версией, версия на английском языке имеет преимущественную силу. Если Вы заметите какое-либо несоответствие, пожалуйста, сообщите о нем на e-mail.
+
+<h3>3. Риски использования Карбованец</h2>
+
+Вебсайт не несет ответственности за любые потери, убытки и требования, возникающие вследствии событий из следующих пяти категорий:
+<ol>
+
+<li> Ошибки пользователя связанных с Карбованцем ПО и сервисов, как то: забытые пароли, платежи по неправильному карбованец-адресу, случайное удаление кошелька.</li>
+
+<li> Проблемы функционирования вебсайта или любого связанного с Карбованцем ПО или сервиса, как то: поврежденный файл-кошелек, неправильно созданные транзакции, небезопасные криптографические библиотеки, вредоносный код, поразивший вебсайт или любой связанный с Карбованцем ПО или сервис.</li>
+
+<li> Технические проблемы устройств пользователя или любого связанного с Карбованцем ПО или сервиса, например потеря данных из-за неисправного или поврежденного устройства хранения.</li>
+
+<li> Проблемы с безопасностью, с которыми сталкивается любой пользователь программного обеспечения или услуг, связанных с карбованцами, например, с несанкционированным доступом к кошелькам пользователей и/или аккаунтам.</li>
+
+<li> Действия или бездействие третьих лиц и/или события, воздействующие на третьих лиц, например, банкротство сервис-провайдеров, атаки на информационную безопасность или сервис-провайдеров и мошенничество со стороны третьих лиц.</li>
+</ol>
+
+<h3>4. Риски инвестиций</h2>
+
+Инвестиции в карбованцы могут привести к денежным потерям в краткосрочной или даже долгосрочной перспективе. Лица, инвестирующие в карбованцы, должны понимать, что цены могут колебаться в широком диапазоне.Информация, размещаемая на Весайте, не гарантирует, что инвесторы в карбованцы не потеряют деньги.
+
+<h3>5. Соответствие налоговому законодательству</h2>
+
+Пользователи данного Веб-сайта самостоятельно определяют, какие налоги (если таковые есть) применимы к их операциям с карбованцами. Владельцы Веб-сайта и лица, участвующие в разработке данного Веб-сайта, НЕ несут ответственность за налогообложение, которое применяется к операциями с карбованцами.
+
+<h3>6. Этот веб-сайт не хранит, не получает и не посылает карбованцы</h3>
+
+Данный Веб-сайт не хранит, не отправляет и не получает карбованцы, поскольку карбованцы существуют только силу наличия записи о владении, хранящейся в сети карбованец.
+
+<h3>7. Отсутствие гарантий</h2>
+
+Веб-сайт функционирует по принципу "как есть" без каких-либо гарантий любого рода в отношении Веб-сайта и/или любого содержимого, данных, материалов и/или услуг, оказываемых на Веб-сайте.
+
+<h3>8. Ограничение ответственности</h2>
+
+Если иное не предусмотрено законом, ни при каких обстоятельствах владельцы Веб-сайта и участники проектов не несут ответственности за убытки любого рода, включая, но не ограничиваясь, утрату возможности эксплуатации, потерю прибыли, потерю данных, вытекающие или связанные каким-либо образом с использованием Веб-сайта.
+
+<h3>9. Арбитраж</h2>
+
+Пользователь Веб-сайта согласен на арбитражное рассмотрение любого спора, связанного с Веб-сайтом или настоящей оговоркой, кроме споров, относящихся к авторским правам, логотипам, товарным знакам, фирменным наименованиям, торговым секретам и патентам.
+
+<h3>10. Последняя поправка</h2>
+
+Эта информация была в последний раз обновлена: September 11th, 2017.
+
+		</div>
+
+	
+	</section>  
+    
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="grad1">
+   <div class="container">
+	 <div class="breath">
+        <div class="row">
+          <div class="col-lg-4">
+			<p>&copy; 2016-2017 Карбованец. 
+		  
+			E-mail:&nbsp;krbcoin@ukr.net</p>
+			
+			<div
+			  class="fb-like"
+			  data-share="true"
+			  data-width="300"
+			  data-show-faces="true">
+			</div>
+		  </div>
+          <div class="col-lg-8">
+			<p  class="text-right">
+				<a href="/ru/privacy">Конфиденциальность</a>
+				|
+				<a href="/ru/terms">Условия</a> 
+				|
+				<a href="https://donate.karbo.io/">Пожертвования</a>
+				|
+				<a href="http://karbo.foundation">Фундация</a>
+				|
+				<a href="https://forum.karbo.io/">Форум</a>
+			</p>
+		  </div>
+		</div>
+	 </div>
+  </div>
+</footer>
+<!-- END FOOTER -->
+
+<!-- JS and analytics only. --> 
+<!-- Bootstrap core JavaScript
+================================================== --> 
+<script src="/js/jquery.js"></script> 
+<script src="/js/calc.js"></script> 
+<script src="/js/bootstrap.min.js"></script> 
+<script src="/js/easing.js"></script> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.8.0/css/flag-icon.min.css">
+
+
+</body>
+</html>

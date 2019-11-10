@@ -1,0 +1,9 @@
+#Header set Access-Control-Allow-Origin "*"
+#DirectoryIndex index.html index.php index.htm parking-page.html
+
+RewriteEngine On
+RewriteRule ^terms/?$ /jp/terms-and-conditions.html?&%{QUERY_STRING}
+RewriteRule ^privacy/?$ /jp/privacy-policy.html?&%{QUERY_STRING}
+RewriteRule ^use/?$ /jp/use.html?&%{QUERY_STRING}
+RewriteRule ^pay/?$ /pay.html?&%{QUERY_STRING}
+RewriteRule ^info/?$ /jp/info.html?&%{QUERY_STRING}

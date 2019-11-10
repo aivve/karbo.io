@@ -1,0 +1,1 @@
+RewriteRule ^.*$ http://karbo.io/ [R=301,L]

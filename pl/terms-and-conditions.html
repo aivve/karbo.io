@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<!-- Meta, title, CSS, favicons, etc. -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Warunki korzystania z Karbo - Zdecentralizowanego środka wymiany">
+<title>Warunki - Karbowaniec elektroniczny - Zdecentralizowany środek wymiany</title></title>
+
+<link rel="alternate" href="/" hreflang="x-default" />
+<link rel="alternate" href="/ua/" hreflang="uk_UA" />
+<link rel="alternate" href="/ru/" hreflang="ru_RU" />
+<link rel="alternate" href="/pl/" hreflang="pl_PL" />
+<link rel="alternate" href="/es/" hreflang="es_ES" />
+<link rel="alternate" href="/cn/" hreflang="zh_CN" />
+<link rel="alternate" href="/jp/" hreflang="ja_JP" />
+<link rel="alternate" href="/kr/" hreflang="ko_KR" />
+
+<!-- Bootstrap core CSS -->
+<link href="/css/bootstrap.css" rel="stylesheet">
+
+<!-- Startup CSS -->
+<link href="/css/startup.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <script src="js/respond.min.js"></script>
+<![endif]-->
+
+<!-- Favicons -->
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="icon" type="image/icon" href="/images/favicon.ico" >
+<script src="/js/pace.js"></script>
+<!-- Custom Google Font : Open Sans -->
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:100,100i,300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic' rel='stylesheet' type='text/css'>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-78493281-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<meta property="og:url" content="https://www.karbo.io" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Karbowaniec elektroniczny" />
+<meta property="og:description" content="Zdecentralizowany środek wymiany" />
+<meta property="og:image" content="https://karbo.io/images/wallet.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1092" />
+<meta property="og:image:height" content="684" />
+</head>
+<body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1631255797202963',
+      xfbml      : true,
+      version    : 'v2.7'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/pl_PL/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<div class="preloader"></div>
+
+<!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Nawigacja</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/pl/"><span id="coinIcon">&#1180;</span> <strong>Karbo</strong><em>waneć</em></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+			  <a href="/pl/download">Pobierz</a>
+			</li>
+			<li>
+              <a href="/pl/use">Użytkowanie</a>
+            </li>
+			<li>
+              <a href="/pl/info">Informacja</a>
+            </li>
+			<li>
+              <a href="https://explorer.karbo.io/">Eksplorator</a>
+            </li>
+			<li class="dropdown">
+			  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-language" aria-hidden="true"></i> <span class="caret"></span></a>
+			  <ul class="dropdown-menu" role="menu">
+				<li><a href="/"><span class="flag-icon flag-icon-us"></span> English</a></li>
+				<li><a href="/ua/"><span class="flag-icon flag-icon-ua"></span> Українська</a></li>
+				<li><a href="/ru/"><span class="flag-icon flag-icon-ru"></span> Русский</a></li>
+				<li><a href="/pl/"><span class="flag-icon flag-icon-pl"></span> Polski</a></li>
+				<li><a href="/es/"><span class="flag-icon flag-icon-es"></span> Español</a></li>
+				<li><a href="/cn/"><span class="flag-icon flag-icon-cn"></span> 简体中文</a></li>
+				<li><a href="/jp/"><span class="flag-icon flag-icon-jp"></span> 日本語</a></li>
+				<li><a href="/kr/"><span class="flag-icon flag-icon-kr"></span> 한국어</a></li>
+			  </ul>
+			</li>
+			<li class="dropdown">
+			<a href="#" class="price dropdown-toggle" data-toggle="dropdown"><span id="eur_price"></span> <span id="arrowplace"></span></a>
+			<ul class="dropdown-menu" role="menu">
+				<li><a href="#calc" id="btc_price"></a></li>
+				<li><a href="#calc" id="usd_price"></a></li>
+				<li><a href="#calc" id="uah_price"></a></li>
+				<li><a href="#calc" id="rur_price"></a></li>
+			</ul>
+			</li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+   </div>
+<!--// Navbar Ends-->
+
+	<div class="wrapper"></div>
+	
+<!--SUBPAGE HEAD-->
+
+<div class="subpage-head grad breath inverse">
+  <div class="container">
+    <div class="section-title">
+		<h2>Zasady i warunki</h2>
+		<h4>Zastrzeżenia prawne</h4>
+	</div>
+  </div>
+</div>
+
+<!-- // END SUBPAGE HEAD -->
+
+<div class="breath">
+  <div class="container"> 
+		
+
+	<section class="row">
+
+
+		<div class="col-lg-12">
+
+<h3>1. Informacje publikowane na karbo.io</h2>
+
+Witryna https://karbo.io/ (określana dalej jako "Witryna") dostarcza informacje i materiały o charakterze ogólnym. Użytkownik nie jest upoważniony do oraz nie powinien polegać na Witrynie jako źródle porad prawnych, porad biznesowych, ani też porad o jakimkolwiek innym charakterze. Powołując się na zawartość Witryny, działasz na własne ryzyko. Przed podjęciem decyzji o podjęciu lub zaniechaniu działania, powinieneś skontaktować się z prawnikiem licencjonowanym w jurysdykcji, w której chcesz lub potrzebujesz pomocy. Ani właściciele, ani współtwórcy Witryny nie są w żaden sposób odpowiedzialni za działania, decyzje lub inne zachowania podjęte lub zaniechane przez użytkownika w oparciu o treść Witryny.
+
+<h3>2. Tłumaczenia</h2>
+
+Witryna może zawierać tłumaczenia angielskiej wersji treści dostępnych na Witrynie. Tłumaczenia te służą wyłącznie jako udogodnienie. W wypadku konfliktu pomiędzy wersją angielską a wersją tłumaczoną, pierwszeństwo ma wersja angielska. Jeśli zauważysz jakąkolwiek niespójność, prosimy o zgłoszenie jej na e-mail.
+
+<h3>3. Ryzyka związane z użyciem Karbowańców</h2>
+
+Witryna nie będzie odpowiedzialna za żadne straty, szkody lub roszczenia wynikające ze zdarzeń wchodzących zakres pięciu następujących kategorii:
+<ol>
+<li>  Błędy popełniane przez użytkownika dowolnego oprogramowania lub usługi powiązanej z Karbowaneć, np. zapomniane hasła, płatności wysłane do błędnych adresów Karbowaneć i przypadkowe usunięcia portfeli.</li>
+
+<li> Problemy z oprogramowaniem WItryny i/lub każdym powiązanym z Karbowaneć oprogramowaniem lub usługą, np. uszkodzony plik portfela, niepoprawnie skonstruowane transakcje, niebezpieczne biblioteki kryptograficzne, szkodliwe oprogramowanie (malware) wpływające na Witrynę i/lub powiązane z Karbowaneć oprogramowanie lub usługi.</li>
+
+<li> Awarie techniczne sprzętu użytkownika dowolnego oprogramowania lub usługi powiązanej z Karbowaneć, np. utrata danych spowodowana wadliwym lub uszkodzonym urządzeniem pamięci.</li>
+
+<li> Problemy z bezpieczeństwem doświadczane przez użytkownika każdego powiązanego z Karbowaneć oprogramowania lub usługi, np. nieautoryzowany dostęp do portfeli i/lub kont użytkownika.</li>
+
+<li> Działania lub zaniechania osób trzecich i/lub zdarzenia doświadczane przez osoby trzecie, np. bankructwa usługodawców, ataki na dane o zabezpieczeniach usługodawców oraz oszustwa dokonywane przez strony trzecie.</li>
+</ol>
+
+<h3>4. Ryzyka inwestycyjne</h2>
+
+Inwestowanie w Karbowaneć może prowadzić do utraty pieniędzy w krótkich lub nawet długich okresach. Inwestorzy w Karbowaneć powinni spodziewać się dużych wahań cen. Informacje publikowane na Witrynie nie mogą gwarantować, że inwestorzy w Karbowaneć nie stracą pieniędzy.
+
+<h3>5.  Przestrzeganie obowiązków podatkowych</h2>
+
+Użytkownicy Witryny są całkowicie odpowiedzialni za określenie, czy i jakie podatki mają zastosowanie do ich transakcji Karbowaneć. Właściciele lub współtwórcy Witryny NIE są odpowiedzialni za określanie podatków, które stosuje się do transakcji Karbowaneć.
+
+<h3>6. Witryna nie przechowuje, nie wysyła ani nie otrzymuje karbwowańców</h3>
+
+Witryna nie przechowuje, nie wysyła, ani nie otrzymuje Karbowanećów. Wynika to z faktu, że Karbowanećy istnieją wyłącznie z racji utrzymywanej w sieci Karbowaneć ewidencji własności. Każde przeniesienie własności Karbowanećów ma miejsce w zdecentralizowanej sieci Karbowaneć, a nie na Witrynie.
+
+<h3>7. Brak gwarancji</h2>
+
+Witryna jest dostarczana w stanie "tak, jak jest", bez jakichkolwiek gwarancji odnośnie Witryny i/lub wszelkich treści, danych, materiałów i/lub usług dostarczanych na Witrynie.
+
+<h3>8. Wyłączenie odpowiedzialności</h2>
+
+O ile prawo nie stanowi inaczej, właściciele ani współtwórcy Witryny w żadnym wypadku nie ponoszą odpowiedzialności za szkody jakiegokolwiek rodzaju, w tym (ale bez ograniczenia do), utratę możliwości użytkowania, utratę zysków lub utratę danych wynikające z lub w dowolny inny sposób związane z używaniem Witryny.
+
+<h3>9. Arbitraż</h2>
+
+Użytkownik Witryny zgadza się rozstrzygać wszelkie spory wynikające z lub związane z Witryną lub niniejszym wyłączeniem odpowiedzialności, z wyjątkiem sporów dotyczących praw autorskich, logo, nazw handlowych, znaków handlowych, sekretów handlowych lub patentów.
+
+<h3>10. Ostatnia zmiana</h2>
+
+Niniejsze zastrzeżenie zostało ostatnio zmienione September 11th, 2017.
+
+		</div>
+
+	
+	</section>  
+    
+  </div>
+</div>
+
+
+
+
+
+
+</div>
+
+<!-- FOOTER -->
+<footer class="grad1">
+   <div class="container">
+	 <div class="breath">
+        <div class="row">
+          <div class="col-lg-4">
+			<p>&copy; 2016-2017 Karbowaneć. 
+		  
+			E-mail:&nbsp;krbcoin@ukr.net</p>
+			
+			<div
+			  class="fb-like"
+			  data-share="true"
+			  data-width="300"
+			  data-show-faces="true">
+			</div>
+		  </div>
+          <div class="col-lg-8">
+			<p  class="text-right">
+				<a href="/pl/privacy">Polityka prywatności</a>
+				|
+				<a href="/pl/terms">Warunki</a> 
+				|
+				<a href="https://donate.karbo.io/">Darowizny</a>
+				|
+				<a href="https://karbo.foundation">Fundacja</a>
+				|
+				<a href="https://forum.karbo.io/">Forum</a>
+			</p>
+		  </div>
+		</div>
+	 </div>
+  </div>
+</footer>
+<!-- END FOOTER -->
+
+
+<!-- JS and analytics only. --> 
+<!-- Bootstrap core JavaScript
+================================================== --> 
+<script src="/js/jquery.js"></script> 
+<script src="/js/calc.js"></script> 
+<script src="/js/bootstrap.min.js"></script> 
+<script src="/js/easing.js"></script> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.8.0/css/flag-icon.min.css">
+
+
+</body>
+</html>

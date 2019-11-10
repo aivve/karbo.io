@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<!-- Meta, title, CSS, favicons, etc. -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Информация и спецификация Электронного Карбованца - криптографической цифровой децентрализованной обменной единицы и обменной сети">
+<title>Информация об Электронном Карбованце - децентрализованной обменной сети</title>
+
+<link rel="alternate" href="/" hreflang="x-default" />
+<link rel="alternate" href="/ua/" hreflang="uk_UA" />
+<link rel="alternate" href="/ru/" hreflang="ru_RU" />
+<link rel="alternate" href="/pl/" hreflang="pl_PL" />
+<link rel="alternate" href="/es/" hreflang="es_ES" />
+<link rel="alternate" href="/cn/" hreflang="zh_CN" />
+<link rel="alternate" href="/jp/" hreflang="ja_JP" />
+<link rel="alternate" href="/kr/" hreflang="ko_KR" />
+
+<!-- Bootstrap core CSS -->
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Karbo CSS -->
+<link href="/css/karbo.css" rel="stylesheet">
+<link href="/css/timeline.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <script src="js/respond.min.js"></script>
+<![endif]-->
+
+<!-- Favicons -->
+<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="icon" type="image/icon" href="/images/favicon.ico" >
+<!-- Custom Google Font -->
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans:200,200i,300,300i,400,400i,700,700i,900,900i&amp;subset=cyrillic,latin-ext" rel="stylesheet">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-78493281-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<meta property="og:url" content="https://www.karbo.io" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Электронный Карбованец" />
+<meta property="og:description" content="Децентрализованное средство обмена" />
+<meta property="og:image" content="https://karbo.io/images/wallet.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1092" />
+<meta property="og:image:height" content="684" />
+
+<script src="https://kit.fontawesome.com/2058fca1c3.js"></script>
+</head>
+<body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1631255797202963',
+      xfbml      : true,
+      version    : 'v2.7'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/ru_RU/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Fixed navbar -->
+    <div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Навигация</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/ru/"><div id="coinIcon">
+				<svg version="1.1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+					xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px"
+					height="32px" viewBox="0 0 206.569 206.568" enable-background="new 0 0 206.569 206.568" xml:space="preserve">
+					<!--path fill-rule="evenodd" clip-rule="evenodd" fill="#FFEC00" d="M103.284,0c57.042,0,103.285,46.242,103.285,103.284
+								c0,57.042-46.242,103.284-103.285,103.284S0,160.326,0,103.284C0,46.242,46.242,0,103.284,0"/-->
+					<g id="navbar-logo-k">			
+						<rect x="42.621" y="67.455" fill="#0E0740" width="121.327" height="14.829"/>
+						<polygon fill="#0E0740" points="164.002,142.947 103.339,82.284 42.675,142.947 53.162,153.434 103.339,103.256 153.516,153.434 "/>
+					</g>
+				</svg>
+				</div> <strong>Карбо</strong><em>ванец</em></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+			  <a href="/ru/download">Cкачать</a>
+			</li>
+			<li>
+			  <a href="https://wallet.karbo.org/">Веб-кошелёк</a>
+			</li>
+			<li>
+              <a href="/ru/use">Применение</a>
+            </li>
+			<li>
+              <a href="/ru/pay">Оплата</a>
+            </li>
+			<li>
+              <a href="/ru/info">Информация</a>
+            </li>
+			<li>
+              <a href="https://explorer.karbo.io/">Обозреватель</a>
+            </li>
+			<li class="dropdown">
+			  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-language" aria-hidden="true"></i> <span class="caret"></span></a>
+			  <ul class="dropdown-menu" role="menu">
+				<li><a href="/"><span class="flag-icon flag-icon-us"></span> English</a></li>
+				<li><a href="/ua/"><span class="flag-icon flag-icon-ua"></span> Українська</a></li>
+				<li><a href="/ru/"><span class="flag-icon flag-icon-ru"></span> Русский</a></li>
+				<li><a href="/pl/"><span class="flag-icon flag-icon-pl"></span> Polski</a></li>
+				<li><a href="/es/"><span class="flag-icon flag-icon-es"></span> Español</a></li>
+				<li><a href="/cn/"><span class="flag-icon flag-icon-cn"></span> 简体中文</a></li>
+				<li><a href="/jp/"><span class="flag-icon flag-icon-jp"></span> 日本語</a></li>
+				<li><a href="/kr/"><span class="flag-icon flag-icon-kr"></span> 한국어</a></li>
+			  </ul>
+			</li>
+			<li class="dropdown">
+			<a href="#" class="price dropdown-toggle" data-toggle="dropdown"><span id="rur_price"></span> <span id="arrowplace"></span></a>
+			<ul class="dropdown-menu" role="menu">
+				<li><a href="#calc" id="btc_price"></a></li>
+				<li><a href="#calc" id="cny_price"></a></li>
+				<li><a href="#calc" id="eur_price"></a></li>
+				<li><a href="#calc" id="jpy_price"></a></li>
+				<li><a href="#calc" id="krw_price"></a></li>
+				<li><a href="#calc" id="usd_price"></a></li>
+				<li><a href="#calc" id="uah_price"></a></li>
+			</ul>
+			</li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+   </div>
+<!--// Navbar Ends-->
+
+<div class="wrapper"></div>
+
+<article class="content">
+
+<!--SUBPAGE HEAD-->
+
+	<div class="subpage-head grad breath inverse">
+	  <div class="container">
+		<div class="section-title">
+		  <h2>Об Электронном Карбованце</h2>
+		  <h4>Информация и Спецификация</h4>
+		</div>
+	  </div>
+	</div>
+
+<!-- // END SUBPAGE HEAD -->
+
+
+
+	<div class="container breath" id="links"> 
+		<div class="row">
+			<div class="col-sm-12 col-md-6 col-lg-4">
+				  <h2>Полезные ресурсы</h2>
+					<ul class="list-group">
+						<!--li class="list-group-item"><a href="/ru/mining">Майнинг</a></li-->
+						<li class="list-group-item"><a href="https://explorer.karbowanec.com/#pools">Пулы для майнинга</a></li>
+						<li class="list-group-item"><a href="https://explorer.karbowanec.com">Официальный обозреватель блокчейна</a></li>
+						<li class="list-group-item"><a href="http://bootstrap.karbo.io/">Скачать блокчейн</a></li>
+						<li class="list-group-item"><a href="https://karbo.io/paperwallet/old/">Бумажный кошелек (классический)</a></li>
+						<li class="list-group-item"><a href="https://karbo.io/paperwallet/">Бумажный кошелек (мнемонический)</a></li>
+						<li class="list-group-item"><a href="/paymentid">Генератор Payment ID</a></li>
+						<li class="list-group-item"><a href="/doc">Документация</a></li>
+						<li class="list-group-item"><a href="https://github.com/seredat/karbowanec">Исходный код</a></li>
+						<li class="list-group-item"><a href="/promo">Набор для медиа (рекламные материалы)</a></li>
+					</ul>
+			</div>
+		
+		
+			<div class="col-sm-12 col-md-6 col-lg-4">
+				
+				<h2>Сайты сообщества</h2>
+			
+				<div class="alert alert-warning">
+				  <p>Официальный сайт: <a href="http://karbo.io">karbo.io</a> и <a href="https://karbo.org">karbo.org</a></p>
+				</div>
+				
+				<ul class="list-group">
+					<li class="list-group-item"><a href="https://karbo.wiki/">karbo.wiki</a> – руководства, база знаний, помощь</li>
+					<li class="list-group-item"><a href="http://map.karbo.xyz/">map.karbo.xyz</a> - карта узлов сети</li>
+				</ul>
+			
+				<p>Альтернативные / старые домены:</p>
+				
+					<ul class="list-group">
+						<li class="list-group-item"><a href="http://karbowanec.com">http://karbowanec.com</a></li>	
+						<li class="list-group-item"><a href="http://karbovanets.org">http://karbovanets.org</a></li>	
+
+					</ul>
+			</div>
+			<div class="col-sm-12 col-md-6 col-lg-4">
+				
+				<h2>Прийом Karbo</h2>
+			
+				<p>Оплата в карбованцах:</p>
+				
+					<ul class="list-group">
+						<li class="list-group-item"><a href="/ua/pay">Термінал POS</a> – бесплатная аппликация Point of sale, работающий с любым кошельком и узлом без регистрации</li>
+						<li class="list-group-item"><a href="https://karbo.club">Karbo.Club</a> - бесплатный шлюз с плагинами e-commerce, требуется регистрация</li>
+					</ul>
+			</div>
+			
+		</div>
+	</div>
+
+	<div>
+		<div class="container breath" id="specs"> 
+			<div class="row">
+				<div class="col-md-12">
+					<h2>Спецификация</h2>
+				</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+			
+			</div>
+		</div>
+	
+
+		<div class="row">
+			<div class="col-md-6">
+			
+				<h3 style="margin-bottom:20px;">Спецификация</h3>
+				<ul style="margin-bottom:30px;padding-left:15px;">
+					<li>Алгоритм Proof-of-work: CryptoNight</li>
+					<li>Время блока: 240 секунд</li>
+					<li>Уровень сложности: перенацеливания каждого блока</li>
+					<li>Награда за блок: плавно уменьшается с каждым блоком по формуле<br/>
+						<span class="text-primary text-center">BaseReward = (MSupply - A)/2<sup>18</sup></span><br/>
+						где MSupply = к-во наименьших единиц, 'A' - к-во уже добытых монет</span>
+					</li>
+					<li>Делится на: 10<sup>12</sup> единиц (до 12 знаков после запятой)</li>
+					<li>Эмиссия: постоянная, начальная масса монет &ndash; 10,000,000,000,000,000,000 наименьших единиц, или 10 миллионов крб.</li>
+					<li>Дополнительная эмиссия: ~2% от начальной массы в год, минимальная награда за блок составляет 1 крб.
+					<br />
+					<small>После того как награда за блок уменьшится до 1 крб. (на 97% начальной эмиссии), она такой будет оставаться постоянно.</small></li>
+				</ul>
+				
+			</div>
+			<div class="col-md-6">
+				
+				<h3 style="margin-bottom:20px;">Статистика live</h3>
+				<ul style="margin-bottom:30px;padding-left:15px;">
+					<li>Высота блокчейна: <a href="http://explorer.karbowanec.com/" class="normal-links" target="_blank" id="last-block-url"><span id="blockchain-height">loading...</span></a></li>
+					<li>Скорость сети: <span id="hashrate">loading...</span></li>
+					<li>Сложность добычи: <span id="difficulty">loading...</span></li>
+					<li>Награда за последний блок: <span id="reward">loading...</span></li>
+					<li>Время последнего блока: <span id="last-block">loading...</span></li>
+					<li>Всего отчеканено монет: <span id="emission">loading...</span></li>
+				</ul>
+
+			</div>
+		
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<span class="label label-info">График эмиссии</span>
+				<div id="emission">
+					<canvas id="emissionChart"></canvas>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+
+	
+	<div class="container breath" id="about"> 
+		<div class="row">
+			<div class="col-md-12">
+				
+				<section>
+					<h2>Что такое Карбованец?</h2>
+					
+					<p>Название происходит от древнего способа записи расчетов или долгов путем нанесения на деревянной палочке специальных отметок-зарубок, называемых в украинском и польком языке "карбы", который был распространен на территории современной Украины и всей Европы в епоху Средневековья, а иногда употреблялся еще даже в начале XX в. Палка расщеплялась вдоль надвое и каждая половина с засечками оставалась у участников сделки. Приложив половинки друг к другу, можно было проверить не подделывались ли засечки. Это очень напоминает работу <a class="text-primary" href="https://ru.wikipedia.org/wiki/%D0%91%D0%BB%D0%BE%D0%BA%D1%87%D0%B5%D0%B9%D0%BD">блокчейна</a> в сети Карбованец.</p>
+					
+					<p><a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D1%80%D0%B1%D0%BE%D0%B2%D0%B0%D0%BD%D0%B5%D1%86">"Карбованец”</a>  денежная единица Украины в разные периоди ее истории до 1996 года, а также это украинское название денежной единицы СССР. Сейчас он заменен гривней, которая является законным средством платежа на территории Украины.</p>
+					
+					<p>“Карбованец”, таким образом, является очень известным словом, прочно ассоциируется с деньгами не только на территории Украины, но и в соседних странах. Это слово знакомо людям, что облегчает восприятие. В неславянских ресурсах для облегчения чтения и произношения используется сокращение <strong>“Karbo”</strong>, которое пользуется популярностью и среди украинских пользователей.</p>
+
+					<p>“Карбованец" восстановлено в цифровой форме криптовалюты в качестве народного средства обмена &ndash; неофициального и независимого.</p>
+				
+				</section>
+				<section class="breath">
+				
+					<h3>Миссия</h3>
+					
+					<blockquote>
+					  <p><strong>Стать "Четвертым карбованцем" &ndash; народным электронным средством обмена</strong></p>
+					</blockquote>
+
+					
+					
+				</section>
+				
+					
+				<section class="breath">
+				
+					<p>“Карбованец” базируется на принципах Австрийской школы экономики. Она подчеркивает возможности спонтанного упорядочения механизма ценообразования и отмечает, что сложность субъективного выбора человека делает математическое моделирование действующего рынка невероятно сложным (или невозможным) и поэтому поддерживает подход невмешательства в экономику. Представители Австрийской школы защищают строгое соблюдение добровольно заключенных соглашений между экономическими агентами, наименьшее возможное вмешательство (особенно со стороны государства) в экономическую деятельность и максимальную открытость личного выбора (вместе со свободным выбором средств обмена) &ndash; <a class="text-primary" href="https://ru.wikipedia.org/wiki/%D0%90%D0%B2%D1%81%D1%82%D1%80%D0%B8%D0%B9%D1%81%D0%BA%D0%B0%D1%8F_%D1%88%D0%BA%D0%BE%D0%BB%D0%B0">Википедия</a>.</p>
+				
+					<p>В частности, они выражают серьезную обеспокоенность по поводу искажений и вредного влияния вмешательства правительства в торговлю, утверждая, что на самом деле только некоторые государственные нормативные акты в этой сфере необходимы или желательны, а часто они вызывают эффект лавины, поскольку в проблемах, связанных с существующими нормами, часто неправильно обвиняется свободный рынок, чем оправдывается дальнейшее вмешательство в рынок. Они особенно критично относятся к длительному правительственному вмешательству в сферу производства частных денег, выступая за немедленную отмену всех законов относительно навязывания единственного законного средства платежа и возврата к полному резерву или свободному банковскому обслуживанию, где финансовая система является децентрализованной, а не под полным контролем государственной монополии или монопольного центрального банка.</p>
+					
+					<p>Лауреат Нобелевской премии Фридрих Хайек в своих трудах доказывает, что конкуренция независимых валют имеет огромное положительное значение. Он предлагает денационализировать деньги, так как в области эмиссии денег, по его мнению, государственная монополия вредна для общества. Вместо государственных денег которыми она заставляет пользоваться всех участников рынка, им должен быть разрешен выпуск собственных денег которые будут конкурировать. Удобная и надежная валюта будет пользоваться наибольшим спросом. Эмитент будет пытаться привлечь пользователей за счет улучшений своего продукта.</p>
+
+
+					<p>"Карбованец" разрабатывается волонтерами в качестве такового свободного средства обмена &ndash; децентрализованной системы с улучшенной приватностью, в которой стоимость ее единиц базируется исключительно на спросе и предложении на свободном рынке, где эмиссия зависит от неизменного математического алгоритма системы.</p>
+				</section>
+				
+				<section class="breath">
+				
+					<h3>Однородность и конфиденциальность Карбованца</h3>
+		
+					<strong>Анонимность реализована за счет круговых подписей, которые скрывают отправителя и одноразовых адресов, которые скрывают адресата.</strong>
+					
+					<h6>Конфиденциальность</h6>
+					  <p>Переводы карбованцев не отслеживаются и не связываются. Карбованец обеспечивает анонимность и конфиденциальность с помощью криптографической технологии <strong>ring signature</strong>. Все транзакции подписываются группой так, что невозможно достоверно определить из группы подписал транзакцию и, соответственно, нельзя с уверенностью сказать кто проводил транзакцию. Чем больше участников в группе, тем выше конфиденциальность операции. Кроме того, транзакции карбованцев невозможно связать, &ndash; даже если исходные транзакции не отслеживаются, все равно можно было бы увидеть переводы которые вы получили на свой адрес, но благодаря варианту протокола обмена Диффи-Хеллмана, получатель имеет многочисленные уникальные одноразовые адреса, происходящих из его публичного ключа. Средства, высланные на эти адреса, может использовать только получатель. Связать же между собой эти транзакции невозможно, так как их нельзя отличить среди других транзакций в сети.</p>
+						 
+					<h6>Однородность</h6>
+					  <p>Уникальные одноразовые адреса и групповые подписи транзакций (ring signature) обеспечивают <strong>устойчивость к анализу блокчейна</strong>. Каждая транзакция только увеличивает энтропию и создает дополнительные препятствия для тех, кто хотел бы покопаться в операциях с карбованцами.</p>
+							  
+					  <p>Устойчивость к анализу, в свою очередь, обеспечивает очень важную характеристику &ndash; <strong><em>однородность</em></strong>. Это значит что все вариации одного номинала имеют одинаковую покупательную способность.</p>
+
+					  <p>Основное отличие и преимущество над биткойнами &ndash; именно <em>однородность</em>. Все карбованцы являются взаимозаменяемыми и унифицированными в отличие от биткойнов, так как в Биткойне каждому желающему доступна возможность в любое время просматривать все финансовые операции по счетам всех без исключения участников и видеть сколько биткойнов на балансе того или иного адреса. Это может привести к цензуре активов людей, в результате чего часть средств станут "хуже", чем остальные средства в системе. Например, продавец может не захотеть принимать те или иные биткойны, потому что они якобы использовались для каких-то подозрительных сделок предыдущим владельцем, или были украдены и тому подобное. Используя же карбованцы вы получаете бóльшую приватность, независимость и свободу, так как бы вы пользовались наличными.</p>
+					
+				</section>
+				
+			</div>
+		</div>
+	</div>
+	
+	<div class="container breath" id="roadmap">
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2>План развития</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+			
+				<ul class="timeline">
+					<li>
+					  <div class="timeline-badge success"><i class="fa fa-bullhorn"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Запуск проекта</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 30.05.2016, 11:05:34</small></p>
+						</div>
+						<div class="timeline-body">
+						  <ul>
+							<li><a href="https://bitcointalk.org/index.php?topic=1491747">Объявления о запуске на форуме Bitcointalk</a> и начало майнинга.</li>
+							<li>Официальный веб-сайт по адресу <a href="http://karbowanec.com">http://karbowanec.com</a></li>
+							<li>Кошельки под Windows и Linux, а также Command-line suite</li>
+						  </ul>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-binoculars"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Официальный обозреватель блокчейна</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 07.06.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Запущен новый самостоятельный обозреватель: <a href="http://explorer.karbowanec.com/">http://explorer.karbowanec.com/</a></p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="glyphicon glyphicon-tint"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Первый кран</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 22.06.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Запущен первый <a href="http://faucet.karbowanec.com/">официальный кран</a>, где можно было получить бесплатные пробные карбованцы</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-paw"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Поддержка Forknote</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 27.06.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Карбованец добавлен на пул Democats:
+							<ul>
+								<li><a href="https://democats.org/pool/?name=karbowanec">Пул</a></li>
+								<li><a href="https://democats.org/blockchain/?name=karbowanec">Обозреватель</a></li>
+								<li><a href="https://democats.org/charts/?name=karbowanec">Графики</a></li>
+							</ul>
+						  </p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="fa fa-exchange"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Выход на биржу</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 05.07.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Размещен на первой бирже <a href="https://www.cryptopia.co.nz/Exchange?market=KRB_BTC">Cryptopia</a></p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-language"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Поддержка кириллицы в кошельках</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 28.08.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Только кошельки карбованца имеют полную поддержку кириллицы в названиях файлов и папок всех криптовалюта на базе CryptoNote. Это очень важное исправление, так как отсутствие поддержки нелатинских букв могла привести к потере кошельков и средств пользователей.</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="glyphicon fa fa-apple"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Кошелек под Mac OS</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 28.09.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Выпущено кошельки под Mac OS.</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-exchange"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Выход на биржу Livecoin.net</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 07.10.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Начато торги на бирже <a href="https://www.livecoin.net/en/trade/orderbook?currencyPair=KRB%2FBTC">Livecoin.net</a></p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="fa fa-code"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Важное обновление, запланировано хардфорк</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 19.10.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <ul>
+							<li>переход на ядро Bytecoin 1.0.11</li>
+							<li><strong>новый алгоритм расчета сложности</strong></li>
+							<li><strong>остаточная эмиссия</strong></li>
+							<li>ограниченный RPC (для мастернод)</li>
+							<li>комиссия для мастернод</li>
+						  </ul>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-code-fork"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Хардфорк</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 22.12.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Хардфорк сети на высоте <a href="https://explorer.karbowanec.com/en/?hash=8e39967eb50b8a922cbfe22fe02989218345cbd61ae651ddbecf00834910ff50#blockchain_block">60001</a>. Этот хардфорк состоялся для защиты от мощных майнеров, которые злоупотребляли медленной реакцией стандартного алгоритма сложности CryptoNote путем внезапного вброса очень большой мощности по сравнению со средней мощностью сети чтобы быстро получить большое количество блоков и вознаграждение пока сложность, наконец, не отреагирует и поднимется до уровня, соответствующего их мощности. После чего они прекращали майнинг, оставляя остальных майнеров бороться со слишком большой для них сложностью. Это приводило к большим интервалам между блоками и задержкам подтверждения транзакций и могло иметь катастрофический эффект. Чтобы отбиться от подобных атак, был введен новый алгоритм расчета сложности Zawy difficulty algorithm v.1 с нашими змінами, оригинал которого описан <a href="https://github.com/monero-project/research-lab/issues/3#issuecomment-245966676">тут</a>.</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					<li>
+					  <div class="timeline-badge success"><i class="fa fa-hand-o-up"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Поддержка URI в кошельках</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 23.12.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Внедрена поддержка схемы URI <em>karbowanec:</em> для улучшения удобства использования. Это позволяет делать запросы на переводы и оплачивать их в более удобный способ.</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-mobile"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Сервис пополнения мобильных телефонов</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 31.12.2016</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Очередная важная веха &ndash; первый реально действующий сервис для <a href="https://krbtel.top/">пополнения за крб. мобильных телефонов</a> украинских операторов для демонстрации возможностей.</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="fa fa-id-card-o"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> OpenAlias и Кошельки слежения</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 02.04.2017</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Поддержка протокола <a href="https://openalias.org/"><em>OpenAlias</em></a>, еще один шаг к улучшению юзабилити.<br />
+						  
+						  Также изменения в кошельке:
+						  <ul>
+							<li><strong>Кошельки слежения</strong></li>
+							<li>Майнинг соло</li>
+							<li>Начало ребрендинга в Карбо</li>
+							<li>Разнообразные исправления, улучшения</li>
+						  </ul>
+						  </p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-bug"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Обновление безопасности</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 10.04.2016, 12:00 PM UTC</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Обновление безопасности для предохранения от <a href="https://getmonero.org/2017/05/17/disclosure-of-a-major-bug-in-cryptonote-based-currencies.html">Disclosure of a Major Bug in CryptoNote Based Currencies</a>, опубликованного позже, 2017-05-17 00:00:00 +0200 разработчиками Monero. На момент публикации раскрытия, уязвимость <a href="https://github.com/seredat/karbowanec/commit/4da156f2f07784ac24dde65d98517b1ffc99156f">была уже устранена</a> благодаря slb із Forknote и команде Monero.</p>
+						  <p>Во время этого обновления был изменен Network ID, с целью избавиться ошибок, которые возникали в результате спама узлов с паразитной сети, а также для того чтобы гарантировать переход всех пользователей на новую версию.</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="fa fa-exchange"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Первая украинская биржа - KRB/UAH</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 02.04.2017</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Начато торги на первой украинской бирже <a href="https://btc-trade.com.ua/stock/krb_uah">BTC Trade UA</a>.</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge success"><i class="fa fa-shopping-cart"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Платежный Шлюз, плагины для электронной коммерции</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 02.04.2017</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p><strong>Бесплатный Платежный Шлюз <a href="https://karbo.club/"><em>karbo.club</em></a></strong> с плагинами для интернет-магазинов.</p>
+						  <ul>
+							<li><a href="https://github.com/Karbovanets/karbo-woocommerce"><strong>Karbo плагин для WooCommerce</strong></a></li>
+							<li><a href="https://github.com/Karbovanets/karbo-plugin-opencart"><strong>Karbo плагин для OpenCart </strong></a></li>
+						  </ul>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge success"><i class="glyphicon glyphicon-leaf"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success" aria-hidden="true"></i> Мнемоническая фраза в кошельках</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 12.10.2017</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Обновления кошельков с поддержкой <strong>мнемонической фразы</strong> для восстановления кошелька.</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge primary"><i class="glyphicon glyphicon-phone"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success"></i> Мобильный кошелек</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 13.02.2018</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Легкий мобильный кошелек, который работает через сеть удаленных узлов. Выпущена версия под <a href="https://play.google.com/store/apps/details?id=org.karbo.karbon">Android</a>. Продолжается разработка улушчений и дополнительного функционала.</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					<div class="timeline-badge primary"><i class="glyphicon glyphicon-globe"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-spinner fa-pulse fa-fw"></i> Ребрендинг и новый веб-сайт</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Q4 2017</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Новый сайт и изменение названия <strong>Karbo</strong> для того, чтобы облегчить восприятие глобальной аудитории.</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					<div class="timeline-badge primary"><i class="glyphicon glyphicon-bullhorn"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-spinner fa-pulse fa-fw"></i> Промоционная кампания</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Q4 2017</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Мероприятия по распространению информации о проекте Karbo в Украине и мире.</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge warning"><i class="fa fa-lightbulb-o"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-cogs" aria-hidden="true"></i> Легкий кошелек</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> ETA Q1 2018</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Легкий кошелек для ПК, который будет работать через сеть удаленных узлов с упрощенным интерфейсом предназначен для пользователей, менее знакомых с ПК и технологиями блокчейна.</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge primary"><i class="fa fa-cloud"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-check success"></i> Веб-кошельки</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 13.02.2018</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Первый веб-кошелек <a href="https://karbo.me">karbo.me</a> онлайн.</p>
+						</div>
+					  </div>					  
+					</li>
+					<li>
+					  <div class="timeline-badge warning"><i class="fa fa-flask"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-cogs" aria-hidden="true"></i> Улучшение алгоритма сложности</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Q1 2018</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Переход на <a href="https://github.com/seredat/karbowanec/commit/231db5270acb2e673a641a1800be910ce345668a#commitcomment-24807829">обновленную версию алгоритма Zawy</a>. Это улучшение уже введенного алгоритма, разработанное вместе с его автором на нашем репозитории Github.</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge warning"><i class="fa fa-flask"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-cogs" aria-hidden="true"></i> Улучшение неотслеживаемости</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Q2 2018</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Обновление алгоритма выбора выходов (триангулярное распределение).</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge warning"><i class="fa fa-flask"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-cut" aria-hidden="true"></i> Стабильные комиссии в фиате</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Q2 2018</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Минимальная комиссия транзакции в фиатном эквиваленте будет оставаться стабильной независимо от роста или падения цены. Она не будет фиксирована в KRB. Это обеспечит стабильно низкие комиссии даже в случае резкого подорожания монеты.</p>
+						</div>
+					  </div>
+					</li>
+					<li class="timeline-inverted">
+					  <div class="timeline-badge warning"><i class="fa fa-flask"></i></div>
+					  <div class="timeline-panel">
+						<div class="timeline-heading">
+						  <h4 class="timeline-title"><i class="fa fa-cogs" aria-hidden="true"></i> Полные кошельки слежения</h4>
+						  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2019</small></p>
+						</div>
+						<div class="timeline-body">
+						  <p>Ключи слежения, позволяющие мониторинг входных и выходных транзакций.</p>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="timeline-badge warning"><i class="fa fa-rocket"></i></div>
+					</li>
+				</ul>
+			
+			</div>
+		</div>
+	</div>		
+
+</article>
+
+<!-- FOOTER -->
+<footer class="grad1">
+   <div class="container">
+	 <div class="breath">
+        <div class="row">
+          <div class="col-lg-4">
+			<p>&copy; 2016-2019 Карбованец. 
+		  
+			E-mail:&nbsp;dev@karbo.io</p>
+			
+			<div
+			  class="fb-like"
+			  data-share="true"
+			  data-width="300"
+			  data-show-faces="true">
+			</div>
+		  </div>
+          <div class="col-lg-8">
+			<p  class="text-right">
+				<a href="/ru/privacy">Конфиденциальность</a>
+				|
+				<a href="/ru/terms">Условия</a> 
+				|
+				<a href="/donate">Пожертвования</a>
+				|
+				<a href="https://forum.karbo.io/">Форум</a>
+			</p>
+		  </div>
+		</div>
+	 </div>
+  </div>
+</footer>
+<!-- END FOOTER -->
+
+<!-- JS and analytics only. --> 
+<!-- Bootstrap core JavaScript
+================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="/js/jquery.js"></script> 
+<script src="/js/bootstrap.min.js"></script> 
+<script src="/js/easing.js"></script> 
+<script src="/js/rates.js"></script>
+<script src="/js/tools.js"></script>
+<script src="/js/Chart.min.js"></script>
+
+<script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("navbar").classList.add("navbar-grad-reverse");
+  } else {
+    document.getElementById("navbar").classList.remove("navbar-grad-reverse");
+  }
+}
+</script>
+<script>
+$(function () {
+            emissionSpeedFactor = 18;
+            difficultyTarget = 240;
+            moneySupply = 10000000;
+			
+	getEmission = function() {
+            var dots = [],
+                days = 10 * 365,
+                k = 1 / Math.pow(2, emissionSpeedFactor),
+                val;
+
+            for (var d = 0; d < days; d += 365) {
+                val = moneySupply * ((k - 1) * Math.pow((1 - k), (d * 86400 / difficultyTarget)) + 1);
+                dots.push(Math.round(val * 100 / moneySupply));
+            }
+            return dots;
+	}
+	getReward = function() {
+			var dots = [],
+                days = 10 * 365,
+                k = 1 / Math.pow(2, emissionSpeedFactor),
+                val2;
+
+            for (var d = 0; d < days; d += 365) {
+				var day0 = moneySupply * ((k - 1) * Math.pow((1 - k), (d * 86400 / difficultyTarget)) + 1);
+				var day1 = moneySupply * ((k - 1) * Math.pow((1 - k), ((d + 1) * 86400 / difficultyTarget)) + 1);
+				    val2 = Math.round(((day1 - day0) * difficultyTarget / (86400 * Math.pow(1, 12)))*100)/100;
+				// tail emission
+				if (val2 < 1) {
+					val2 = 1;
+				}
+				
+				dots.push(val2);
+			}
+            return dots;
+	}
+
+var ctx = document.getElementById('emissionChart').getContext('2d');
+var gradientE = ctx.createLinearGradient(0, 0, 0, 400);
+    gradientE.addColorStop(0, 'rgba(0, 87,184, 1)') // show this color at 0%;
+	gradientE.addColorStop(0.5, 'rgba(0, 162, 232, 0.2)'); // show this color at 50%
+	gradientE.addColorStop(1, 'rgba(255, 255, 255, 0)'); // show this color at 100%
+var gradientR = ctx.createLinearGradient(0, 0, 0, 400);
+	gradientR.addColorStop(0, 'rgba(255, 242,0, 0.8)') // show this color at 0%;
+	gradientR.addColorStop(0.5, 'rgba(255, 242,0, 0.7)'); // show this color at 50%
+	gradientR.addColorStop(1, 'rgba(239, 228, 176, 0.5)'); // show this color at 100%
+	
+var emChart = new Chart(ctx, {
+  type: 'line',
+  data: {
+      labels: ['Начало', '1 год', '2 год', '3 год', '4 год', '5 год', '6 год', '7 год', '8 год', '9 год'],
+      datasets: [{
+      label: 'Эмиссия, %',
+      yAxisID: 'E',
+	  backgroundColor: gradientE,
+      borderColor: '#0057B8',
+	  borderWidth: 2,
+	  pointColor : "#fff",
+      pointBorderColor : "#0057B8",
+      pointHighlightFill: "#0057B8",
+      pointBackgroundColor: "#0057B8",
+	  pointBorderWidth: 4,
+	  pointRadius: 3,
+	  pointHoverRadius: 5,
+      data: getEmission()
+    }, {
+      label: 'Награда, KRB',
+      yAxisID: 'R',
+	  backgroundColor: gradientR,
+      borderColor: '#FFF200',
+	  borderWidth: 2,
+	  pointColor : "#fff",
+      pointBorderColor : "#FFF200",
+      pointHighlightFill: "#FFF200",
+      pointBackgroundColor: "#FFF200",
+	  pointBorderWidth: 4,
+	  pointRadius: 3,
+	  pointHoverRadius: 5,
+      data: getReward()
+    }]
+  },
+  options: {
+	maintainAspectRatio: false,
+	responsive: true,
+    scales: {
+      yAxes: [{
+        id: 'E',
+        type: 'linear',
+        position: 'right',
+		scaleLabel: {
+			display: true,
+			labelString: 'Эмиссия %'
+		}
+		//gridLines: {
+        //    display:false
+        //},
+		//display: false
+      }, {
+        id: 'R',
+        type: 'linear',
+        position: 'left',
+		scaleLabel: {
+			display: true,
+			labelString: 'Награда за блок, KRB'
+		}
+		//gridLines: {
+        //    display:false
+        //},
+		//display: false
+      }],
+	  xAxes: [{
+		//display: false
+	  }]
+    }
+  }
+});
+	
+
+});
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.8.0/css/flag-icon.min.css">
+
+</body>
+</html>
