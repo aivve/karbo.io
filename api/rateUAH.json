@@ -1,9 +1,9 @@
 {
     "status": {
-        "timestamp": "2019-11-11T14:37:43.351Z",
+        "timestamp": "2019-11-11T14:37:21.858Z",
         "error_code": 0,
         "error_message": null,
-        "elapsed": 14,
+        "elapsed": 27,
         "credit_count": 1,
         "notice": null
     },
@@ -19,20 +19,20 @@
                 "mineable"
             ],
             "max_supply": null,
-            "circulating_supply": 7996844.84263292,
-            "total_supply": 7996844.84263292,
+            "circulating_supply": 7996829.55968447,
+            "total_supply": 7996829.55968447,
             "platform": null,
-            "cmc_rank": 1088,
-            "last_updated": "2019-11-11T14:37:02.000Z",
+            "cmc_rank": 1089,
+            "last_updated": "2019-11-11T14:36:03.000Z",
             "quote": {
                 "UAH": {
-                    "price": 1.463227825525646,
-                    "volume_24h": 10770.855632488561,
+                    "price": 1.4631178373114435,
+                    "volume_24h": 10770.009818642338,
                     "percent_change_1h": null,
-                    "percent_change_24h": -0.63681766,
-                    "percent_change_7d": 0.02519964,
-                    "market_cap": 11701205.890151743,
-                    "last_updated": "2019-11-11T14:37:02.000Z"
+                    "percent_change_24h": -0.64428673,
+                    "percent_change_7d": 0.01768517,
+                    "market_cap": 11700303.970713766,
+                    "last_updated": "2019-11-11T14:36:02.000Z"
                 }
             }
         }

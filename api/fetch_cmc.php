@@ -3,7 +3,7 @@
 // schedule cron job `0 * * * * /usr/bin/php /var/www/html/api/fetch_cmc.php` to fetch rates
 
 $CMC_PRO_API_KEY = "df0dbd2e-b851-4d80-978c-aa6b434efd1d";
-$path = "/var/www/html/api/rate/";
+$path = "./rate/";
 
 function fetchAndSave($curency,$CMC_PRO_API_KEY,$path){
 $ch = curl_init();
@@ -35,6 +35,7 @@ $myObj->RUB = fetchAndSave('RUB',$CMC_PRO_API_KEY,$path);
 $myObj->KRW = fetchAndSave('KRW',$CMC_PRO_API_KEY,$path);
 $myObj->CNY = fetchAndSave('CNY',$CMC_PRO_API_KEY,$path);
 $myObj->JPY = fetchAndSave('JPY',$CMC_PRO_API_KEY,$path);
+$myObj->PLN = fetchAndSave('PLN',$CMC_PRO_API_KEY,$path);
 
 
 $fp = fopen($path.'all.json', 'w');

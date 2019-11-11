@@ -1,10 +1,11 @@
 {
     "status": {
-        "timestamp": "2019-08-03T08:11:40.943Z",
+        "timestamp": "2019-11-11T14:37:44.621Z",
         "error_code": 0,
         "error_message": null,
-        "elapsed": 7,
-        "credit_count": 1
+        "elapsed": 18,
+        "credit_count": 1,
+        "notice": null
     },
     "data": {
         "KRB": {
@@ -18,20 +19,20 @@
                 "mineable"
             ],
             "max_supply": null,
-            "circulating_supply": 7706933.64347167,
-            "total_supply": 7706933.64347167,
+            "circulating_supply": 7996844.84263292,
+            "total_supply": 7996844.84263292,
             "platform": null,
-            "cmc_rank": 876,
-            "last_updated": "2019-08-03T08:11:01.000Z",
+            "cmc_rank": 1088,
+            "last_updated": "2019-11-11T14:37:02.000Z",
             "quote": {
                 "JPY": {
-                    "price": 8.968780603960427,
-                    "volume_24h": 197412.07836092258,
-                    "percent_change_1h": 0.5613,
-                    "percent_change_24h": 0.7124,
-                    "percent_change_7d": 7.5156,
-                    "market_cap": 69121796.97757879,
-                    "last_updated": "2019-08-03T08:11:00.000Z"
+                    "price": 6.512740507682241,
+                    "volume_24h": 47940.441369686225,
+                    "percent_change_1h": 0.02833392,
+                    "percent_change_24h": -0.82572967,
+                    "percent_change_7d": 1.77072676,
+                    "market_cap": 52081375.34026524,
+                    "last_updated": "2019-11-11T14:37:00.000Z"
                 }
             }
         }

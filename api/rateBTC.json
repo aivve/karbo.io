@@ -1,9 +1,9 @@
 {
     "status": {
-        "timestamp": "2019-11-11T14:37:42.888Z",
+        "timestamp": "2019-11-11T14:37:21.331Z",
         "error_code": 0,
         "error_message": null,
-        "elapsed": 11,
+        "elapsed": 18,
         "credit_count": 1,
         "notice": null
     },
@@ -19,19 +19,19 @@
                 "mineable"
             ],
             "max_supply": null,
-            "circulating_supply": 7996844.84263292,
-            "total_supply": 7996844.84263292,
+            "circulating_supply": 7996829.55968447,
+            "total_supply": 7996829.55968447,
             "platform": null,
-            "cmc_rank": 1088,
-            "last_updated": "2019-11-11T14:37:02.000Z",
+            "cmc_rank": 1089,
+            "last_updated": "2019-11-11T14:36:03.000Z",
             "quote": {
                 "BTC": {
-                    "price": 0.000006823715414308069,
-                    "volume_24h": 0.05022953522517667,
-                    "percent_change_1h": -0.30810173,
-                    "percent_change_24h": 0.39866803,
-                    "percent_change_7d": 7.29494052,
-                    "market_cap": 54.56819341850424,
+                    "price": 0.000006823202487845387,
+                    "volume_24h": 0.05022559079979094,
+                    "percent_change_1h": -0.31559537,
+                    "percent_change_24h": 0.39112112,
+                    "percent_change_7d": 7.2868799,
+                    "market_cap": 54.56398734651461,
                     "last_updated": "2019-11-11T14:36:35.000Z"
                 }
             }

@@ -319,11 +319,8 @@ to {
 	width: 32px;
 	height: 32px;
 	border-radius: 50%;
-	background-color: #FFEC00;
-    background-image: linear-gradient(180deg,#FFEC00 0%, #FFFCCC 100%);
-    background-size: cover;
-	background-repeat: no-repeat;
-	display: inline-block;
+	background-color: #0AACFC;
+ 	display: inline-block;
 	vertical-align: middle;
 	margin-top: -4px;
 }
@@ -334,9 +331,11 @@ to {
 }
 
 #coinIcon svg {
-	-ms-transform: rotate(-90deg); /* IE 9 */
-    -webkit-transform: rotate(-90deg); /* Safari 3-8 */
-    transform: rotate(-90deg);
+	/*
+	-ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+	*/
 	-webkit-transition: all 400ms ease-in-out;
     -moz-transition:    all 400ms ease-in-out;
 	-o-transition:      all 400ms ease-in-out;
@@ -344,9 +343,9 @@ to {
 }
 
 .navbar-brand:hover #coinIcon svg, .navbar-brand:focus #coinIcon svg {
-	-ms-transform: rotate(0deg); /* IE 9 */
-    -webkit-transform: rotate(0deg); /* Safari 3-8 */
-    transform: rotate(0deg);
+	/*-ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);*/
 }
 
 .logo {

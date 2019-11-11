@@ -8,6 +8,7 @@ var price_rur;
 var price_krw;
 var price_cny;
 var price_jpy;
+var price_pln;
 var rate_change;
 var rate_arrow;
 var x;
@@ -23,6 +24,7 @@ $.when(
 		price_krw = Number(data.KRW.price);
 		price_cny = Number(data.CNY.price);
 		price_jpy = Number(data.JPY.price);
+		price_pln = Number(data.PLN.price);
 		rate_change = Number(data.USD.percent_change_1h);
 	})
 	
@@ -35,6 +37,7 @@ $.when(
 	$('#krw_price').html('<strong>' + (Math.round(price_krw * 100)/100).toFixed(2) + '</strong>' + ' &#8361;');
 	$('#cny_price').html('<strong>' + (Math.round(price_cny * 100)/100).toFixed(2) + '</strong>' + ' &#20803;');
 	$('#jpy_price').html('<strong>' + (Math.round(price_jpy * 100)/100).toFixed(2) + '</strong>' + ' &#165;');
+	$('#pln_price').html('<strong>' + (Math.round(price_pln * 100)/100).toFixed(2) + '</strong>' + ' zł');
 	$('#btc_price').html('<strong>' + price_btc.toFixed(8) + '</strong>' + ' &#3647;');
 	
 	if (rate_change > 0) { var rate_arrow = "<span class=\"text-success\">&uarr;</span>"; }
@@ -77,6 +80,8 @@ $.when(
 		x = price_cny;
 	} else if (selected_curr == "JPY" ) {
 		x = price_jpy;
+	} else if (selected_curr == "PLN" ) {
+		x = price_pln;
 	}
    };
    
