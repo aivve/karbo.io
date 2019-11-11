@@ -120,8 +120,9 @@
 			<ul class="dropdown-menu" role="menu">
 				<li><a href="#calc" id="btc_price"></a></li>
 				<li><a href="#calc" id="usd_price"></a></li>
-				<li><a href="#calc" id="cny_price"></a></li>
+				<li><a href="#calc" id="pln_price"></a></li>
 				<li><a href="#calc" id="eur_price"></a></li>
+				<li><a href="#calc" id="cny_price"></a></li>
 				<li><a href="#calc" id="jpy_price"></a></li>
 				<li><a href="#calc" id="rur_price"></a></li>
 				<li><a href="#calc" id="uah_price"></a></li>
@@ -155,14 +156,13 @@
 		  
 			<div class="alert alert-dismissible alert-success">
 			  <button type="button" class="close" data-dismiss="alert">&times;</button>
-			  <h4>Want to accept karbo?</h4>
-			  <p>We have free Payment Gateway <a href="https://karbo.club/en/">karbo.club</a> with plugins, buttons and invoice creation form.</p>
-			</div>
-			
-			<div class="alert alert-dismissible alert-warning">
-			  <button type="button" class="close" data-dismiss="alert">&times;</button>
-			  <h4>주의!</h4>
-			  <p>거래소로 자금을 이체할 때, 거래소에 제공된 결제 ID(Payment ID)를 지정하십시오!</p>
+			  <h4>카르보 통화를 수락 하시겠습니까?</h4>
+			  <p>우리는 무료입니다 :
+				<ul>
+				  <li><a href="https://karbo.club/en/">karbo.club</a> 플러그인, 버튼 및 송장 작성 양식이있는 지불 게이트웨이</li>
+				  <li>모든 카르보 노드 및 모든 카르보 월렛에서 작동하는 <a href="/pay">POS 앱</a> 사용이 간편</li>
+				</ul>
+			  </p>
 			</div>
 			
 		  </div>
@@ -177,6 +177,7 @@
 		  <div class="btn-group button-group filters-button-group">
 			<button class="btn btn-default button is-checked" data-filter="*">모두</button>
 			<button class="btn btn-default button" data-filter=".exchange">환전</button>
+			<button class="btn btn-default button" data-filter=".gateway">결제</button>
 			<button class="btn btn-default button" data-filter=".merchant">상점</button>
 			<button class="btn btn-default button" data-filter=".faucet">크레인</button>
 			<button class="btn btn-default button" data-filter=".charity">자선</button>
