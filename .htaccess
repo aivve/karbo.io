@@ -11,5 +11,7 @@ RewriteRule ^mining/?$ /mining.html?&%{QUERY_STRING}
 RewriteRule ^terms/?$ /terms-and-conditions.html?&%{QUERY_STRING}
 RewriteRule ^privacy/?$ /privacy-policy.html?&%{QUERY_STRING}
 
+RewriteRule ^doc/?$ https://docs.karbo.org/$1
+
 
 
