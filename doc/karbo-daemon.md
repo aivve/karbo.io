@@ -1,7 +1,7 @@
 # Daemon command line arguments and commands
 
 
-## Command line options:
+## Command line options
 
 Option                                 | Description
 -------------------------------------- | -----------------------------
@@ -11,7 +11,8 @@ Option                                 | Description
   `--data-dir arg`                     | Specify data directory
   `--config-file arg`                  | Specify configuration file
 
-## Command line options and settings options:
+## Command line options and settings options
+
 Option                                 | Description
 -------------------------------------- | -----------------------------
   `--log-file arg`                     |
@@ -34,83 +35,29 @@ Option                                 | Description
   `--mining-threads arg`               | Specify mining threads count
 
 
-## Daemon commands:
-{|  cellspacing="0" border="1"
-! Command
-! Description
-! Arg 1
-! Arg 2
+## Daemon commands
 
-|-
-| help
-| print bytecoind commands
-| -
-| -
-|-
-| start_mining 
-| Start mining in several threads to a given wallet address
-| [string] wallet_address
-| [uint] threads
-|-
-| stop_mining
-| Stop mining
-| -
-| -
-|-
-| show_hr
-| Show current mining hashrate
-| -
-| -
-|-
-| hide_hr 
-| Stop showing current mining hashrate
-| -
-| -
-|-
-| exit
-| Exit bytecoind
-| -
-| -
-|-
-| print_bc
-| Print blockchain info in a given blocks range
-| [uint] begin_height 
-| [uint] end_height (optional)
-|-
-| print_block
-| Print block
-| [string] block_hash or [uint] block_height
-| -
-|-
-| print_cn
-| Print connections
-| -
-| -
-|-
-| print_pl
-| Print peer list
-| -
-| -
-|-
-| print_pool
-| Print transaction pool (long format)
-| -
-| -
-|-
-| print_pool_sh
-| Print transaction pool (short format)
-| -
-| -
-|-
-| set_log
-| Change current log detailization level
-| [uint] log level (0 - 4)
-| -
-|-
-| print_tx
-| Print transaction
-| [string] transaction_hash
-| -
-|-
-|}
+Command                   | Description                   | Arg 1                  | Arg 2    
+--------------------------|-------------------------------|------------------------|------------------------
+ `help`                   | Print available commands      | -                      | -
+ `start_mining`           | Start mining in several threads to a given wallet address | [string] wallet_address | [uint] threads
+ `stop_mining`            | Stop mining
+ `show_hr`                | Show current mining hashrate
+ `hide_hr`                | Stop showing current mining hashrate
+ `exit`                   | Exit karbowanecd
+ `ban`                    | Ban a given <IP> for a given amount of <seconds> | [string] IP_address | [uint] seconds
+ `unban`                  | Unban a given <IP>            | [string] IP_address
+ `height`                 | Print current blockchain height
+ `print_bc`               | Print blockchain info in a given blocks range | [uint] begin_height | [uint] end_height (optional)
+ `print_block`            | Print block                   | [string] block_hash or [uint] block_height
+ `print_cn`               | Print connections
+ `print_diff`             | Print difficulty for the next block
+ `print_pl`               | Print peer list
+ `print_pool`             | Print transaction pool (long format)
+ `print_pool_sh`          | Print transaction pool (short format)
+ `print_mp`               | Print number of transactions in memory pool
+ `print_tx`               | Print transaction             | [string] transaction_hash
+ `set_log`                | Change current log detailization level | [uint] log level (0 - 4)
+ `status`                 | Print information about blockchain and daemon status
+ `save`                   | Store blockchain data to disk
 

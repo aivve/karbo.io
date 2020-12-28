@@ -4,7 +4,7 @@ Header set Access-Control-Allow-Origin "*"
 RewriteEngine On
 RewriteRule ^info/?$ /info.html?&%{QUERY_STRING}
 RewriteRule ^donate/?$ /donate.html?&%{QUERY_STRING}
-RewriteRule ^use/?$ /use.html?&%{QUERY_STRING}
+RewriteRule ^use/?$ /use.html
 RewriteRule ^pay/?$ /pay.html?&%{QUERY_STRING}
 RewriteRule ^paymentid/?$ /paymentid.html?&%{QUERY_STRING}
 RewriteRule ^mining/?$ /mining.html?&%{QUERY_STRING}

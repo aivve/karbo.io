@@ -11,6 +11,10 @@
 
 * [Light Wallet and Masternodes](light-wallet.md)
 * [Daemon command line arguments and commands](karbo-daemon.md)
+
+## Integration Guides
+
+* [Integration Guide](integration.md)
 * [Karbo RPC Wallet](karbo-walletd.md)
 
 

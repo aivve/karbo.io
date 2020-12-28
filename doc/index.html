@@ -17,12 +17,12 @@
   <link rel="alternate" href="/kr/" hreflang="ko_KR" />
   
   <!-- Favicons -->
-  <link rel="shortcut icon" href="/images/favicon.ico">
-  <link rel="icon" type="image/icon" href="/images/favicon.ico" >
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="icon" type="image/icon" href="images/favicon.ico" >
 
   <!-- Karbo CSS -->
-  <link rel="stylesheet" href="buble.css">
-  <link href="/css/karbo.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/buble.css">
+  <link href="css/karbo.css" rel="stylesheet">
 
   
  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
@@ -97,6 +97,15 @@
 		color: #FFED00;
 	}
 	
+	.sidebar > h1::before {
+		display: inline-block;
+		width:50px;
+		height:50px;
+		vertical-align: middle;
+		margin: -5px 10px 0 0;
+		content:url('images/logo.svg');
+	}
+	
 	.sidebar li.active {
 		background-color: transparent;
 	}
@@ -121,18 +130,15 @@
 <body>
   <nav>
     <a href="#/">Home</a>
-	<a href="/">Karbo.io</a>
+	<a href="//karbo.org">Karbo</a>
+	<a href="//karbo.org/download">Download</a>
   </nav>
   
   <div id="app"></div>
   <script>
     window.$docsify = {
 	  name: (
-         '<img'
-         + '  src="/images/logo.svg"'
-         + '  width="60" height="60"'
-         + '  style="vertical-align: middle; margin: 0 10px 0 0;"'
-         + '/><strong>Karbo Docs</strong>'
+         'Karbo Docs'
        ),
 	  
       repo: '',

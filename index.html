@@ -292,11 +292,11 @@ function get_bits_system_architecture()
 function is_32bits_architecture() { return get_bits_system_architecture() == 32 ? 1 : 0 ; }
 function is_64bits_architecture() { return get_bits_system_architecture() == 64 ? 1 : 0 ; }
 
-var WindowsWalletLink = is_32bits_architecture() ? "https://github.com/seredat/karbowanecwallet/releases/download/v.1.3.6/Karbo-setup-1.3.6-32-bit.exe"
-                                                 : "https://github.com/seredat/karbowanecwallet/releases/download/v.1.3.6/Karbo-setup-1.3.6-64-bit.exe";
-var LinuxWalletLink   = is_32bits_architecture() ? "https://github.com/seredat/karbowanecwallet/releases/download/v.1.3.6/Karbowanec_wallet-1.3.6-xenial-32-bit.deb"
-                                                 : "https://github.com/seredat/karbowanecwallet/releases/download/v.1.3.6/Karbowanec_wallet-1.3.6-xenial-64-bit.deb";
-var MacOSWalletLink   =                            "https://github.com/seredat/karbowanecwallet/releases/download/v.1.3.6/Karbo_wallet_1.3.6.dmg";
+var WindowsWalletLink = is_32bits_architecture() ? "https://github.com/seredat/karbowanecwallet/releases/download/v.1.4.6/"
+                                                 : "https://github.com/seredat/karbowanecwallet/releases/download/v.1.4.6/Karbo-wallet-win64-v.1.4.6-install.zip";
+var LinuxWalletLink   = is_32bits_architecture() ? "https://github.com/seredat/karbowanecwallet/releases/download/v.1.4.6/"
+                                                 : "https://github.com/seredat/karbowanecwallet/releases/download/v.1.4.6/Karbo-wallet-ubuntu-18.04-v.1.4.6.tar.gz";
+var MacOSWalletLink   =                            "https://github.com/seredat/karbowanecwallet/releases/download/v.1.4.6/Karbo-wallet-macOS-v.1.4.6.dmg";
 var AndroidWalletLink =                            "https://play.google.com/store/apps/details?id=org.karbo.karbon";
 
 $('#ForWindows').find("a").attr("href", WindowsWalletLink);
@@ -503,11 +503,14 @@ if (navigator.appVersion.indexOf("Mac")!=-1) {
 	 <div class="breath">
         <div class="row">
           <div class="col-lg-4">
-			<p>&copy; 2016-2019 <strong>Karbo</strong>. 
+			<p>&copy; 2016-2020 <strong>Karbo</strong>. 
 		  
 			E-mail:&nbsp;dev@karbo.io</p>
 			
 			<div class="fb-like" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+			
+			<small>Best viewed in <a href="https://brave.com/mfk645">Brave</a></small>
+			
 		  </div>
           <div class="col-lg-8">
 			<p class="text-right">

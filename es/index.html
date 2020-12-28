@@ -159,23 +159,7 @@
 						  <div class='coin -two'></div>
 						</div>
 						<div class='sign'>
-						  <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-							viewBox="0 0 2500000 2500000"
-							 xmlns:xlink="http://www.w3.org/1999/xlink">
-							 <defs>
-							  <style type="text/css">
-							   <![CDATA[
-								.kstr0 {stroke:#none;stroke-width:35250}
-								.kfil0 {fill:#ffed00}
-								.kfil1 {fill:#ffed00;fill-rule:nonzero}
-							   ]]>
-							  </style>
-							 </defs>
-							 <g id="krb-logo">
-							  <!--circle class="kfil0 kstr0" cx="1250000" cy="1250000" r="1214062"/-->
-							  <path class="kfil1 kstr0" d="M1251219 1162750c18009,-3203 34019,-10006 48025,-20412 14009,-10407 27215,-28016 39622,-52029l275750 -538290c10803,-18010 24012,-32419 39218,-43625 15210,-10806 33219,-16410 53232,-16410l174893 0 -343384 633144c-15209,26016 -32419,47228 -51628,63635 -19613,16409 -41225,28815 -64838,37221 36822,9604 67638,25213 92854,47225 24812,21610 48425,52025 70437,91247l330578 668363 -192503 0c-38822,0 -70041,-21213 -93653,-63235l-270947 -566303c-14006,-25215 -29216,-43225 -45622,-54034 -16409,-10803 -37222,-17206 -62034,-18809l0 287359 -151281 0 0 -288559 -111263 0 0 703581 -213716 0 0 -1540835 213716 0 0 673166 111263 0 0 -332981 151281 0 0 330581z"/>
-							 </g>
-							</svg>
+							<img src="/images/logo.svg" />
 						</div>
 					  </div>
 					  <div class="revers">
@@ -282,10 +266,39 @@ $(window).resize(function(){
 <script>
 var OSName="Unknown OS";
 
-var WindowsWalletLink 	= "https://github.com/seredat/karbowanecwallet/releases/download/v.1.3.6/Karbo-setup-1.3.6-32-bit.exe";
-var LinuxWalletLink 	= "https://github.com/seredat/karbowanecwallet/releases/download/v.1.3.6/Karbowanec_wallet-1.3.6-xenial-32-bit.deb";
-var MacOSWalletLink 	= "https://github.com/seredat/karbowanecwallet/releases/download/v.1.3.6/Karbo_wallet_1.3.6.dmg";
-var AndroidWalletLink 	= "https://play.google.com/store/apps/details?id=org.karbo.karbon";
+function get_bits_system_architecture()
+{
+    var _to_check = [] ;
+    if ( window.navigator.cpuClass ) _to_check.push( ( window.navigator.cpuClass + "" ).toLowerCase() ) ;
+    if ( window.navigator.platform ) _to_check.push( ( window.navigator.platform + "" ).toLowerCase() ) ;
+    if ( navigator.userAgent ) _to_check.push( ( navigator.userAgent + "" ).toLowerCase() ) ;
+
+    var _64bits_signatures = [ "x86_64", "x86-64", "Win64", "x64;", "amd64", "AMD64", "WOW64", "x64_64", "ia64", "sparc64", "ppc64", "IRIX64" ] ;
+    var _bits = 32, _i, _c ;
+    outer_loop:
+    for( var _c = 0 ; _c < _to_check.length ; _c++ )
+    {
+        for( _i = 0 ; _i < _64bits_signatures.length ; _i++ )
+        {
+            if ( _to_check[_c].indexOf( _64bits_signatures[_i].toLowerCase() ) != -1 )
+            {
+               _bits = 64 ;
+               break outer_loop;
+            }
+        }
+    }
+    return _bits ; 
+}
+
+function is_32bits_architecture() { return get_bits_system_architecture() == 32 ? 1 : 0 ; }
+function is_64bits_architecture() { return get_bits_system_architecture() == 64 ? 1 : 0 ; }
+
+var WindowsWalletLink = is_32bits_architecture() ? "https://github.com/seredat/karbowanecwallet/releases/download/v.1.4.6/"
+                                                 : "https://github.com/seredat/karbowanecwallet/releases/download/v.1.4.6/Karbo-wallet-win64-v.1.4.6-install.zip";
+var LinuxWalletLink   = is_32bits_architecture() ? "https://github.com/seredat/karbowanecwallet/releases/download/v.1.4.6/"
+                                                 : "https://github.com/seredat/karbowanecwallet/releases/download/v.1.4.6/Karbo-wallet-ubuntu-18.04-v.1.4.6.tar.gz";
+var MacOSWalletLink   =                            "https://github.com/seredat/karbowanecwallet/releases/download/v.1.4.6/Karbo-wallet-macOS-v.1.4.6.dmg";
+var AndroidWalletLink =                            "https://play.google.com/store/apps/details?id=org.karbo.karbon";
 
 $('#ForWindows').find("a").attr("href", WindowsWalletLink);
 $('#ForLinux').find("a").attr("href", LinuxWalletLink);
@@ -478,7 +491,7 @@ if (navigator.appVersion.indexOf("Mac")!=-1) {
 	 <div class="breath">
         <div class="row">
           <div class="col-lg-4">
-			<p>&copy; 2016-2017 Karbovanets. 
+			<p>&copy; 2016-2020 Karbo. 
 		  
 			E-mail:&nbsp;krbcoin@ukr.net</p>
 			

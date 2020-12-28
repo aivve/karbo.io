@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<!-- Meta, title, CSS, favicons, etc. -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="нформация о майнинге Электронного Карбованца - децентрализованного обменного средства: пулы, программное обеспечение и т.д.">
+<title>Майнинг Карбованца - Децентрализованного обменного средства</title>
+
+<link rel="alternate" href="/" hreflang="x-default" />
+<link rel="alternate" href="/ua/" hreflang="uk_UA" />
+<link rel="alternate" href="/ru/" hreflang="ru_RU" />
+<link rel="alternate" href="/pl/" hreflang="pl_PL" />
+<link rel="alternate" href="/es/" hreflang="es_ES" />
+<link rel="alternate" href="/cn/" hreflang="zh_CN" />
+<link rel="alternate" href="/jp/" hreflang="ja_JP" />
+<link rel="alternate" href="/kr/" hreflang="ko_KR" />
+
+<!-- Bootstrap core CSS -->
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Startup CSS -->
+<link href="/css/startup.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <script src="js/respond.min.js"></script>
+<![endif]-->
+
+<!-- Favicons -->
+<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="icon" type="image/icon" href="/images/favicon.ico" >
+<script src="/js/pace.js"></script>
+<!-- Custom Google Font : Open Sans -->
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:100,100i,300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic' rel='stylesheet' type='text/css'>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-78493281-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<meta property="og:url" content="https://www.karbo.io" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Электронный Карбованец" />
+<meta property="og:description" content="Децентрализованное средство обмена" />
+<meta property="og:image" content="https://karbo.io/images/wallet.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1092" />
+<meta property="og:image:height" content="684" />
+</head>
+<body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1631255797202963',
+      xfbml      : true,
+      version    : 'v2.7'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/ru_RU/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<div class="preloader"></div>
+
+<!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Навигация</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/ru/"><span id="coinIcon">&#1180;</span> <strong>Карбо</strong><em>ванец</em></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+			  <a href="/ru/download">Cкачать</a>
+			</li>
+			<li>
+              <a href="/ru/use">Применение</a>
+            </li>
+			<li>
+              <a href="/ru/info">Информация</a>
+            </li>
+			<li>
+              <a href="http://explorer.karbowanec.com/">Обозреватель</a>
+            </li>
+			<li class="dropdown">
+			  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-language" aria-hidden="true"></i> <span class="caret"></span></a>
+			  <ul class="dropdown-menu" role="menu">
+				<li><a href="/"><span class="flag-icon flag-icon-us"></span> English</a></li>
+				<li><a href="/ua/"><span class="flag-icon flag-icon-ua"></span> Українська</a></li>
+				<li><a href="/ru/"><span class="flag-icon flag-icon-ru"></span> Русский</a></li>
+				<li><a href="/pl/"><span class="flag-icon flag-icon-pl"></span> Polski</a></li>
+			  </ul>
+			</li>
+			<li class="dropdown">
+			<a href="#" class="price dropdown-toggle" data-toggle="dropdown"><span id="rur_price"></span> <span id="arrowplace"></span></a>
+			<ul class="dropdown-menu" role="menu">
+				<li><a href="#calc" id="btc_price"></a></li>
+				<li><a href="#calc" id="usd_price"></a></li>
+				<li><a href="#calc" id="eur_price"></a></li>
+				<li><a href="#calc" id="uah_price"></a></li>
+			</ul>
+			</li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+   </div>
+<!--// Navbar Ends-->
+
+<div class="wrapper"></div>
+
+<article class="content">
+
+<!--SUBPAGE HEAD-->
+
+	<div class="subpage-head grad breath inverse">
+	  <div class="container">
+		<div class="section-title">
+		  <h2>Майнинг Карбованца</h2>
+		  <h4>Информация о майнинге соло и в пулах</h4>
+		</div>
+	  </div>
+	</div>
+
+<!-- // END SUBPAGE HEAD -->
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 has-margin-bottom">
+      <article class="page-content breath">
+		
+		<section>
+			
+			<div class="well">
+				Новичек? Много букв? Просто <a href="/download">скачай кошелек</a>, открой вкладку «Майнинг» м нажми кнопку «Начать майнинг». Profit!
+			</div>
+	
+			
+		</section>
+	  
+	  
+		<div class="breath" id="solo">
+		
+			<h3>Майнинг соло</h3>
+			
+			<p>For solo mining you will need Karbowanec command line cient software named karbowanecd. You can <a href="http://karbowanec.com/en/#downloads">download</a> it under CLI wallet section.</p>
+			
+			<p>You will also need wallet address to where mined coins will be received. You can use GUI wallet, web-wallet, simplewallet (which is bundled with CLI daemon) or even paperwallet.</p>
+			
+			<p>You can start solo mining in few diferent ways. For example this way: 
+			
+			Unpack CLI wallet package, and run karbowanecd with followimg parameters:
+			
+			<code>karbowanecd --start-mining YOUR_WALLET_ADDRESS --mining-threads 2</code>, 
+			
+			where YOUR_WALLET_ADDRESS &ndash; is you wallet where you will receive mined Karbo, and --mining-threads &ndash; CPU cores, which you want to use for mining. Remember that the best results will give the the same  number of cores as L3 CPU cache divided by 2.
+			
+			You can also run solo mining from simplewallet, or use standalone miner from the Command-line suit.</p>
+			
+			<p></p>
+		
+		</div>
+		
+		
+		<div class="breath" id="solo">
+		
+			<h3>Pool mining</h3>
+				
+			<p>You can start pool mining right in the Karbowanec wallet in 'Mining' tab. 
+			
+			After a while you'll start receiving your first Karbo.
+			
+			You can check the status of your mining on the pool site by entering your wallet in the field 'Your Stats & Payment History'.
+			
+			The wallet will use CPU for mining.</p>
+			
+			<p>There is also special mining software for CPU and GPU.</p>
+			
+			<p>You can use various miners for CryptoNote coins. The list of selected mining software is below.</p>
+			
+
+		</div>
+	  
+	  
+	  <div class="breath" id="pools">
+
+
+			<h3>Mining pools</h3>
+			
+			<p><a href="http://explorer.karbowanec.com/#pools">The list of mining pools</a></p>
+			
+			<p>Pool monitoring: <a href="http://poolpolice.org/"><strong>poolpolice.org</strong></a></p>
+
+
+	   </div>
+		
+		<div class="breath" id="software">
+		<h3>Software for mining in pools</h3>
+		
+		
+		  <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>App Name</th>
+                    <th>Architecture</th>
+                    <th>Downloads</th>
+                    <th>Source Code</th>
+                </tr>
+                </thead>
+                <tbody id="mining_apps">
+                <tr>
+                    <td class="miningAppTitle">XMRig</td>
+                    <td>CPU</td>
+                    <td><a target="_blank" href="https://github.com/xmrig/xmrig/releases">Github releases</a></td>
+                    <td><a target="_blank" href="https://github.com/xmrig/xmrig">Github</a></td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                        <span>Example:</span>
+                        <code>xmrig.exe -o pool.karbowanec.com:3333 -u YOUR_WALLET_ADDRESS -p x</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="miningAppTitle">XMRig NVIDIA</td>
+                    <td>NVIDIA GPU</td>
+                    <td><a target="_blank" href="https://github.com/xmrig/xmrig-nvidia/releases">Github releases</a></td>
+                    <td><a target="_blank" href="https://github.com/xmrig/xmrig-nvidia">Github</a></td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                        <span>Example:</span>
+                        <code>xmrig.exe -o pool.karbowanec.com:5555 -u YOUR_WALLET_ADDRESS -p x</code>
+                    </td>
+                </tr>
+				<tr>
+                    <td class="miningAppTitle">ccminer (tpruvot)</td>
+                    <td>NVIDIA GPU</td>
+                    <td><a target="_blank" href="https://github.com/tpruvot/ccminer/releases">Github releases</a></td>
+                    <td><a target="_blank" href="https://github.com/tpruvot/ccminer/">Github</a></td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                        <span>Example:</span>
+                        <code>ccminer -a cryptonight -o stratum+tcp://pool.karbowanec.com:5555 -u YOUR_WALLET_ADDRESS -p x</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="miningAppTitle">XMR-STAK-AMD</td>
+                    <td>AMD GPU</td>
+                    <td><a target="_blank" href="https://github.com/fireice-uk/xmr-stak-amd/releases">Github</a></td>
+                    <td><a target="_blank" href="https://github.com/fireice-uk/xmr-stak-amd">Github</a></td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                        <span>Example config.txt (replace the relevant lines):</span>
+                        <br>
+                        <code>
+                            "pool_address" : "pool.karbowanec.com:5555</span>", <br>
+                            "wallet_address" : "<span class="exampleAddress">YOUR_WALLET_ADDRESS</span>", <br>
+                            "pool_password" : "x",
+                        </code>
+                        
+                    </td>
+                </tr>
+				<tr>
+                    <td class="miningAppTitle">Wolf's OpenCL XMR Miner</td>
+                    <td>AMD GPU</td>
+                    <td><a target="_blank" href="ttps://github.com/wolf9466/wolf-xmr-miner/releases">Github</a></td>
+                    <td><a target="_blank" href="https://github.com/wolf9466/wolf-xmr-miner">Github</a></td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                <span>Example:</span>
+                <code>miner.exe krb.conf</code><br />
+				Example of krb.conf:<br />
+			<br />
+<code style="display:block;white-space:pre-wrap">{
+	"Algorithms":
+	[
+		{
+			"name": "CryptoNight",
+			"devices":
+			[
+				{
+					"index": 0,
+					"corefreq": 1000,
+					"memfreq": 1500,
+					"fanspeed": 65,
+					"powertune": 20,
+					"threads": 1,
+					"rawintensity": 1336,
+					"worksize": 8
+				}
+			],
+			"pools":
+			[
+				{
+					"url": "stratum+tcp://pool.karbowanec.com:5555",
+					"user": "YOUR_WALLET_ADDRESS",
+					"pass": "x"
+				}
+			]
+		}
+	]
+}</code>
+                        
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+		
+
+
+		
+		</div>
+		
+      </article>
+      
+    </div>
+    <!--// col md 12--> 
+  </div>  
+</div>   
+
+<!-- FOOTER -->
+<footer class="grad1">
+   <div class="container">
+	 <div class="breath">
+        <div class="row">
+          <div class="col-lg-4">
+			<p>&copy; 2016-2017 Карбованец. 
+		  
+			E-mail:&nbsp;krbcoin@ukr.net</p>
+			
+			<div
+			  class="fb-like"
+			  data-share="true"
+			  data-width="300"
+			  data-show-faces="true">
+			</div>
+		  </div>
+          <div class="col-lg-8">
+			<p  class="text-right">
+				<a href="/ru/privacy">Конфиденциальность</a>
+				|
+				<a href="/ru/terms">Условия</a> 
+				|
+				<a href="http://donate.karbovanets.org/">Пожертвования</a>
+				|
+				<a href="http://karbo.foundation">Фундация</a>
+				|
+				<a href="https://forum.karbo.io/">Форум</a>
+			</p>
+		  </div>
+		</div>
+	 </div>
+  </div>
+</footer>
+<!-- END FOOTER -->
+
+<!-- JS and analytics only. --> 
+<!-- Bootstrap core JavaScript
+================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="/js/jquery.js"></script>
+<script src="/js/rates.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/nicescroll.js"></script> 
+<script src="/js/easing.js"></script> 
+<!--script src="/js/nicescroll.js"></script-->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.8.0/css/flag-icon.min.css">
+
+</body>
+</html>

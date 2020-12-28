@@ -819,8 +819,8 @@ function getTransaction(id) {
 	method: "POST",
 	data: JSON.stringify({
 		jsonrpc:"2.0",
-		id: "test",
-		method:"check_tx_with_view_key",
+		id: "simplepay_check",
+		method:"checktransactionbyviewkey",
 		params: {
 			txid:id,
 			view_key:privateViewKey,
@@ -862,8 +862,8 @@ function getTransactions() {
 	method: "POST",
 	data: JSON.stringify({
 		jsonrpc:"2.0",
-		id: "test",
-		method:"get_transaction_hashes_by_payment_id",
+		id: "simplepay_get_tx",
+		method:"gettransactionhashesbypaymentid",
 		params: {
 			paymentId:payment_id
 		}

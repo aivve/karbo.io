@@ -1,9 +1,10 @@
 <?php
+error_reporting(E_ALL);
 
 // schedule cron job `0 * * * * /usr/bin/php /var/www/html/api/fetch_cmc.php` to fetch rates
 
 $CMC_PRO_API_KEY = "df0dbd2e-b851-4d80-978c-aa6b434efd1d";
-$path = "./rate/";
+$path = "/var/www/html/api/rate/";
 
 function fetchAndSave($curency,$CMC_PRO_API_KEY,$path){
 $ch = curl_init();

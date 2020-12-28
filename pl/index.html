@@ -258,10 +258,39 @@ $(window).resize(function(){
 <script>
 var OSName="Unknown OS";
 
-var WindowsWalletLink 	= "https://github.com/seredat/karbowanecwallet/releases/download/v.1.3.6/Karbo-setup-1.3.6-32-bit.exe";
-var LinuxWalletLink 	= "https://github.com/seredat/karbowanecwallet/releases/download/v.1.3.6/Karbowanec_wallet-1.3.6-xenial-32-bit.deb";
-var MacOSWalletLink 	= "https://github.com/seredat/karbowanecwallet/releases/download/v.1.3.6/Karbo_wallet_1.3.6.dmg";
-var AndroidWalletLink 	= "https://play.google.com/store/apps/details?id=org.karbo.karbon";
+function get_bits_system_architecture()
+{
+    var _to_check = [] ;
+    if ( window.navigator.cpuClass ) _to_check.push( ( window.navigator.cpuClass + "" ).toLowerCase() ) ;
+    if ( window.navigator.platform ) _to_check.push( ( window.navigator.platform + "" ).toLowerCase() ) ;
+    if ( navigator.userAgent ) _to_check.push( ( navigator.userAgent + "" ).toLowerCase() ) ;
+
+    var _64bits_signatures = [ "x86_64", "x86-64", "Win64", "x64;", "amd64", "AMD64", "WOW64", "x64_64", "ia64", "sparc64", "ppc64", "IRIX64" ] ;
+    var _bits = 32, _i, _c ;
+    outer_loop:
+    for( var _c = 0 ; _c < _to_check.length ; _c++ )
+    {
+        for( _i = 0 ; _i < _64bits_signatures.length ; _i++ )
+        {
+            if ( _to_check[_c].indexOf( _64bits_signatures[_i].toLowerCase() ) != -1 )
+            {
+               _bits = 64 ;
+               break outer_loop;
+            }
+        }
+    }
+    return _bits ; 
+}
+
+function is_32bits_architecture() { return get_bits_system_architecture() == 32 ? 1 : 0 ; }
+function is_64bits_architecture() { return get_bits_system_architecture() == 64 ? 1 : 0 ; }
+
+var WindowsWalletLink = is_32bits_architecture() ? "https://github.com/seredat/karbowanecwallet/releases/download/v.1.4.6/"
+                                                 : "https://github.com/seredat/karbowanecwallet/releases/download/v.1.4.6/Karbo-wallet-win64-v.1.4.6-install.zip";
+var LinuxWalletLink   = is_32bits_architecture() ? "https://github.com/seredat/karbowanecwallet/releases/download/v.1.4.6/"
+                                                 : "https://github.com/seredat/karbowanecwallet/releases/download/v.1.4.6/Karbo-wallet-ubuntu-18.04-v.1.4.6.tar.gz";
+var MacOSWalletLink   =                            "https://github.com/seredat/karbowanecwallet/releases/download/v.1.4.6/Karbo-wallet-macOS-v.1.4.6.dmg";
+var AndroidWalletLink =                            "https://play.google.com/store/apps/details?id=org.karbo.karbon";
 
 $('#ForWindows').find("a").attr("href", WindowsWalletLink);
 $('#ForLinux').find("a").attr("href", LinuxWalletLink);
@@ -463,7 +492,7 @@ if (navigator.appVersion.indexOf("Mac")!=-1) {
 	 <div class="breath">
         <div class="row">
           <div class="col-lg-4">
-			<p>&copy; 2016-2019 Karbowaneć. 
+			<p>&copy; 2016-2020 Karbowaneć. 
 		  
 			E-mail:&nbsp;dev@karbo.io</p>
 			
